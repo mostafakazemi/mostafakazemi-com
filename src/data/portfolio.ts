@@ -94,7 +94,7 @@ export const skillGroups = [
 
 export const projects = [
   {
-    title: "The Jack Westin MCAT(R) Chrome Extension",
+    title: "The Jack Westin MCAT® Chrome Extension",
     type: "Browser Extension / EdTech / Remote US Team",
     description:
       "Contributed to the Jack Westin MCAT Chrome Extension, a production browser extension for a US-based edtech platform focused on MCAT preparation.",
@@ -130,7 +130,7 @@ export const projects = [
       "Contributed to Jack Westin public-facing and operations-facing frontend platforms, including Nuxt and Vue applications for an edtech product.",
     links: [{ label: "Website", href: "https://jackwestin.com/" }],
     highlights: [
-      "Worked across Nuxt 2 and modern Nuxt/Vue 3 application architectures.",
+      "Worked across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
       "Contributed to public, marketing, and production web application experiences.",
       "Worked with SSR, generation workflows, page-level implementation, and reusable Vue components.",
       "Improved maintainability, frontend structure, production UI quality, and tooling coverage.",
