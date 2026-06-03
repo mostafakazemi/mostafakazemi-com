@@ -3,13 +3,64 @@ import "./globals.css";
 
 const title = "Mostafa Kazemi - Senior Frontend Engineer";
 const description =
-  "Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.";
+  "Mostafa Kazemi is a Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.";
 const domain = "https://mostafakazemi.com";
+const alternateNames = [
+  "Mostafa Kazeminejad",
+  "Mostafa Kazemi Nejad",
+  "مصطفی کاظمی",
+  "مصطفی کاظمی نژاد"
+];
+const keywords = [
+  "Mostafa Kazemi",
+  "Mostafa Kazeminejad",
+  "Mostafa Kazemi Nejad",
+  "مصطفی کاظمی",
+  "مصطفی کاظمی نژاد",
+  "Senior Frontend Engineer",
+  "Frontend Engineer",
+  "React Developer",
+  "Next.js Developer",
+  "Vue.js Developer",
+  "Nuxt.js Developer",
+  "TypeScript Developer"
+];
+
+const personStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mostafa Kazemi",
+  alternateName: alternateNames,
+  jobTitle: "Senior Frontend Engineer",
+  url: domain,
+  email: "mailto:mostafa.kazeminejhad@gmail.com",
+  sameAs: [
+    "https://github.com/mostafakazemi",
+    "https://www.linkedin.com/in/mostafa-kazeminejad-70aba2237/",
+    "https://t.me/mesikd"
+  ],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Nuxt.js",
+    "TypeScript",
+    "Browser Extensions",
+    "Frontend Architecture",
+    "Reusable UI Systems"
+  ]
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(domain),
   title,
   description,
+  applicationName: "Mostafa Kazemi Portfolio",
+  authors: [{ name: "Mostafa Kazemi", url: domain }],
+  creator: "Mostafa Kazemi",
+  publisher: "Mostafa Kazemi",
+  keywords,
+  category: "technology",
   alternates: {
     canonical: domain
   },
@@ -19,16 +70,32 @@ export const metadata: Metadata = {
     url: domain,
     siteName: "Mostafa Kazemi",
     locale: "en_US",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Mostafa Kazemi - Senior Frontend Engineer"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title,
-    description
+    description,
+    images: ["/twitter-image"]
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
   }
 };
 
@@ -56,6 +123,12 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personStructuredData).replace(/</g, "\\u003c")
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

@@ -6,14 +6,15 @@ export function Projects() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
-            Projects
+            PROJECTS
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Public-safe project highlights.
+            Featured Projects
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            Concise summaries of production work, written conservatively for a
-            public portfolio without proprietary code or confidential details.
+            A selection of real-world products, platforms, and frontend systems
+            I’ve contributed to across web applications, browser extensions,
+            reusable UI libraries, and e-commerce platforms.
           </p>
         </div>
 

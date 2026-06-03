@@ -59,6 +59,6 @@ After deployment, add `mostafakazemi.com` in:
 
 Then configure the DNS records exactly as Vercel instructs. DNS requirements can vary by registrar, so Vercel should be treated as the source of truth for the final records.
 
-## Content Safety
+## Content
 
-The portfolio content is written to be public-safe. It avoids proprietary source code, secrets, API keys, private URLs, internal business logic, and confidential implementation details.
+Portfolio content is centralized in `src/data/portfolio.ts` so project summaries, skills, experience, and contact links can be edited without changing layout components.

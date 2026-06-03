@@ -16,10 +16,6 @@ export function ThemeToggle() {
       className="inline-flex h-10 items-center rounded-full border border-slate-300 bg-white px-3 text-sm font-medium text-slate-800 shadow-sm transition hover:border-slate-400 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-800"
       aria-label="Toggle dark and light mode"
     >
-      <span aria-hidden="true" className="mr-2 text-xs font-bold uppercase">
-        <span className="dark:hidden">L</span>
-        <span className="hidden dark:inline">D</span>
-      </span>
       <span className="dark:hidden">Light</span>
       <span className="hidden dark:inline">Dark</span>
     </button>

@@ -158,7 +158,7 @@ export const projects = [
       "Worked with Storybook-based component documentation and reviewable UI states.",
       "Contributed to production component-library architecture and package structure.",
       "Supported typed builds, testing utilities, accessibility-minded UI patterns, and Web Component outputs.",
-      "Helped reusable UI scale across multiple product surfaces without exposing product internals."
+      "Helped reusable UI scale across multiple product surfaces and development workflows."
     ],
     tags: [
       "Vue",
