@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CaseStudyHeader } from "@/components/case-studies/CaseStudyHeader";
 import { CaseStudySection } from "@/components/case-studies/CaseStudySection";
+import { TechnologyTags } from "@/components/case-studies/TechnologyTags";
 import {
   caseStudies,
   getCaseStudyBySlug,
@@ -164,17 +165,34 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
           <CaseStudyHeader caseStudy={caseStudy} />
 
+          <CaseStudySection title="Summary">
+            <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+              {caseStudy.summary}
+            </p>
+          </CaseStudySection>
+
           <CaseStudySection title="Problem">
             <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
               {caseStudy.problem}
             </p>
           </CaseStudySection>
 
+          <CaseStudySection title="My Role">
+            <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+              {caseStudy.role} on {caseStudy.company}
+              {caseStudy.period ? `, ${caseStudy.period}` : ""}.
+            </p>
+          </CaseStudySection>
+
+          <CaseStudySection title="Technologies">
+            <TechnologyTags technologies={caseStudy.technologies} />
+          </CaseStudySection>
+
           <CaseStudySection title="Responsibilities">
             <BulletList items={caseStudy.responsibilities} />
           </CaseStudySection>
 
-          <CaseStudySection title="Challenges">
+          <CaseStudySection title="Technical Challenges">
             <BulletList items={caseStudy.challenges} />
           </CaseStudySection>
 

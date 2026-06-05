@@ -25,6 +25,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+button:not(:disabled),
+a[href],
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
 ::selection {
   background: #38bdf8;
   color: #020617;

@@ -38,7 +38,7 @@ export const caseStudy = {
     "Delivered production browser-extension experiences for MCAT study workflows.",
     "Improved maintainability through typed Vue components, reusable UI patterns, and clearer frontend boundaries.",
     "Supported a more reliable browser-integrated experience by isolating UI and managing cross-context communication carefully.",
-    "Contributed to frontend architecture that can evolve without exposing proprietary implementation details."
+    "Contributed to frontend architecture that can evolve across browser-integrated product surfaces."
   ],
   learnings: [
     "Browser extensions benefit from strict boundaries between host-page behavior and product UI.",

@@ -2,5 +2,7 @@
 // The build regenerates it from sibling case-study files.
 import type { CaseStudy } from "./types";
 import { caseStudy as aamcExtension } from "./aamc-extension";
+import { caseStudy as jackwestinPlatform } from "./jackwestin-platform";
+import { caseStudy as sazitoPlatform } from "./sazito-platform";
 
-export const caseStudies = [aamcExtension] satisfies CaseStudy[];
+export const caseStudies = [aamcExtension, jackwestinPlatform, sazitoPlatform] satisfies CaseStudy[];
