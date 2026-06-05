@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 
 export function Hero() {
@@ -7,8 +8,8 @@ export function Hero() {
       className="relative overflow-hidden border-b border-slate-200 dark:border-slate-800"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.10),transparent_34%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_34%)]" />
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
-        <div className="flex flex-col justify-center">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
+        <div className="order-2 flex flex-col justify-center lg:order-1">
           <p className="mb-5 inline-flex w-fit rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-800 dark:border-sky-900/80 dark:bg-sky-950/60 dark:text-sky-200">
             Remote-ready frontend engineer
           </p>
@@ -56,28 +57,24 @@ export function Hero() {
           </div>
         </div>
 
-        <aside className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-2xl shadow-slate-200/70 backdrop-blur dark:border-slate-800 dark:bg-slate-900/60 dark:shadow-black/20">
-          <div className="grid gap-4">
-            {[
-              ["Focus", "Frontend architecture, reusable UI systems, and product-grade implementation."],
-              ["Stack", "React, Next.js, Vue, Nuxt.js, TypeScript, Tailwind CSS, Vite, Webpack."],
-              ["Experience", "Remote collaboration, code reviews, browser extensions, testing, and legacy refactoring."],
-              ["Availability", "Open to remote contract and full-time remote frontend roles."]
-            ].map(([label, value]) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/70"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-500">
-                  {label}
-                </p>
-                <p className="mt-3 text-base leading-7 text-slate-700 dark:text-slate-300">
-                  {value}
-                </p>
-              </div>
-            ))}
-          </div>
-        </aside>
+        <figure className="order-1 mx-auto w-full max-w-[280px] sm:max-w-[340px] lg:order-2 lg:max-w-[420px] lg:justify-self-end">
+          <picture>
+            <source
+              srcSet="/profile-320.jpg 320w, /profile-640.jpg 640w, /profile-960.jpg 960w"
+              sizes="(min-width: 1024px) 420px, (min-width: 640px) 340px, 280px"
+              type="image/jpeg"
+            />
+            <Image
+              src="/profile-640.jpg"
+              alt={`${siteConfig.name} portrait`}
+              width={640}
+              height={640}
+              priority
+              sizes="(min-width: 1024px) 420px, (min-width: 640px) 340px, 280px"
+              className="aspect-square w-full rounded-[2rem] border border-slate-200 bg-white object-cover shadow-2xl shadow-slate-300/70 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30"
+            />
+          </picture>
+        </figure>
       </div>
     </section>
   );

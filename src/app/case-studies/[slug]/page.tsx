@@ -14,6 +14,8 @@ import {
 } from "@/data/case-studies";
 import { siteConfig } from "@/data/portfolio";
 
+const profileImage = "/profile-og.jpg";
+
 type PageProps = {
   params: Promise<{
     slug: string;
@@ -63,10 +65,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: "article",
       images: [
         {
-          url: "/opengraph-image",
+          url: profileImage,
           width: 1200,
-          height: 630,
-          alt: `${caseStudy.title} Case Study`
+          height: 1200,
+          alt: "Mostafa Kazemi portrait"
         }
       ]
     },
@@ -74,7 +76,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title,
       description,
-      images: ["/twitter-image"]
+      images: [profileImage]
     }
   };
 }
@@ -93,7 +95,8 @@ function caseStudyJsonLd(caseStudy: CaseStudy) {
       "@type": "Person",
       name: siteConfig.name,
       jobTitle: siteConfig.title,
-      url: siteConfig.domain
+      url: siteConfig.domain,
+      image: `${siteConfig.domain}${profileImage}`
     },
     publisher: {
       "@type": "Person",

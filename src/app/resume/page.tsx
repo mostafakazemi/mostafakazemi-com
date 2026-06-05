@@ -4,6 +4,7 @@ import resume from "@/data/resume.json";
 
 const domain = "https://mostafakazemi.com";
 const resumeUrl = `${domain}/resume`;
+const profileImage = "/profile-og.jpg";
 const title = "Resume - Mostafa Kazemi | Senior Frontend Engineer";
 const description =
   "ATS-friendly resume for Mostafa Kazemi, also known as Mostafa Kazeminejad, Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, browser extensions, and frontend architecture.";
@@ -39,10 +40,10 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/opengraph-image",
+        url: profileImage,
         width: 1200,
-        height: 630,
-        alt: "Mostafa Kazemi - Senior Frontend Engineer Resume"
+        height: 1200,
+        alt: "Mostafa Kazemi portrait"
       }
     ]
   },
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/twitter-image"]
+    images: [profileImage]
   },
   robots: {
     index: true,
@@ -72,6 +73,7 @@ const personJsonLd = {
   alternateName: resume.profile.alternateNames,
   jobTitle: resume.profile.title,
   url: resume.profile.website,
+  image: `${domain}${profileImage}`,
   email: `mailto:${resume.profile.email}`,
   telephone: resume.profile.phone,
   address: {

@@ -5,6 +5,7 @@ const title = "Mostafa Kazemi - Senior Frontend Engineer";
 const description =
   "Mostafa Kazemi is a Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.";
 const domain = "https://mostafakazemi.com";
+const profileImage = "/profile-og.jpg";
 const alternateNames = [
   "Mostafa Kazeminejad",
   "Mostafa Kazemi Nejad",
@@ -33,6 +34,7 @@ const personStructuredData = {
   alternateName: alternateNames,
   jobTitle: "Senior Frontend Engineer",
   url: domain,
+  image: `${domain}${profileImage}`,
   email: "mailto:mostafa.kazeminejhad@gmail.com",
   sameAs: [
     "https://github.com/mostafakazemi",
@@ -82,10 +84,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: profileImage,
         width: 1200,
-        height: 630,
-        alt: "Mostafa Kazemi - Senior Frontend Engineer"
+        height: 1200,
+        alt: "Mostafa Kazemi portrait"
       }
     ]
   },
@@ -93,7 +95,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/twitter-image"]
+    images: [profileImage]
   },
   robots: {
     index: true,
