@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-06-03T00:00:00.000Z"),
       changeFrequency: "monthly",
       priority: 1
+    },
+    {
+      url: "https://mostafakazemi.com/resume",
+      lastModified: new Date("2026-06-05T00:00:00.000Z"),
+      changeFrequency: "monthly",
+      priority: 0.9
     }
   ];
 }

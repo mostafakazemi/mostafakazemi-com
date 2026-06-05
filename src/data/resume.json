@@ -1,0 +1,141 @@
+{
+  "profile": {
+    "name": "Mostafa Kazemi",
+    "alternateNames": [
+      "Mostafa Kazeminejad",
+      "Mostafa Kazemi Nejad",
+      "مصطفی کاظمی",
+      "مصطفی کاظمی نژاد"
+    ],
+    "title": "Senior Frontend Engineer",
+    "location": "Istanbul, Türkiye",
+    "remote": "Open to Remote Worldwide",
+    "email": "mostafa.kazeminejhad@gmail.com",
+    "phone": "+989183446857",
+    "website": "https://mostafakazemi.com",
+    "github": "https://github.com/mostafakazemi",
+    "linkedin": "https://www.linkedin.com/in/mostafa-kazeminejad-70aba2237/"
+  },
+  "summary": [
+    "Senior Frontend Engineer with 6+ years of experience building scalable web applications, browser extensions, design systems, and modern frontend architectures.",
+    "Experienced in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, reusable component systems, and browser extension development.",
+    "Worked remotely with international teams and contributed to production systems used by thousands of users.",
+    "Strong background in frontend architecture, testing, state management, developer tooling, maintainable codebases, and performance-focused UI engineering.",
+    "Open to remote contract, freelance, and long-term engineering opportunities."
+  ],
+  "skills": [
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Vue.js",
+        "Nuxt.js",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "title": "State Management",
+      "items": ["Redux", "Redux Toolkit", "Pinia"]
+    },
+    {
+      "title": "Testing",
+      "items": ["Cypress", "Playwright", "Vitest", "Jest"]
+    },
+    {
+      "title": "Tooling",
+      "items": ["Vite", "Webpack", "Storybook", "pnpm", "Git"]
+    },
+    {
+      "title": "Architecture",
+      "items": [
+        "Design Systems",
+        "Component Libraries",
+        "Frontend Architecture",
+        "Browser Extensions",
+        "REST APIs",
+        "Performance Optimization"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Frontend Developer",
+      "company": "Sazito",
+      "period": "Jun 2022 - Present",
+      "type": "Part-time",
+      "highlights": [
+        "Developed and maintained large-scale React and Next.js applications.",
+        "Built reusable frontend components and scalable UI systems.",
+        "Improved performance, maintainability, and developer experience.",
+        "Worked with TypeScript, Redux, and modern frontend tooling."
+      ]
+    },
+    {
+      "title": "Frontend Engineer",
+      "company": "Jack Westin",
+      "location": "Remote",
+      "period": "Jun 2022 - Present",
+      "highlights": [
+        "Built and maintained Vue.js and Nuxt.js applications.",
+        "Developed Chrome Extension products and browser-integrated experiences.",
+        "Contributed to reusable UI libraries and design systems.",
+        "Worked on frontend architecture, testing, and performance optimization.",
+        "Collaborated remotely with international teams."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Chamedoon",
+      "period": "Apr 2020 - Jun 2022",
+      "highlights": [
+        "Developed production frontend features.",
+        "Improved application performance and user experience.",
+        "Worked closely with backend and product teams."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Ilam",
+      "degree": "Bachelor of Software Engineering",
+      "graduated": "2012"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Jack Westin",
+      "highlights": [
+        "Public-facing educational platform.",
+        "Vue.js / Nuxt.js applications.",
+        "Browser extension development.",
+        "Component libraries and frontend architecture."
+      ]
+    },
+    {
+      "title": "AAMC Chrome Extension",
+      "highlights": [
+        "Vue 3",
+        "TypeScript",
+        "Browser Extensions",
+        "Shadow DOM",
+        "State Management",
+        "Analytics Integration"
+      ]
+    },
+    {
+      "title": "Sazito",
+      "highlights": [
+        "React",
+        "Next.js",
+        "E-commerce Platform",
+        "Reusable UI Systems",
+        "Frontend Architecture"
+      ]
+    }
+  ]
+}

@@ -46,13 +46,13 @@ export function Hero() {
             >
               View Projects
             </a>
-            <button
-              type="button"
-              disabled
-              className="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-slate-200 bg-slate-100 px-6 py-3 text-sm font-semibold text-slate-400 dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-600"
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-sky-400 hover:text-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
             >
-              Download Resume - Coming soon
-            </button>
+              Download Resume PDF
+            </a>
           </div>
         </div>
 

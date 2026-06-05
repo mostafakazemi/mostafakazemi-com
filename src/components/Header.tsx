@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { navItems, siteConfig } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
@@ -14,8 +15,8 @@ export function Header() {
         className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
         aria-label="Primary navigation"
       >
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="group inline-flex items-center gap-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
           onClick={() => setIsOpen(false)}
         >
@@ -28,17 +29,17 @@ export function Header() {
               {siteConfig.title}
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-200/70 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -65,14 +66,14 @@ export function Header() {
       >
         <div className="mx-auto grid max-w-6xl gap-1">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-800"
               onClick={() => setIsOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
