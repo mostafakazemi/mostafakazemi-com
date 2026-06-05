@@ -238,7 +238,7 @@ function addEducation() {
     paragraph(item.degree, {
       spaceAfter: 0.2
     });
-    paragraph(`${item.school}, ${item.graduated}`, {
+    paragraph([item.school, item.country, item.graduated].filter(Boolean).join(", "), {
       spaceAfter: 1
     });
   }
