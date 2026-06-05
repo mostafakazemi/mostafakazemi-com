@@ -5,7 +5,7 @@ export const siteConfig = {
   email: "mostafa.kazeminejhad@gmail.com",
   links: {
     github: "https://github.com/mostafakazemi",
-    linkedin: "https://www.linkedin.com/in/mostafa-kazeminejad-70aba2237/",
+    linkedin: "https://www.linkedin.com/in/mostafakazemi/",
     telegram: "https://t.me/mesikd",
     whatsapp: "https://wa.me/989183446857"
   }

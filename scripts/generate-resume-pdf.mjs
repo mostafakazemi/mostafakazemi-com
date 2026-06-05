@@ -9,6 +9,10 @@ const outputPath = path.join(rootDir, "public/resume.pdf");
 
 const resume = JSON.parse(await fs.readFile(dataPath, "utf8"));
 
+function displayUrl(url) {
+  return url.replace("https://www.", "").replace("https://", "").replace(/\/$/, "");
+}
+
 const page = {
   width: 612,
   height: 792,
@@ -167,9 +171,9 @@ function addHeader() {
       resume.profile.remote,
       resume.profile.email,
       resume.profile.phone,
-      resume.profile.website.replace("https://", ""),
-      resume.profile.github.replace("https://", ""),
-      resume.profile.linkedin.replace("https://www.", "")
+      displayUrl(resume.profile.website),
+      displayUrl(resume.profile.github),
+      displayUrl(resume.profile.linkedin)
     ].join(" | "),
     {
       size: 7.4,

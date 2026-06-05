@@ -36,7 +36,7 @@ const personStructuredData = {
   email: "mailto:mostafa.kazeminejhad@gmail.com",
   sameAs: [
     "https://github.com/mostafakazemi",
-    "https://www.linkedin.com/in/mostafa-kazeminejad-70aba2237/",
+    "https://www.linkedin.com/in/mostafakazemi/",
     "https://t.me/mesikd"
   ],
   knowsAbout: [
