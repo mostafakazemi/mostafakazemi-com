@@ -12,9 +12,9 @@ const resume = JSON.parse(await fs.readFile(dataPath, "utf8"));
 const page = {
   width: 612,
   height: 792,
-  marginX: 54,
-  marginTop: 50,
-  marginBottom: 48
+  marginX: 40,
+  marginTop: 34,
+  marginBottom: 34
 };
 const contentWidth = page.width - page.marginX * 2;
 
@@ -33,6 +33,7 @@ const state = {
 function normalizeText(value) {
   return String(value)
     .replaceAll("Türkiye", "Turkiye")
+    .replaceAll("–", "-")
     .replace(/[^\x09\x0A\x0D\x20-\x7E\xA0-\xFF]/g, "");
 }
 
@@ -100,11 +101,11 @@ function wrapText(text, size, maxWidth) {
 
 function paragraph(text, options = {}) {
   const {
-    size = 10,
+    size = 8.2,
     font = fonts.regular,
     indent = 0,
-    lineHeight = 14,
-    spaceAfter = 5
+    lineHeight = 9.4,
+    spaceAfter = 1.2
   } = options;
   const lines = wrapText(text, size, contentWidth - indent);
 
@@ -124,42 +125,42 @@ function paragraph(text, options = {}) {
 }
 
 function heading(text) {
-  ensureSpace(28);
-  state.y += 8;
+  ensureSpace(18);
+  state.y += 4.2;
   writeText(text.toUpperCase(), {
-    size: 11,
+    size: 8.8,
     font: fonts.bold
   });
-  state.y += 17;
+  state.y += 10.5;
 }
 
 function bullet(text) {
   paragraph(`- ${text}`, {
-    indent: 10,
-    lineHeight: 13,
-    spaceAfter: 2
+    indent: 8,
+    lineHeight: 9.2,
+    spaceAfter: 0.5
   });
 }
 
 function labelValue(label, value) {
   paragraph(`${label}: ${value}`, {
-    size: 10,
-    lineHeight: 13,
-    spaceAfter: 1
+    size: 8,
+    lineHeight: 9.2,
+    spaceAfter: 0.4
   });
 }
 
 function addHeader() {
   writeText(resume.profile.name, {
-    size: 23,
+    size: 19,
     font: fonts.bold
   });
-  state.y += 27;
+  state.y += 21;
   writeText(resume.profile.title, {
-    size: 13,
+    size: 10.5,
     font: fonts.bold
   });
-  state.y += 20;
+  state.y += 13.5;
   paragraph(
     [
       resume.profile.location,
@@ -171,9 +172,9 @@ function addHeader() {
       resume.profile.linkedin.replace("https://www.", "")
     ].join(" | "),
     {
-      size: 9.5,
-      lineHeight: 13,
-      spaceAfter: 8
+      size: 7.4,
+      lineHeight: 8.8,
+      spaceAfter: 1.5
     }
   );
 }
@@ -182,6 +183,13 @@ function addSummary() {
   heading("Summary");
   for (const item of resume.summary) {
     paragraph(item);
+  }
+}
+
+function addAchievements() {
+  heading("Selected Achievements");
+  for (const item of resume.achievements) {
+    bullet(item);
   }
 }
 
@@ -196,46 +204,35 @@ function addSkills() {
 function addExperience() {
   heading("Experience");
   for (const role of resume.experience) {
-    ensureSpace(62);
+    ensureSpace(56);
     writeText(`${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`, {
-      size: 11,
+      size: 9.4,
       font: fonts.bold
     });
-    state.y += 15;
+    state.y += 11.5;
     writeText([role.period, role.type].filter(Boolean).join(" | "), {
-      size: 9.5,
+      size: 7.7,
       font: fonts.italic
     });
-    state.y += 15;
+    state.y += 9.6;
     for (const item of role.highlights) {
       bullet(item);
     }
-    state.y += 5;
+    paragraph(`Technologies: ${role.technologies.join(", ")}`, {
+      size: 7.7,
+      lineHeight: 8.8,
+      spaceAfter: 0.5
+    });
+    state.y += 1.8;
   }
 }
 
 function addEducation() {
   heading("Education");
   for (const item of resume.education) {
-    paragraph(`${item.school} - ${item.degree}. Graduated: ${item.graduated}`, {
-      spaceAfter: 4
+    paragraph(`${item.degree} - ${item.school} - ${item.graduated}`, {
+      spaceAfter: 1
     });
-  }
-}
-
-function addProjects() {
-  heading("Project Highlights");
-  for (const project of resume.projects) {
-    ensureSpace(48);
-    writeText(project.title, {
-      size: 11,
-      font: fonts.bold
-    });
-    state.y += 15;
-    for (const item of project.highlights) {
-      bullet(item);
-    }
-    state.y += 4;
   }
 }
 
@@ -243,10 +240,10 @@ function buildContent() {
   addPage();
   addHeader();
   addSummary();
+  addAchievements();
   addSkills();
   addExperience();
   addEducation();
-  addProjects();
 }
 
 function streamForCommands(commands) {

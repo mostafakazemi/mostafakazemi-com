@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
@@ -16,247 +16,307 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
 endobj
 6 0 obj
-<< /Length 3656 >>
+<< /Length 6181 >>
 stream
 BT
-/F2 23 Tf
-27 TL
-54 742 Td
+/F2 19 Tf
+23 TL
+40 758 Td
 (Mostafa Kazemi) Tj
 ET
 BT
-/F2 13 Tf
-17 TL
-54 715 Td
+/F2 10.5 Tf
+14.5 TL
+40 737 Td
 (Senior Frontend Engineer) Tj
 ET
 BT
-/F1 9.5 Tf
-13 TL
-54 695 Td
-(Istanbul, Turkiye | Open to Remote Worldwide | mostafa.kazeminejhad@gmail.com | +989183446857 |) Tj
+/F1 7.4 Tf
+8.8 TL
+40 723.5 Td
+(Istanbul, Turkiye | Open to Remote Worldwide | mostafa.kazeminejhad@gmail.com | +989183446857 | mostafakazemi.com | github.com/mostafakazemi |) Tj
 ET
 BT
-/F1 9.5 Tf
-13 TL
-54 682 Td
-(mostafakazemi.com | github.com/mostafakazemi | linkedin.com/in/mostafa-kazeminejad-70aba2237/) Tj
+/F1 7.4 Tf
+8.8 TL
+40 714.7 Td
+(linkedin.com/in/mostafa-kazeminejad-70aba2237/) Tj
 ET
 BT
-/F2 11 Tf
-15 TL
-54 653 Td
+/F2 8.8 Tf
+12.8 TL
+40 700.2 Td
 (SUMMARY) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 636 Td
-(Senior Frontend Engineer with 6+ years of experience building scalable web applications, browser) Tj
+/F1 8.2 Tf
+9.4 TL
+40 689.7 Td
+(Senior Frontend Engineer with 6+ years of experience building scalable web applications, browser extensions, reusable component) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 622 Td
-(extensions, design systems, and modern frontend architectures.) Tj
+/F1 8.2 Tf
+9.4 TL
+40 680.3 Td
+(libraries, and modern frontend architectures.) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 603 Td
-(Experienced in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, reusable) Tj
+/F1 8.2 Tf
+9.4 TL
+40 669.7 Td
+(Specialized in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, and developer tooling.) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 589 Td
-(component systems, and browser extension development.) Tj
+/F1 8.2 Tf
+9.4 TL
+40 659.1 Td
+(Experienced in remote collaboration with international teams and delivering production software used by thousands of users.) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 570 Td
-(Worked remotely with international teams and contributed to production systems used by thousands of) Tj
+/F1 8.2 Tf
+9.4 TL
+40 648.5 Td
+(Strong background in frontend architecture, testing strategies, design systems, state management, and maintainable codebases.) Tj
 ET
 BT
-/F1 10 Tf
-14 TL
-54 556 Td
-(users.) Tj
-ET
-BT
-/F1 10 Tf
-14 TL
-54 537 Td
-(Strong background in frontend architecture, testing, state management, developer tooling, maintainable) Tj
-ET
-BT
-/F1 10 Tf
-14 TL
-54 523 Td
-(codebases, and performance-focused UI engineering.) Tj
-ET
-BT
-/F1 10 Tf
-14 TL
-54 504 Td
+/F1 8.2 Tf
+9.4 TL
+40 637.9 Td
 (Open to remote contract, freelance, and long-term engineering opportunities.) Tj
 ET
 BT
-/F2 11 Tf
-15 TL
-54 477 Td
+/F2 8.8 Tf
+12.8 TL
+40 623.1 Td
+(SELECTED ACHIEVEMENTS) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 612.6 Td
+(- Built and maintained browser extension products integrated with educational platforms.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 602.9000000000001 Td
+(- Developed reusable component libraries and frontend systems shared across multiple applications.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 593.2 Td
+(- Worked across React, Next.js, Vue, and Nuxt.js ecosystems in production environments.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 583.5 Td
+(- Contributed to frontend architecture, testing strategy, and performance optimization initiatives.) Tj
+ET
+BT
+/F2 8.8 Tf
+12.8 TL
+40 569.6000000000001 Td
 (SKILLS) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 460 Td
+/F1 8 Tf
+9.2 TL
+40 559.1000000000001 Td
 (Frontend: React, Next.js, Vue.js, Nuxt.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 446 Td
+/F1 8 Tf
+9.2 TL
+40 549.5000000000001 Td
 (State Management: Redux, Redux Toolkit, Pinia) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 432 Td
+/F1 8 Tf
+9.2 TL
+40 539.9000000000001 Td
 (Testing: Cypress, Playwright, Vitest, Jest) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 418 Td
+/F1 8 Tf
+9.2 TL
+40 530.3000000000002 Td
 (Tooling: Vite, Webpack, Storybook, pnpm, Git) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 404 Td
-(Architecture: Design Systems, Component Libraries, Frontend Architecture, Browser Extensions, REST APIs,) Tj
+/F1 8 Tf
+9.2 TL
+40 520.7000000000002 Td
+(Architecture: Design Systems, Component Libraries, Frontend Architecture, Browser Extensions, REST APIs, Performance Optimization) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-54 391 Td
-(Performance Optimization) Tj
-ET
-BT
-/F2 11 Tf
-15 TL
-54 365 Td
+/F2 8.8 Tf
+12.8 TL
+40 502.9000000000002 Td
 (EXPERIENCE) Tj
 ET
 BT
-/F2 11 Tf
-15 TL
-54 348 Td
+/F2 9.4 Tf
+13.4 TL
+40 492.4000000000002 Td
 (Senior Frontend Developer - Sazito) Tj
 ET
 BT
-/F3 9.5 Tf
-13.5 TL
-54 333 Td
+/F3 7.7 Tf
+11.7 TL
+40 480.9000000000002 Td
 (Jun 2022 - Present | Part-time) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 318 Td
-(- Developed and maintained large-scale React and Next.js applications.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 471.3000000000002 Td
+(- Developed and maintained large-scale React and Next.js applications in the e-commerce domain.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 303 Td
-(- Built reusable frontend components and scalable UI systems.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 461.6000000000002 Td
+(- Built reusable frontend components and scalable UI systems for multiple products.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 288 Td
-(- Improved performance, maintainability, and developer experience.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 451.9000000000002 Td
+(- Improved performance, maintainability, and developer experience through modern frontend practices.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 273 Td
-(- Worked with TypeScript, Redux, and modern frontend tooling.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 442.2000000000002 Td
+(- Worked extensively with TypeScript, Redux, state management, and API integrations.) Tj
 ET
 BT
-/F2 11 Tf
-15 TL
-54 253 Td
-(Frontend Engineer - Jack Westin \(Remote\)) Tj
+/F1 8.2 Tf
+9.2 TL
+48 432.5000000000002 Td
+(- Contributed to frontend architecture decisions and long-term product scalability.) Tj
 ET
 BT
-/F3 9.5 Tf
-13.5 TL
-54 238 Td
+/F1 7.7 Tf
+8.8 TL
+40 422.80000000000024 Td
+(Technologies: React, Next.js, TypeScript, Redux, REST APIs, Tailwind CSS) Tj
+ET
+BT
+/F2 9.4 Tf
+13.4 TL
+40 411.7000000000002 Td
+(Frontend Engineer - Jack Westin \(US-based Remote Team\)) Tj
+ET
+BT
+/F3 7.7 Tf
+11.7 TL
+40 400.2000000000002 Td
 (Jun 2022 - Present) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 223 Td
-(- Built and maintained Vue.js and Nuxt.js applications.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 390.6000000000002 Td
+(- Developed and maintained production Vue.js and Nuxt.js applications used by thousands of students.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 208 Td
-(- Developed Chrome Extension products and browser-integrated experiences.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 380.9000000000002 Td
+(- Built browser extension features and integrated frontend experiences with third-party educational platforms.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 193 Td
-(- Contributed to reusable UI libraries and design systems.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 371.2000000000002 Td
+(- Developed reusable UI systems, component libraries, and frontend infrastructure shared across multiple products.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 178 Td
-(- Worked on frontend architecture, testing, and performance optimization.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 361.5000000000002 Td
+(- Contributed to frontend architecture, testing strategies, performance optimization, and developer experience improvements.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 163 Td
-(- Collaborated remotely with international teams.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 351.80000000000024 Td
+(- Collaborated remotely with international cross-functional teams in a production environment.) Tj
 ET
 BT
-/F2 11 Tf
-15 TL
-54 143 Td
+/F1 7.7 Tf
+8.8 TL
+40 342.10000000000025 Td
+(Technologies: Vue.js, Nuxt.js, Vue 3, TypeScript, Browser Extensions, Cypress, Storybook, Component Libraries) Tj
+ET
+BT
+/F2 9.4 Tf
+13.4 TL
+40 331.0000000000002 Td
 (Frontend Developer - Chamedoon) Tj
 ET
 BT
-/F3 9.5 Tf
-13.5 TL
-54 128 Td
+/F3 7.7 Tf
+11.7 TL
+40 319.5000000000002 Td
 (Apr 2020 - Jun 2022) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 113 Td
-(- Developed production frontend features.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 309.9000000000002 Td
+(- Developed and maintained production Vue.js and Nuxt.js applications.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 98 Td
-(- Improved application performance and user experience.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 300.2000000000002 Td
+(- Built responsive user interfaces and integrated frontend applications with REST APIs.) Tj
 ET
 BT
-/F1 10 Tf
-13 TL
-64 83 Td
-(- Worked closely with backend and product teams.) Tj
+/F1 8.2 Tf
+9.2 TL
+48 290.5000000000002 Td
+(- Worked extensively with Vuex state management and TypeScript.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 280.80000000000024 Td
+(- Improved application performance, maintainability, and code quality through refactoring and optimization initiatives.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 271.10000000000025 Td
+(- Collaborated closely with product and backend teams to deliver new features and improve user experience.) Tj
+ET
+BT
+/F1 8.2 Tf
+9.2 TL
+48 261.4000000000002 Td
+(- Contributed to testing, debugging, and long-term maintainability of the frontend codebase.) Tj
+ET
+BT
+/F1 7.7 Tf
+8.8 TL
+40 251.70000000000016 Td
+(Technologies: Vue.js, Nuxt.js, Vuex, TypeScript, JavaScript, REST APIs, Sass, CSS, HTML5, Git) Tj
+ET
+BT
+/F2 8.8 Tf
+12.8 TL
+40 236.4000000000002 Td
+(EDUCATION) Tj
+ET
+BT
+/F1 8.2 Tf
+9.4 TL
+40 225.9000000000002 Td
+(Bachelor of Software Engineering - University of Ilam - 2012) Tj
 ET
 endstream
 endobj
@@ -264,157 +324,21 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 1255 >>
-stream
-BT
-/F2 11 Tf
-15 TL
-54 734 Td
-(EDUCATION) Tj
-ET
-BT
-/F1 10 Tf
-14 TL
-54 717 Td
-(University of Ilam - Bachelor of Software Engineering. Graduated: 2012) Tj
-ET
-BT
-/F2 11 Tf
-15 TL
-54 691 Td
-(PROJECT HIGHLIGHTS) Tj
-ET
-BT
-/F2 11 Tf
-15 TL
-54 674 Td
-(Jack Westin) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 659 Td
-(- Public-facing educational platform.) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 644 Td
-(- Vue.js / Nuxt.js applications.) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 629 Td
-(- Browser extension development.) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 614 Td
-(- Component libraries and frontend architecture.) Tj
-ET
-BT
-/F2 11 Tf
-15 TL
-54 595 Td
-(AAMC Chrome Extension) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 580 Td
-(- Vue 3) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 565 Td
-(- TypeScript) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 550 Td
-(- Browser Extensions) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 535 Td
-(- Shadow DOM) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 520 Td
-(- State Management) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 505 Td
-(- Analytics Integration) Tj
-ET
-BT
-/F2 11 Tf
-15 TL
-54 486 Td
-(Sazito) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 471 Td
-(- React) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 456 Td
-(- Next.js) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 441 Td
-(- E-commerce Platform) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 426 Td
-(- Reusable UI Systems) Tj
-ET
-BT
-/F1 10 Tf
-13 TL
-64 411 Td
-(- Frontend Architecture) Tj
-ET
-endstream
-endobj
-9 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
-endobj
-10 0 obj
-<< /Title (Mostafa Kazemi Resume) /Author (Mostafa Kazemi) /Subject (Senior Frontend Engineer Resume) /Keywords (Mostafa Kazemi, Senior Frontend Engineer, React, Next.js, Vue, Nuxt.js, TypeScript) /Creator (mostafakazemi.com) /Producer (mostafakazemi.com Resume Generator) /CreationDate (D:20260605074146Z) >>
+<< /Title (Mostafa Kazemi Resume) /Author (Mostafa Kazemi) /Subject (Senior Frontend Engineer Resume) /Keywords (Mostafa Kazemi, Senior Frontend Engineer, React, Next.js, Vue, Nuxt.js, TypeScript) /Creator (mostafakazemi.com) /Producer (mostafakazemi.com Resume Generator) /CreationDate (D:20260605075426Z) >>
 endobj
 xref
-0 11
+0 9
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
-0000000127 00000 n 
-0000000197 00000 n 
-0000000272 00000 n 
-0000000350 00000 n 
-0000004057 00000 n 
-0000004203 00000 n 
-0000005509 00000 n 
-0000005655 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000344 00000 n 
+0000006576 00000 n 
+0000006722 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R /Info 10 0 R >>
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
 startxref
-5981
+7047
 %%EOF

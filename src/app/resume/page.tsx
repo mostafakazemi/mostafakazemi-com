@@ -206,6 +206,17 @@ export default function ResumePage() {
               </div>
             </Section>
 
+            <Section title="Selected Achievements">
+              <ul className="grid gap-2">
+                {resume.achievements.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Section>
+
             <Section title="Skills">
               <div className="grid gap-5 md:grid-cols-2">
                 {resume.skills.map((group) => (
@@ -247,6 +258,12 @@ export default function ResumePage() {
                         </li>
                       ))}
                     </ul>
+                    <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                      <span className="font-semibold text-slate-950 dark:text-white">
+                        Technologies:
+                      </span>{" "}
+                      {role.technologies.join(", ")}
+                    </p>
                   </section>
                 ))}
               </div>
@@ -256,10 +273,13 @@ export default function ResumePage() {
               {resume.education.map((item) => (
                 <div key={item.school}>
                   <h3 className="text-lg font-semibold text-slate-950 dark:text-white">
-                    {item.school}
+                    {item.degree}
                   </h3>
                   <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                    {item.degree} | Graduated: {item.graduated}
+                    {item.school}
+                  </p>
+                  <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">
+                    {item.graduated}
                   </p>
                 </div>
               ))}

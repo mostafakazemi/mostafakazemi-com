@@ -17,11 +17,17 @@
     "linkedin": "https://www.linkedin.com/in/mostafa-kazeminejad-70aba2237/"
   },
   "summary": [
-    "Senior Frontend Engineer with 6+ years of experience building scalable web applications, browser extensions, design systems, and modern frontend architectures.",
-    "Experienced in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, reusable component systems, and browser extension development.",
-    "Worked remotely with international teams and contributed to production systems used by thousands of users.",
-    "Strong background in frontend architecture, testing, state management, developer tooling, maintainable codebases, and performance-focused UI engineering.",
+    "Senior Frontend Engineer with 6+ years of experience building scalable web applications, browser extensions, reusable component libraries, and modern frontend architectures.",
+    "Specialized in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, and developer tooling.",
+    "Experienced in remote collaboration with international teams and delivering production software used by thousands of users.",
+    "Strong background in frontend architecture, testing strategies, design systems, state management, and maintainable codebases.",
     "Open to remote contract, freelance, and long-term engineering opportunities."
+  ],
+  "achievements": [
+    "Built and maintained browser extension products integrated with educational platforms.",
+    "Developed reusable component libraries and frontend systems shared across multiple applications.",
+    "Worked across React, Next.js, Vue, and Nuxt.js ecosystems in production environments.",
+    "Contributed to frontend architecture, testing strategy, and performance optimization initiatives."
   ],
   "skills": [
     {
@@ -66,36 +72,63 @@
     {
       "title": "Senior Frontend Developer",
       "company": "Sazito",
-      "period": "Jun 2022 - Present",
+      "period": "Jun 2022 – Present",
       "type": "Part-time",
       "highlights": [
-        "Developed and maintained large-scale React and Next.js applications.",
-        "Built reusable frontend components and scalable UI systems.",
-        "Improved performance, maintainability, and developer experience.",
-        "Worked with TypeScript, Redux, and modern frontend tooling."
-      ]
+        "Developed and maintained large-scale React and Next.js applications in the e-commerce domain.",
+        "Built reusable frontend components and scalable UI systems for multiple products.",
+        "Improved performance, maintainability, and developer experience through modern frontend practices.",
+        "Worked extensively with TypeScript, Redux, state management, and API integrations.",
+        "Contributed to frontend architecture decisions and long-term product scalability."
+      ],
+      "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
     },
     {
       "title": "Frontend Engineer",
       "company": "Jack Westin",
-      "location": "Remote",
-      "period": "Jun 2022 - Present",
+      "location": "US-based Remote Team",
+      "period": "Jun 2022 – Present",
       "highlights": [
-        "Built and maintained Vue.js and Nuxt.js applications.",
-        "Developed Chrome Extension products and browser-integrated experiences.",
-        "Contributed to reusable UI libraries and design systems.",
-        "Worked on frontend architecture, testing, and performance optimization.",
-        "Collaborated remotely with international teams."
+        "Developed and maintained production Vue.js and Nuxt.js applications used by thousands of students.",
+        "Built browser extension features and integrated frontend experiences with third-party educational platforms.",
+        "Developed reusable UI systems, component libraries, and frontend infrastructure shared across multiple products.",
+        "Contributed to frontend architecture, testing strategies, performance optimization, and developer experience improvements.",
+        "Collaborated remotely with international cross-functional teams in a production environment."
+      ],
+      "technologies": [
+        "Vue.js",
+        "Nuxt.js",
+        "Vue 3",
+        "TypeScript",
+        "Browser Extensions",
+        "Cypress",
+        "Storybook",
+        "Component Libraries"
       ]
     },
     {
       "title": "Frontend Developer",
       "company": "Chamedoon",
-      "period": "Apr 2020 - Jun 2022",
+      "period": "Apr 2020 – Jun 2022",
       "highlights": [
-        "Developed production frontend features.",
-        "Improved application performance and user experience.",
-        "Worked closely with backend and product teams."
+        "Developed and maintained production Vue.js and Nuxt.js applications.",
+        "Built responsive user interfaces and integrated frontend applications with REST APIs.",
+        "Worked extensively with Vuex state management and TypeScript.",
+        "Improved application performance, maintainability, and code quality through refactoring and optimization initiatives.",
+        "Collaborated closely with product and backend teams to deliver new features and improve user experience.",
+        "Contributed to testing, debugging, and long-term maintainability of the frontend codebase."
+      ],
+      "technologies": [
+        "Vue.js",
+        "Nuxt.js",
+        "Vuex",
+        "TypeScript",
+        "JavaScript",
+        "REST APIs",
+        "Sass",
+        "CSS",
+        "HTML5",
+        "Git"
       ]
     }
   ],
