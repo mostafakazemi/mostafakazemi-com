@@ -36,7 +36,8 @@ const state = {
 
 function normalizeText(value) {
   return String(value)
-    .replaceAll("Türkiye", "Turkiye")
+    .replaceAll("Türkiye", "Turkey")
+    .replaceAll("Turkiye", "Turkey")
     .replaceAll("–", "-")
     .replace(/[^\x09\x0A\x0D\x20-\x7E\xA0-\xFF]/g, "");
 }
@@ -234,7 +235,10 @@ function addExperience() {
 function addEducation() {
   heading("Education");
   for (const item of resume.education) {
-    paragraph(`${item.degree} - ${item.school} - ${item.graduated}`, {
+    paragraph(item.degree, {
+      spaceAfter: 0.2
+    });
+    paragraph(`${item.school}, ${item.graduated}`, {
       spaceAfter: 1
     });
   }
