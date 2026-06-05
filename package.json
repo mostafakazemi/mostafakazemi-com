@@ -4,8 +4,9 @@
   "private": true,
   "packageManager": "pnpm@10.19.0",
   "scripts": {
+    "generate:case-studies": "node scripts/generate-case-study-registry.mjs",
     "generate:resume": "node scripts/generate-resume-pdf.mjs",
-    "prebuild": "pnpm generate:resume",
+    "prebuild": "pnpm generate:case-studies && pnpm generate:resume",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
