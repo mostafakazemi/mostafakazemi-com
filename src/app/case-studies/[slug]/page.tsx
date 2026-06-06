@@ -14,7 +14,7 @@ import {
 } from "@/data/case-studies";
 import { siteConfig } from "@/data/portfolio";
 
-const profileImage = "/profile-og.webp";
+const profileImage = "/profile-og.jpg";
 
 type PageProps = {
   params: Promise<{

@@ -5,7 +5,7 @@ const title = "Mostafa Kazemi - Senior Frontend Engineer";
 const description =
   "Mostafa Kazemi is a Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.";
 const domain = "https://mostafakazemi.com";
-const profileImage = "/profile-og.webp";
+const profileImage = "/profile-og.jpg";
 const alternateNames = [
   "Mostafa Kazeminejad",
   "Mostafa Kazemi Nejad",

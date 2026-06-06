@@ -4,7 +4,7 @@ import resume from "@/data/resume.json";
 
 const domain = "https://mostafakazemi.com";
 const resumeUrl = `${domain}/resume`;
-const profileImage = "/profile-og.webp";
+const profileImage = "/profile-og.jpg";
 const title = "Resume - Mostafa Kazemi | Senior Frontend Engineer";
 const description =
   "ATS-friendly resume for Mostafa Kazemi, also known as Mostafa Kazeminejad, Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, browser extensions, and frontend architecture.";
