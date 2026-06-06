@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
 
+const profileBlurDataUrl =
+  "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoYABgAPt1mq1EopSOiqAgBEBuJYgDGBYvWXtIKJrWUpvVjDsiuqyn94vYvE/XvAAD+79edCjgI0L4Cvh7AJQ5opeVj52eVjZrQS8j2MRcw1qf+lvUEDM9cupo5bBIVeIRDk61OGTDfo5uKstcuzX0ieMRVTx7b8YSx/ReQ2kZtsbm/PK1oZvngfbMl2E2PrvcfQI17yMZCPuKSiLYoAYaPLtJZJAAA";
+
 export function Hero() {
   return (
     <section
@@ -52,22 +55,28 @@ export function Hero() {
         </div>
 
         <figure className="order-1 mx-auto w-full max-w-[220px] sm:max-w-[280px] lg:order-2 lg:max-w-[360px] lg:justify-self-end">
-          <picture>
-            <source
-              srcSet="/profile-320.jpg 320w, /profile-640.jpg 640w, /profile-960.jpg 960w"
-              sizes="(min-width: 1024px) 360px, (min-width: 640px) 280px, 220px"
-              type="image/jpeg"
-            />
-            <Image
-              src="/profile-640.jpg"
-              alt={`${siteConfig.name} portrait`}
-              width={640}
-              height={640}
-              priority
-              sizes="(min-width: 1024px) 360px, (min-width: 640px) 280px, 220px"
-              className="aspect-square w-full rounded-[1.75rem] border border-slate-200 bg-white object-cover shadow-xl shadow-slate-300/60 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30"
-            />
-          </picture>
+          <div
+            className="relative aspect-square overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white bg-cover bg-center shadow-xl shadow-slate-300/60 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30"
+            style={{ backgroundImage: `url(${profileBlurDataUrl})` }}
+          >
+            <picture className="absolute inset-0 block">
+              <source
+                srcSet="/profile-320.webp 320w, /profile-640.webp 640w, /profile-960.webp 960w"
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 280px, 220px"
+                type="image/webp"
+              />
+              <Image
+                src="/profile-640.webp"
+                alt={`${siteConfig.name} portrait`}
+                fill
+                priority
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 280px, 220px"
+                placeholder="blur"
+                blurDataURL={profileBlurDataUrl}
+                className="object-cover"
+              />
+            </picture>
+          </div>
         </figure>
       </div>
     </section>
