@@ -16,9 +16,9 @@ function displayUrl(url) {
 const page = {
   width: 612,
   height: 792,
-  marginX: 40,
-  marginTop: 34,
-  marginBottom: 34
+  marginX: 44,
+  marginTop: 42,
+  marginBottom: 42
 };
 const contentWidth = page.width - page.marginX * 2;
 
@@ -36,7 +36,6 @@ const state = {
 
 function normalizeText(value) {
   return String(value)
-    .replaceAll("Türkiye", "Turkey")
     .replaceAll("Turkiye", "Turkey")
     .replaceAll("–", "-")
     .replace(/[^\x09\x0A\x0D\x20-\x7E\xA0-\xFF]/g, "");
@@ -67,19 +66,27 @@ function writeText(text, options = {}) {
     y = state.y,
     size = 10,
     font = fonts.regular,
-    leading = size + 4
+    leading = size + 4,
+    align = "left",
+    width = contentWidth
   } = options;
+  const textX =
+    align === "center"
+      ? x + (width - estimateWidth(text, size)) / 2
+      : align === "right"
+        ? x + width - estimateWidth(text, size)
+        : x;
 
   state.commands.push("BT");
   state.commands.push(`/${font} ${size} Tf`);
   state.commands.push(`${leading} TL`);
-  state.commands.push(`${x} ${page.height - y} Td`);
+  state.commands.push(`${textX} ${page.height - y} Td`);
   state.commands.push(`(${pdfEscape(text)}) Tj`);
   state.commands.push("ET");
 }
 
 function estimateWidth(text, size) {
-  return normalizeText(text).length * size * 0.48;
+  return normalizeText(text).length * size * 0.46;
 }
 
 function wrapText(text, size, maxWidth) {
@@ -108,20 +115,25 @@ function paragraph(text, options = {}) {
   const {
     size = 8.2,
     font = fonts.regular,
+    x = page.marginX,
     indent = 0,
-    lineHeight = 9.4,
-    spaceAfter = 1.2
+    maxWidth = contentWidth,
+    lineHeight = 10.2,
+    spaceAfter = 1.2,
+    align = "left"
   } = options;
-  const lines = wrapText(text, size, contentWidth - indent);
+  const lines = wrapText(text, size, maxWidth - indent);
 
   ensureSpace(lines.length * lineHeight + spaceAfter);
 
   for (const line of lines) {
     writeText(line, {
-      x: page.marginX + indent,
+      x: x + indent,
       size,
       font,
-      leading: lineHeight
+      leading: lineHeight,
+      align,
+      width: maxWidth - indent
     });
     state.y += lineHeight;
   }
@@ -130,65 +142,117 @@ function paragraph(text, options = {}) {
 }
 
 function heading(text) {
-  ensureSpace(18);
-  state.y += 4.2;
+  ensureSpace(70);
+  state.y += 8;
   writeText(text.toUpperCase(), {
-    size: 8.8,
+    size: 9.2,
     font: fonts.bold
   });
-  state.y += 10.5;
+  state.y += 6;
+  drawLine(page.marginX, state.y, page.marginX + contentWidth);
+  state.y += 11;
 }
 
 function bullet(text) {
   paragraph(`- ${text}`, {
-    indent: 8,
-    lineHeight: 9.2,
-    spaceAfter: 0.5
+    indent: 9,
+    lineHeight: 10,
+    spaceAfter: 1.1
   });
 }
 
-function labelValue(label, value) {
+function labelValue(label, value, options = {}) {
+  const { size = 8, lineHeight = 9.8, spaceAfter = 1.2, font = fonts.regular } = options;
   paragraph(`${label}: ${value}`, {
-    size: 8,
-    lineHeight: 9.2,
-    spaceAfter: 0.4
+    size,
+    font,
+    lineHeight,
+    spaceAfter
   });
+}
+
+function drawLine(x1, y, x2, width = 0.65) {
+  const pdfY = page.height - y;
+  state.commands.push(`${width} w`);
+  state.commands.push(`${x1} ${pdfY} m`);
+  state.commands.push(`${x2} ${pdfY} l`);
+  state.commands.push("S");
+}
+
+function addCenteredText(text, options = {}) {
+  const { size = 8, font = fonts.regular, lineHeight = size + 2.5, spaceAfter = 0 } = options;
+  paragraph(text, {
+    size,
+    font,
+    lineHeight,
+    spaceAfter,
+    align: "center"
+  });
+}
+
+function addInlineRow(left, right, options = {}) {
+  const { size = 8, font = fonts.bold, rightFont = fonts.regular, lineHeight = size + 2 } = options;
+  ensureSpace(lineHeight);
+  writeText(left, {
+    size,
+    font
+  });
+  if (right) {
+    writeText(right, {
+      size: size - 0.2,
+      font: rightFont,
+      align: "right"
+    });
+  }
+  state.y += lineHeight;
 }
 
 function addHeader() {
   writeText(resume.profile.name, {
-    size: 19,
-    font: fonts.bold
+    size: 20,
+    font: fonts.bold,
+    align: "center"
   });
-  state.y += 21;
+  state.y += 18;
   writeText(resume.profile.title, {
-    size: 10.5,
-    font: fonts.bold
+    size: 9.5,
+    font: fonts.regular,
+    align: "center"
   });
-  state.y += 13.5;
-  paragraph(
+  state.y += 12;
+  addCenteredText(
     [
       resume.profile.location,
       resume.profile.remote,
       resume.profile.email,
-      resume.profile.phone,
-      displayUrl(resume.profile.website),
-      displayUrl(resume.profile.github),
-      displayUrl(resume.profile.linkedin)
+      resume.profile.phone
     ].join(" | "),
     {
       size: 7.4,
-      lineHeight: 8.8,
-      spaceAfter: 1.5
+      lineHeight: 9,
+      spaceAfter: 0.8
+    }
+  );
+  addCenteredText(
+    [
+      displayUrl(resume.profile.website),
+      displayUrl(resume.profile.linkedin),
+      displayUrl(resume.profile.github)
+    ].join(" | "),
+    {
+      size: 7.4,
+      lineHeight: 9,
+      spaceAfter: 3
     }
   );
 }
 
 function addSummary() {
-  heading("Summary");
-  for (const item of resume.summary) {
-    paragraph(item);
-  }
+  heading("Professional Summary");
+  paragraph(resume.summary.join(" "), {
+    lineHeight: 10.4,
+    spaceAfter: 2
+  });
 }
 
 function addAchievements() {
@@ -203,43 +267,84 @@ function addSkills() {
   for (const group of resume.skills) {
     labelValue(group.title, group.items.join(", "));
   }
-  state.y += 4;
+  state.y += 2;
 }
 
 function addExperience() {
-  heading("Experience");
+  heading("Work Experience");
   for (const role of resume.experience) {
-    ensureSpace(56);
-    writeText(`${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`, {
-      size: 9.4,
-      font: fonts.bold
+    ensureSpace(100);
+    addInlineRow(
+      `${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`,
+      [role.period, role.type].filter(Boolean).join(" | "),
+      {
+        size: 9.2,
+        font: fonts.bold,
+        rightFont: fonts.regular,
+        lineHeight: 12
+      }
+    );
+    paragraph(`Technologies: ${role.technologies.join(", ")}`, {
+      size: 7.8,
+      font: fonts.italic,
+      lineHeight: 9.6,
+      spaceAfter: 2
     });
-    state.y += 11.5;
-    writeText([role.period, role.type].filter(Boolean).join(" | "), {
-      size: 7.7,
-      font: fonts.italic
-    });
-    state.y += 9.6;
     for (const item of role.highlights) {
       bullet(item);
     }
-    paragraph(`Technologies: ${role.technologies.join(", ")}`, {
-      size: 7.7,
-      lineHeight: 8.8,
-      spaceAfter: 0.5
+    state.y += 6;
+  }
+}
+
+function addCaseStudies() {
+  heading("Selected Case Studies");
+  for (const study of resume.caseStudies) {
+    ensureSpace(125);
+    addInlineRow(study.title, "", {
+      size: 9.1,
+      lineHeight: 12
     });
-    state.y += 1.8;
+    labelValue("Problem", study.problem, {
+      spaceAfter: 1
+    });
+    labelValue("Responsibilities", study.responsibilities.join("; "), {
+      spaceAfter: 1
+    });
+    labelValue("Technical Challenges", study.technicalChallenges.join(", "), {
+      spaceAfter: 1
+    });
+    labelValue("Solution", study.solution, {
+      spaceAfter: 1
+    });
+    labelValue("Impact", study.impact, {
+      spaceAfter: 1
+    });
+    paragraph(`Technologies: ${study.technologies.join(", ")}`, {
+      size: 7.8,
+      font: fonts.italic,
+      lineHeight: 9.4,
+      spaceAfter: 6
+    });
   }
 }
 
 function addEducation() {
   heading("Education");
   for (const item of resume.education) {
-    paragraph(item.degree, {
-      spaceAfter: 0.2
-    });
-    paragraph([item.school, item.country, item.graduated].filter(Boolean).join(", "), {
+    paragraph([item.school, item.country].filter(Boolean).join(", "), {
+      size: 8.4,
+      font: fonts.bold,
+      lineHeight: 10,
       spaceAfter: 1
+    });
+    paragraph(item.degree, {
+      lineHeight: 10,
+      spaceAfter: 0.8
+    });
+    paragraph(`Graduated: ${item.graduated}`, {
+      lineHeight: 10,
+      spaceAfter: 1.6
     });
   }
 }
@@ -248,10 +353,11 @@ function buildContent() {
   addPage();
   addHeader();
   addSummary();
-  addAchievements();
-  addSkills();
   addExperience();
+  addCaseStudies();
   addEducation();
+  addSkills();
+  addAchievements();
 }
 
 function streamForCommands(commands) {
@@ -278,9 +384,15 @@ function createPdf() {
 
   const catalogId = addObject("placeholder");
   const pagesId = addObject("placeholder");
-  const regularFontId = addObject("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
-  const boldFontId = addObject("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>");
-  const italicFontId = addObject("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>");
+  const regularFontId = addObject(
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>"
+  );
+  const boldFontId = addObject(
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"
+  );
+  const italicFontId = addObject(
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>"
+  );
   const pageIds = [];
 
   for (const commands of state.pages) {

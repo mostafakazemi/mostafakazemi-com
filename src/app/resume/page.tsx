@@ -98,10 +98,12 @@ function Section({
   title: string;
 }>) {
   return (
-    <section className="border-t border-slate-200 pt-8 dark:border-slate-800">
-      <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
-        {title}
-      </h2>
+    <section className="pt-8">
+      <div className="border-b border-slate-900 pb-2 dark:border-slate-200">
+        <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-950 dark:text-white">
+          {title}
+        </h2>
+      </div>
       <div className="mt-5">{children}</div>
     </section>
   );
@@ -134,138 +136,110 @@ export default function ResumePage() {
           </a>
         </nav>
 
-        <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:p-10 dark:border-slate-800 dark:bg-slate-900/80">
-          <header className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
-                Resume
-              </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl dark:text-white">
-                {resume.profile.name}
-              </h1>
-              <p className="mt-3 text-xl font-semibold text-sky-700 dark:text-sky-300">
-                {resume.profile.title}
-              </p>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300">
-                ATS-friendly resume for remote contract, freelance, and long-term
-                frontend engineering opportunities.
-              </p>
-            </div>
-
-            <address className="not-italic">
-              <dl className="grid gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm dark:border-slate-800 dark:bg-slate-950/70">
-                <div>
-                  <dt className="font-semibold text-slate-950 dark:text-white">Location</dt>
-                  <dd className="mt-1 text-slate-600 dark:text-slate-300">
-                    {resume.profile.location}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-slate-950 dark:text-white">Remote</dt>
-                  <dd className="mt-1 text-slate-600 dark:text-slate-300">
-                    {resume.profile.remote}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-slate-950 dark:text-white">Email</dt>
-                  <dd className="mt-1">
-                    <a className="text-sky-700 hover:text-sky-600 dark:text-sky-300" href={`mailto:${resume.profile.email}`}>
-                      {resume.profile.email}
-                    </a>
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-slate-950 dark:text-white">Phone</dt>
-                  <dd className="mt-1 text-slate-600 dark:text-slate-300">
-                    {resume.profile.phone}
-                  </dd>
-                </div>
-                {[resume.profile.website, resume.profile.github, resume.profile.linkedin].map((link) => (
-                  <div key={link}>
-                    <dt className="sr-only">Link</dt>
-                    <dd>
-                      <a
-                        className="text-sky-700 hover:text-sky-600 dark:text-sky-300"
-                        href={link}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {cleanUrl(link)}
-                      </a>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+        <article className="mx-auto max-w-3xl rounded-xl border border-slate-200 bg-white p-7 shadow-sm sm:p-12 dark:border-slate-800 dark:bg-slate-900/90">
+          <header className="text-center">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+              {resume.profile.name}
+            </h1>
+            <p className="mt-1 text-sm font-medium text-slate-700 dark:text-slate-300">
+              {resume.profile.title}
+            </p>
+            <address className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs not-italic text-slate-600 dark:text-slate-300">
+              <span>{resume.profile.location}</span>
+              <span>{resume.profile.remote}</span>
+              <a className="hover:text-sky-700 dark:hover:text-sky-300" href={`mailto:${resume.profile.email}`}>
+                {resume.profile.email}
+              </a>
+              <span>{resume.profile.phone}</span>
+              {[resume.profile.website, resume.profile.linkedin, resume.profile.github].map((link) => (
+                <a
+                  key={link}
+                  className="hover:text-sky-700 dark:hover:text-sky-300"
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {cleanUrl(link)}
+                </a>
+              ))}
             </address>
           </header>
 
-          <div className="mt-10 grid gap-10">
-            <Section title="Summary">
-              <div className="grid gap-4 text-base leading-8 text-slate-600 dark:text-slate-300">
-                {resume.summary.map((item) => (
-                  <p key={item}>{item}</p>
-                ))}
-              </div>
+          <div className="mt-8 grid gap-8">
+            <Section title="Professional Summary">
+              <p className="text-sm leading-8 text-slate-700 dark:text-slate-300">
+                {resume.summary.join(" ")}
+              </p>
             </Section>
 
-            <Section title="Selected Achievements">
-              <ul className="grid gap-2">
-                {resume.achievements.map((item) => (
-                  <li key={item} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </Section>
-
-            <Section title="Skills">
-              <div className="grid gap-5 md:grid-cols-2">
-                {resume.skills.map((group) => (
-                  <div key={group.title}>
-                    <h3 className="font-semibold text-slate-950 dark:text-white">
-                      {group.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                      {group.items.join(", ")}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </Section>
-
-            <Section title="Experience">
+            <Section title="Work Experience">
               <div className="grid gap-8">
                 {resume.experience.map((role) => (
                   <section key={`${role.company}-${role.title}`}>
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-                      <div>
-                        <h3 className="text-xl font-semibold text-slate-950 dark:text-white">
-                          {role.title}
-                        </h3>
-                        <p className="mt-1 font-medium text-sky-700 dark:text-sky-300">
-                          {role.company}
-                          {role.location ? ` (${role.location})` : ""}
-                        </p>
-                      </div>
-                      <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                      <h3 className="text-sm font-bold text-slate-950 dark:text-white">
+                        {role.title} - {role.company}
+                        {role.location ? ` (${role.location})` : ""}
+                      </h3>
+                      <p className="text-xs font-medium text-slate-600 dark:text-slate-400">
                         {[role.period, role.type].filter(Boolean).join(" | ")}
                       </p>
                     </div>
-                    <ul className="mt-4 grid gap-2">
-                      {role.highlights.map((item) => (
-                        <li key={item} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                    <p className="mt-2 text-xs leading-6 text-slate-600 dark:text-slate-300">
                       <span className="font-semibold text-slate-950 dark:text-white">
                         Technologies:
                       </span>{" "}
                       {role.technologies.join(", ")}
                     </p>
+                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                      {role.highlights.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </section>
+                ))}
+              </div>
+            </Section>
+
+            <Section title="Selected Case Studies">
+              <div className="grid gap-8">
+                {resume.caseStudies.map((caseStudy) => (
+                  <section key={caseStudy.title}>
+                    <h3 className="text-sm font-bold text-slate-950 dark:text-white">
+                      {caseStudy.title}
+                    </h3>
+                    <dl className="mt-3 grid gap-3 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">Problem</dt>
+                        <dd>{caseStudy.problem}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">
+                          Responsibilities
+                        </dt>
+                        <dd>{caseStudy.responsibilities.join("; ")}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">
+                          Technical Challenges
+                        </dt>
+                        <dd>{caseStudy.technicalChallenges.join(", ")}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">Solution</dt>
+                        <dd>{caseStudy.solution}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">Impact</dt>
+                        <dd>{caseStudy.impact}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-slate-950 dark:text-white">
+                          Technologies
+                        </dt>
+                        <dd>{caseStudy.technologies.join(", ")}</dd>
+                      </div>
+                    </dl>
                   </section>
                 ))}
               </div>
@@ -274,33 +248,38 @@ export default function ResumePage() {
             <Section title="Education">
               {resume.education.map((item) => (
                 <div key={item.school}>
-                  <h3 className="text-lg font-semibold text-slate-950 dark:text-white">
-                    {item.degree}
+                  <h3 className="text-sm font-bold text-slate-950 dark:text-white">
+                    {[item.school, item.country].filter(Boolean).join(", ")}
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                    {[item.school, item.country, item.graduated].filter(Boolean).join(", ")}
+                  <p className="mt-2 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                    {item.degree}
+                  </p>
+                  <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">
+                    Graduated: {item.graduated}
                   </p>
                 </div>
               ))}
             </Section>
 
-            <Section title="Project Highlights">
-              <div className="grid gap-6 md:grid-cols-3">
-                {resume.projects.map((project) => (
-                  <section key={project.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950/70">
-                    <h3 className="font-semibold text-slate-950 dark:text-white">
-                      {project.title}
-                    </h3>
-                    <ul className="mt-3 grid gap-2">
-                      {project.highlights.map((item) => (
-                        <li key={item} className="text-sm leading-6 text-slate-600 dark:text-slate-300">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
+            <Section title="Skills">
+              <div className="grid gap-3 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                {resume.skills.map((group) => (
+                  <p key={group.title}>
+                    <span className="font-bold text-slate-950 dark:text-white">
+                      {group.title}:
+                    </span>{" "}
+                    {group.items.join(", ")}
+                  </p>
                 ))}
               </div>
+            </Section>
+
+            <Section title="Selected Achievements">
+              <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                {resume.achievements.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </Section>
           </div>
         </article>
@@ -310,8 +289,7 @@ export default function ResumePage() {
             <div>
               <h2 className="text-2xl font-semibold">Interested in working together?</h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300">
-                I&apos;m open to remote contract, freelance, and long-term frontend
-                engineering opportunities.
+                I&apos;m open to remote and long-term frontend engineering opportunities.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">

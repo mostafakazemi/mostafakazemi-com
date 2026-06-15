@@ -8,7 +8,7 @@
       "مصطفی کاظمی نژاد"
     ],
     "title": "Senior Frontend Engineer",
-    "location": "Istanbul, Turkey",
+    "location": "Istanbul, Türkiye",
     "remote": "Open to Remote Worldwide",
     "email": "mostafa.kazeminejhad@gmail.com",
     "phone": "+98 918 344 6857",
@@ -21,13 +21,13 @@
     "Specialized in React, Next.js, Vue, Nuxt.js, TypeScript, frontend performance optimization, and developer tooling.",
     "Experienced in remote collaboration with international teams and delivering production software used by thousands of users.",
     "Strong background in frontend architecture, testing strategies, design systems, state management, and maintainable codebases.",
-    "Open to remote contract, freelance, and long-term engineering opportunities."
+    "Open to remote and long-term engineering opportunities."
   ],
   "achievements": [
-    "Built and maintained browser extension products integrated with educational platforms.",
-    "Developed reusable component libraries and frontend systems shared across multiple applications.",
-    "Worked across React, Next.js, Vue, and Nuxt.js ecosystems in production environments.",
-    "Contributed to frontend architecture, testing strategy, and performance optimization initiatives."
+    "Enabled browser-integrated product experiences by contributing extension UI patterns for third-party educational platforms.",
+    "Reduced duplicated frontend work by contributing reusable component libraries and UI systems shared across multiple applications.",
+    "Improved long-term maintainability by strengthening TypeScript, state management, and frontend architecture patterns.",
+    "Supported performance and developer-experience improvements across production React, Next.js, Vue, and Nuxt.js codebases."
   ],
   "skills": [
     {
@@ -75,11 +75,11 @@
       "period": "Jun 2022 – Present",
       "type": "Part-time",
       "highlights": [
-        "Developed and maintained large-scale React and Next.js applications in the e-commerce domain.",
-        "Built reusable frontend components and scalable UI systems for multiple products.",
-        "Improved performance, maintainability, and developer experience through modern frontend practices.",
-        "Worked extensively with TypeScript, Redux, state management, and API integrations.",
-        "Contributed to frontend architecture decisions and long-term product scalability."
+        "Scaled React and Next.js frontend features for e-commerce products with a focus on maintainability and long-term product growth.",
+        "Standardized reusable UI components and frontend patterns used across multiple product surfaces.",
+        "Improved performance, maintainability, and developer experience through refactoring, TypeScript practices, and modern tooling.",
+        "Strengthened Redux state management and REST API integration patterns for complex product workflows.",
+        "Contributed to frontend architecture decisions that supported scalable online-store and platform experiences."
       ],
       "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
     },
@@ -89,11 +89,11 @@
       "location": "US-based Remote Team",
       "period": "Jun 2022 – Present",
       "highlights": [
-        "Developed and maintained production Vue.js and Nuxt.js applications used by thousands of MCAT students.",
-        "Built browser extension features and integrated frontend experiences with third-party educational platforms.",
-        "Developed reusable UI systems, component libraries, and frontend infrastructure shared across multiple products.",
-        "Contributed to frontend architecture, testing strategies, performance optimization, and developer experience improvements.",
-        "Collaborated remotely with international cross-functional teams in a production environment."
+        "Evolved production Vue.js and Nuxt.js applications used by thousands of MCAT students.",
+        "Delivered browser extension features and embedded frontend experiences for third-party educational platforms.",
+        "Expanded reusable UI systems, component libraries, and frontend infrastructure shared across multiple products.",
+        "Improved frontend architecture, testing strategy, performance, and developer experience across production workflows.",
+        "Collaborated remotely with a US-based cross-functional team to ship reliable frontend features in an active product environment."
       ],
       "technologies": [
         "Vue.js",
@@ -111,12 +111,13 @@
       "company": "Chamedoon",
       "period": "Apr 2020 – Jun 2022",
       "highlights": [
-        "Developed and maintained production Vue.js and Nuxt.js applications.",
-        "Built responsive user interfaces and integrated frontend applications with REST APIs.",
-        "Worked extensively with Vuex state management and TypeScript.",
-        "Improved application performance, maintainability, and code quality through refactoring and optimization initiatives.",
-        "Collaborated closely with product and backend teams to deliver new features and improve user experience.",
-        "Contributed to testing, debugging, and long-term maintainability of the frontend codebase."
+        "Shipped and maintained production Vue.js and Nuxt.js features across customer-facing application flows.",
+        "Created responsive Sass-based interfaces that improved usability across desktop and mobile experiences.",
+        "Integrated frontend workflows with REST APIs in close coordination with backend engineers.",
+        "Strengthened Vuex state management and TypeScript usage as the frontend codebase grew in complexity.",
+        "Improved performance, maintainability, and code quality through refactoring, debugging, and optimization initiatives.",
+        "Partnered with product and backend teams to translate requirements into reliable, user-focused frontend features.",
+        "Supported testing, issue investigation, and long-term maintainability for a production frontend codebase."
       ],
       "technologies": [
         "Vue.js",
@@ -140,36 +141,42 @@
       "graduated": "2012"
     }
   ],
-  "projects": [
+  "caseStudies": [
     {
-      "title": "Jack Westin",
-      "highlights": [
-        "Public-facing educational platform.",
-        "Vue.js / Nuxt.js applications.",
-        "Browser extension development.",
-        "Component libraries and frontend architecture."
-      ]
+      "title": "Jack Westin Browser Extension",
+      "problem": "Students needed reliable browser-integrated study experiences inside third-party educational platforms.",
+      "responsibilities": [
+        "Contributed Vue 3 and TypeScript extension UI features.",
+        "Supported content-script, Shadow DOM, and cross-context communication workflows.",
+        "Helped keep reusable extension UI patterns maintainable across product iterations."
+      ],
+      "technicalChallenges": [
+        "Third-party page integration",
+        "Shadow DOM isolation",
+        "State synchronization",
+        "Performance-sensitive browser contexts"
+      ],
+      "solution": "Implemented modular extension UI patterns that could integrate with external pages while keeping product UI isolated and maintainable.",
+      "impact": "Supported scalable browser extension delivery for educational workflows and improved consistency across browser-integrated product experiences.",
+      "technologies": ["Vue 3", "TypeScript", "Browser Extensions", "Shadow DOM", "State Management"]
     },
     {
-      "title": "AAMC Chrome Extension",
-      "highlights": [
-        "Vue 3",
-        "TypeScript",
-        "Browser Extensions",
-        "Shadow DOM",
-        "State Management",
-        "Analytics Integration"
-      ]
-    },
-    {
-      "title": "Sazito",
-      "highlights": [
-        "React",
-        "Next.js",
-        "E-commerce Platform",
-        "Reusable UI Systems",
-        "Frontend Architecture"
-      ]
+      "title": "Sazito E-commerce Platform",
+      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows.",
+      "responsibilities": [
+        "Contributed React and Next.js features for e-commerce platform experiences.",
+        "Standardized reusable components and API integration patterns.",
+        "Improved maintainability of legacy and modern React frontend surfaces."
+      ],
+      "technicalChallenges": [
+        "Reusable UI architecture",
+        "Redux state management",
+        "REST API workflows",
+        "Performance and maintainability"
+      ],
+      "solution": "Strengthened reusable frontend systems and application patterns that supported multiple e-commerce product workflows.",
+      "impact": "Helped improve product scalability, frontend consistency, and developer experience across platform surfaces.",
+      "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
     }
   ]
 }
