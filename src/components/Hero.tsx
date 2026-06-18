@@ -23,12 +23,12 @@ export function Hero() {
             {siteConfig.title}
           </p>
           <h2 className="mt-6 max-w-3xl text-balance text-2xl font-semibold leading-tight text-slate-900 sm:text-3xl lg:text-[2.35rem] dark:text-slate-100">
-            Frontend architecture, browser extensions, and product UI built with
-            React, Next.js, Vue, Nuxt.js, and TypeScript.
+            Senior frontend architecture, browser extensions, and product UI
+            systems across React, Next.js, Vue, Nuxt.js, and TypeScript.
           </h2>
           <p className="mt-5 max-w-2xl text-pretty text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-300">
-            I build maintainable web applications, reusable UI systems, and
-            browser-integrated experiences for production teams.
+            I own scalable web applications, reusable UI systems, and
+            browser-integrated experiences for remote-first product teams.
           </p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">

@@ -99,7 +99,7 @@ export const projects = [
     title: "The Jack Westin MCAT® Chrome Extension",
     type: "Browser Extension / EdTech / Remote US Team",
     description:
-      "Contributed to the Jack Westin MCAT Chrome Extension, a production browser extension for a US-based edtech platform focused on MCAT preparation.",
+      "Served as Frontend Engineer on the Jack Westin MCAT Chrome Extension, a production browser-integrated experience serving 40,000+ users on a US-based edtech platform.",
     links: [
       {
         label: "Chrome Web Store",
@@ -108,11 +108,11 @@ export const projects = [
       { label: "Website", href: "https://jackwestin.com/" }
     ],
     highlights: [
-      "Worked on production browser-extension features and frontend UI inside extension contexts.",
-      "Worked with content scripts, background communication, extension messaging, and user state flows.",
-      "Implemented Shadow DOM-based UI injection and isolated UI rendering patterns.",
-      "Built reusable Vue and TypeScript UI components for extension side-panel experiences.",
-      "Collaborated remotely with a US-based team using async workflows, ClickUp, Git, and code reviews."
+      "Architected frontend systems for extension UI across browser contexts and injected third-party page surfaces.",
+      "Designed content-script, background communication, extension messaging, and user-state flows for reliable browser behavior.",
+      "Isolated injected UI with Shadow DOM patterns to protect host pages and keep extension rendering maintainable.",
+      "Standardized reusable Vue and TypeScript components for extension side-panel and browser-integrated experiences.",
+      "Strengthened Cypress, Storybook, and review workflows for safer remote extension delivery."
     ],
     tags: [
       "Vue",
@@ -129,14 +129,14 @@ export const projects = [
     title: "Jack Westin Website & Nuxt Platforms",
     type: "EdTech Platform / Vue / Nuxt / Production Web Applications",
     description:
-      "Contributed to Jack Westin public-facing and operations-facing frontend platforms, including Nuxt and Vue applications for an edtech product.",
+      "Led senior frontend work across Jack Westin public-facing and operations-facing Vue/Nuxt platforms for an active edtech product.",
     links: [{ label: "Website", href: "https://jackwestin.com/" }],
     highlights: [
-      "Worked across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
-      "Contributed to public, marketing, and production web application experiences.",
-      "Worked with SSR, generation workflows, page-level implementation, and reusable Vue components.",
-      "Improved maintainability, frontend structure, production UI quality, and tooling coverage.",
-      "Used testing, mocks, type checks, and frontend documentation workflows."
+      "Owned delivery across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
+      "Translated product and marketing requirements into reliable public and production web experiences.",
+      "Designed SSR, generation, page-level, and reusable Vue component patterns for scalable delivery.",
+      "Raised maintainability, frontend structure, production UI quality, and tooling coverage across product surfaces.",
+      "Drove testing, mocks, type checks, and documentation workflows to reduce release risk."
     ],
     tags: [
       "Vue",
@@ -153,14 +153,14 @@ export const projects = [
     title: "Jack Westin UI Libraries",
     type: "Component Library / Design System / Web Components",
     description:
-      "Worked on reusable UI libraries and component systems used across Jack Westin frontend products.",
+      "Standardized reusable UI libraries and component systems used across Jack Westin frontend products.",
     links: [],
     highlights: [
-      "Built and maintained reusable Vue UI components and frontend primitives.",
-      "Worked with Storybook-based component documentation and reviewable UI states.",
-      "Contributed to production component-library architecture and package structure.",
-      "Supported typed builds, testing utilities, accessibility-minded UI patterns, and Web Component outputs.",
-      "Helped reusable UI scale across multiple product surfaces and development workflows."
+      "Designed reusable Vue UI components and frontend primitives for repeated product use.",
+      "Created Storybook-based component documentation and reviewable UI states for faster async collaboration.",
+      "Shaped production component-library architecture and package structure for cross-product adoption.",
+      "Hardened typed builds, testing utilities, accessibility-minded UI patterns, and Web Component outputs.",
+      "Scaled reusable UI across multiple product surfaces and development workflows."
     ],
     tags: [
       "Vue",
@@ -176,18 +176,18 @@ export const projects = [
     title: "Sazito",
     type: "E-commerce Platform / SaaS / Online Store Builder",
     description:
-      "Worked on Sazito, an online store builder for the Iranian market that helps businesses create and manage online stores.",
+      "Owned frontend delivery on Sazito, an online store builder for the Iranian market that enables businesses to create and manage online stores.",
     links: [
       { label: "Main Website", href: "https://sazito.com/" },
       { label: "Example Store", href: "https://davidjones.ir/" },
       { label: "Example Store", href: "https://xiaomixiaomi.ir/" }
     ],
     highlights: [
-      "Worked across modern React and Next.js frontend experiences.",
-      "Contributed to public site and content-style frontend experiences.",
-      "Built reusable UI primitives and components with TypeScript and Tailwind CSS.",
-      "Worked with Redux Toolkit, auth-aware UI, i18n-aware frontend, and API-friendly features.",
-      "Contributed to scalable frontend structure for e-commerce and SaaS flows."
+      "Delivered modern React and Next.js experiences for e-commerce and SaaS workflows.",
+      "Turned public-site and content requirements into maintainable, production-ready frontend surfaces.",
+      "Standardized reusable UI primitives and components with TypeScript and Tailwind CSS.",
+      "Structured Redux Toolkit, auth-aware UI, i18n-aware frontend, and API-connected product flows.",
+      "Designed scalable frontend foundations for online-store and platform workflows."
     ],
     tags: [
       "React",
@@ -203,14 +203,14 @@ export const projects = [
     title: "Sazito Legacy Frontend Platform",
     type: "Large React Frontend / Storefront & Admin Platform / Legacy Modernization",
     description:
-      "Worked with a large legacy React frontend platform supporting multiple production surfaces such as storefront, admin, shop, and theme-related builds.",
+      "Modernized a large legacy React frontend platform powering storefront, admin, shop, and theme-related production surfaces.",
     links: [],
     highlights: [
-      "Worked with a large React client application using Redux, Redux Saga, React Router, Webpack, and Babel.",
-      "Contributed to reusable UI, routing, state management, and API-connected interfaces.",
-      "Helped maintain and improve legacy frontend behavior while supporting ongoing product needs.",
-      "Worked with custom build pipelines, Sass/PostCSS, code splitting, and production frontend workflows.",
-      "Refactored and improved frontend code carefully while preserving existing behavior."
+      "Stabilized a large React client application using Redux, Redux Saga, React Router, Webpack, and Babel.",
+      "Standardized reusable UI, routing, state management, and API-connected interface patterns.",
+      "Reduced legacy maintenance risk while product teams continued shipping storefront and admin features.",
+      "Modernized custom build pipelines, Sass/PostCSS, code splitting, and production frontend workflows.",
+      "Refactored legacy frontend code in small, reviewable steps while preserving existing behavior."
     ],
     tags: [
       "React",
@@ -229,16 +229,16 @@ export const experiences = [
   {
     title: "Frontend Engineer",
     company: "Jack Westin",
-    type: "Remote / Contract",
+    type: "Remote / Contract · Jun 2022 - Jun 2026",
     description:
-      "Built and maintained production frontend features for a US-based edtech platform. Worked across Chrome Extension features, Vue/Nuxt.js applications, React/Next.js app work, reusable UI libraries, Web Components, Shadow DOM integrations, extension messaging, authentication flows, testing, frontend tooling, and frontend architecture. Collaborated remotely using async communication, ClickUp, Git, code reviews, and technical documentation."
+      "Served as Frontend Engineer for a US-based edtech platform across a Chrome extension serving 40,000+ users, Vue/Nuxt.js applications, reusable UI libraries, Shadow DOM integrations, cross-context messaging, testing, frontend tooling, and component architecture. Coordinated remote async delivery through ClickUp, Git, code reviews, and technical documentation."
   },
   {
-    title: "Frontend Engineer",
+    title: "Senior Frontend Engineer",
     company: "Sazito",
-    type: "Part-time",
+    type: "Part-time · Jun 2022 - Present",
     description:
-      "Worked on React and Next.js frontend features for an online store builder platform. Contributed to public website experiences, blog/content frontend, reusable UI components, e-commerce flows, API integrations, legacy React frontend maintenance, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
+      "Owned React and Next.js frontend delivery for an online store builder platform. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
   }
 ];
 

@@ -30,16 +30,16 @@ export function About() {
         <div className="space-y-6 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
           <p>
             I&apos;m Mostafa Kazemi, a Senior Frontend Engineer with experience
-            building production web applications, browser extensions, reusable UI
-            systems, and scalable frontend architectures. I have worked remotely
-            with a US-based edtech company and have experience with async
-            collaboration, code reviews, task management, and production-level
-            frontend development.
+            owning production web applications, browser extensions, reusable UI
+            systems, and scalable frontend architectures. I have delivered
+            remotely with a US-based edtech company and bring strong async
+            collaboration, code review, task management, and production-level
+            frontend engineering habits.
           </p>
           <p>
-            My work goes beyond basic UI implementation and includes the systems,
-            tooling, testing, and maintainability practices needed to keep frontend
-            products reliable as they grow.
+            My work goes beyond screen implementation: I focus on architecture,
+            tooling, testing, performance, and maintainability practices that keep
+            frontend products reliable as teams and product surfaces grow.
           </p>
 
           <div className="grid gap-3 sm:grid-cols-2">

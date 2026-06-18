@@ -22,12 +22,12 @@ export const caseStudy = {
   problem:
     "The platform needed frontend work that could support e-commerce flows, store-builder experiences, API integrations, and ongoing product changes while staying maintainable across both modern Next.js surfaces and legacy React areas.",
   responsibilities: [
-    "Developed and maintained React and Next.js frontend experiences for e-commerce and online store builder workflows.",
-    "Built reusable UI components and frontend patterns with TypeScript and Tailwind CSS.",
-    "Worked on API integrations, auth-aware UI behavior, and stateful product flows.",
-    "Helped maintain legacy React areas using Redux and related frontend tooling.",
-    "Contributed to performance, maintainability, and developer experience improvements across frontend surfaces.",
-    "Worked with product and engineering needs while keeping changes incremental and production-focused."
+    "Owned React and Next.js frontend experiences for e-commerce and online store builder workflows.",
+    "Standardized reusable UI components and frontend patterns with TypeScript and Tailwind CSS.",
+    "Structured API integrations, auth-aware UI behavior, and stateful product flows.",
+    "Modernized legacy React areas using Redux and related frontend tooling.",
+    "Drove performance, maintainability, and developer-experience work across frontend surfaces.",
+    "Balanced product and engineering needs while keeping changes incremental and production-focused."
   ],
   challenges: [
     "Supporting product development across both modern Next.js work and legacy React code paths.",
@@ -36,10 +36,10 @@ export const caseStudy = {
     "Improving performance and maintainability while preserving existing production behavior."
   ],
   results: [
-    "Contributed to scalable frontend structure for e-commerce and SaaS-style product workflows.",
-    "Built reusable components that helped reduce repeated UI work across platform areas.",
-    "Helped improve maintainability through TypeScript, clearer component boundaries, and careful refactoring.",
-    "Supported ongoing platform development across modern and legacy frontend surfaces."
+    "Created scalable frontend structure for e-commerce and SaaS-style product workflows.",
+    "Reduced repeated UI work through reusable components shared across platform areas.",
+    "Raised maintainability through TypeScript, clearer component boundaries, and careful refactoring.",
+    "Kept platform delivery moving across modern and legacy frontend surfaces."
   ],
   learnings: [
     "E-commerce platforms benefit from reusable UI primitives that can adapt across many product contexts.",

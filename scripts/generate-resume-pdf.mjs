@@ -141,8 +141,9 @@ function paragraph(text, options = {}) {
   state.y += spaceAfter;
 }
 
-function heading(text) {
-  ensureSpace(70);
+function heading(text, options = {}) {
+  const { minSpace = 70 } = options;
+  ensureSpace(minSpace);
   state.y += 8;
   writeText(text.toUpperCase(), {
     size: 9.2,
@@ -298,7 +299,9 @@ function addExperience() {
 }
 
 function addCaseStudies() {
-  heading("Selected Case Studies");
+  heading("Selected Case Studies", {
+    minSpace: 220
+  });
   for (const study of resume.caseStudies) {
     ensureSpace(125);
     addInlineRow(study.title, "", {

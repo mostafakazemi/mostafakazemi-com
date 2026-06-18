@@ -13,7 +13,7 @@ export function Projects() {
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
             A selection of real-world products, platforms, and frontend systems
-            I’ve contributed to across web applications, browser extensions,
+            I’ve owned or shaped across web applications, browser extensions,
             reusable UI libraries, and e-commerce platforms.
           </p>
         </div>
