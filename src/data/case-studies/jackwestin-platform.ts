@@ -7,7 +7,7 @@ export const caseStudy = {
   period: "2022 - Jun 2026",
   role: "Frontend Engineer",
   summary:
-    "A Vue and Nuxt.js case study focused on architectural frontend responsibility across edtech platform work, public-facing web experiences, reusable UI libraries, component systems, SSR and generation workflows, testing, and remote collaboration with a US-based team.",
+    "A Vue and Nuxt.js case study focused on architectural frontend responsibility across edtech platform delivery, public-facing web experiences, reusable UI libraries, component systems, SSR and generation workflows, testing, and remote collaboration with a US-based team.",
   technologies: [
     "Vue",
     "Nuxt.js",
@@ -22,12 +22,12 @@ export const caseStudy = {
     "Static Generation"
   ],
   problem:
-    "The platform needed maintainable frontend work across public-facing edtech pages, Nuxt/Vue application surfaces, and reusable UI systems while supporting production workflows, testing, and remote collaboration across time zones.",
+    "The platform needed maintainable frontend delivery across public-facing edtech pages, Nuxt/Vue application surfaces, and reusable UI systems while supporting production workflows, testing, and remote collaboration across time zones.",
   responsibilities: [
     "Owned Vue and Nuxt.js frontend experiences for edtech platform surfaces.",
     "Translated product requirements into public-facing website pages, production UI, and reusable Vue components.",
-    "Standardized component libraries and Storybook-based UI documentation workflows.",
-    "Designed SSR and generation workflows across Nuxt-based frontend applications.",
+    "Organized component libraries and Storybook-based UI documentation workflows.",
+    "Shaped SSR and generation workflows across Nuxt-based frontend applications.",
     "Drove testing coverage and tooling through Cypress, Vitest, Playwright, and typed workflows.",
     "Coordinated remote delivery with a US-based team through async communication, reviews, and task management."
   ],
@@ -44,9 +44,9 @@ export const caseStudy = {
     "Operated effectively with a US-based remote team across product, design, and engineering workflows."
   ],
   learnings: [
-    "Reusable UI systems work best when documentation and production usage evolve together.",
+    "Reusable UI systems are strongest when documentation and production usage evolve together.",
     "Nuxt applications benefit from clear boundaries between page implementation, data flow, and shared components.",
-    "Remote frontend work depends on readable code, explicit review context, and steady communication."
+    "Remote frontend delivery depends on readable code, explicit review context, and steady communication."
   ],
   featured: true
 } satisfies CaseStudy;

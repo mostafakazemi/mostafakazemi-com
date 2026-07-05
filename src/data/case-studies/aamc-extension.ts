@@ -19,14 +19,14 @@ export const caseStudy = {
     "Performance Optimization"
   ],
   problem:
-    "Students needed browser-integrated study tooling that could appear inside third-party educational pages without disrupting the host page. At 40,000+ Chrome Web Store users, the frontend work needed to stay isolated from page styles and markup, coordinate state across extension contexts, and remain maintainable as product needs evolved.",
+    "Students needed browser-integrated study tooling that could appear inside third-party educational pages without disrupting the host page. At 40,000+ Chrome Web Store users, the frontend architecture needed to stay isolated from page styles and markup, coordinate state across extension contexts, and remain maintainable as product needs evolved.",
   responsibilities: [
     "Architected Vue 3 and TypeScript UI modules for browser-integrated study workflows.",
     "Implemented isolated UI rendering patterns with Shadow DOM to reduce style and DOM conflicts on host pages.",
-    "Designed state management and data flow across injected UI, content-script, and extension contexts.",
+    "Structured state management and data flow across injected UI, content-script, and extension contexts.",
     "Implemented cross-context communication patterns for extension messaging and user-state updates.",
     "Created reusable UI primitives for browser-integrated experiences.",
-    "Reduced extension runtime overhead by keeping injected UI lightweight and limiting unnecessary work in browser flows."
+    "Reduced extension runtime overhead by keeping injected UI lightweight and limiting unnecessary processing in browser flows."
   ],
   challenges: [
     "Rendering product UI inside third-party pages while minimizing style collisions and DOM interference.",

@@ -111,9 +111,9 @@ export const projects = [
     ],
     highlights: [
       "Architected frontend systems for extension UI across browser contexts and injected third-party page surfaces.",
-      "Designed content-script, background communication, extension messaging, and user-state flows for reliable browser behavior.",
+      "Mapped content-script, background communication, extension messaging, and user-state flows for reliable browser behavior.",
       "Isolated injected UI with Shadow DOM patterns to protect host pages and keep extension rendering maintainable.",
-      "Standardized reusable Vue and TypeScript components for extension side-panel and browser-integrated experiences.",
+      "Defined reusable Vue and TypeScript components for extension side-panel and browser-integrated experiences.",
       "Strengthened Cypress, Storybook, and review workflows for safer remote extension delivery."
     ],
     tags: [
@@ -131,14 +131,14 @@ export const projects = [
     title: "Jack Westin Website & Nuxt Platforms",
     type: "EdTech Platform / Vue / Nuxt / Production Web Applications",
     description:
-      "Led senior frontend work across Jack Westin public-facing and operations-facing Vue/Nuxt platforms for an active edtech product.",
+      "Led senior frontend delivery across Jack Westin public-facing and operations-facing Vue/Nuxt platforms for an active edtech product.",
     impact:
-      "Impact: Delivered maintainable Nuxt/Vue platform work for MCAT student workflows, public-facing pages, testing, and reusable UI systems.",
+      "Impact: Delivered maintainable Nuxt/Vue platform engineering for MCAT student workflows, public-facing pages, testing, and reusable UI systems.",
     links: [{ label: "Website", href: "https://jackwestin.com/" }],
     highlights: [
       "Owned delivery across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
       "Translated product and marketing requirements into reliable public and production web experiences.",
-      "Designed SSR, generation, page-level, and reusable Vue component patterns for scalable delivery.",
+      "Shaped SSR, generation, page-level, and reusable Vue component patterns for scalable delivery.",
       "Raised maintainability, frontend structure, production UI quality, and tooling coverage across product surfaces.",
       "Drove testing, mocks, type checks, and documentation workflows to reduce release risk."
     ],
@@ -157,12 +157,12 @@ export const projects = [
     title: "Jack Westin UI Libraries",
     type: "Component Library / Design System / Web Components",
     description:
-      "Standardized reusable UI libraries and component systems used across Jack Westin frontend products.",
+      "Consolidated reusable UI libraries and component systems used across Jack Westin frontend products.",
     impact:
       "Impact: Made repeated UI patterns more consistent, testable, documented, and easier to reuse across product surfaces.",
     links: [],
     highlights: [
-      "Designed reusable Vue UI components and frontend primitives for repeated product use.",
+      "Created reusable Vue UI components and frontend primitives for repeated product use.",
       "Created Storybook-based component documentation and reviewable UI states for faster async collaboration.",
       "Shaped production component-library architecture and package structure for cross-product adoption.",
       "Hardened typed builds, testing utilities, accessibility-minded UI patterns, and Web Component outputs.",
@@ -193,9 +193,9 @@ export const projects = [
     highlights: [
       "Delivered modern React and Next.js experiences for e-commerce and SaaS workflows at meaningful platform scale.",
       "Turned public-site and content requirements into maintainable, production-ready frontend surfaces.",
-      "Standardized reusable UI primitives and components with TypeScript and Tailwind CSS.",
+      "Unified reusable UI primitives and components with TypeScript and Tailwind CSS.",
       "Structured Redux Toolkit, auth-aware UI, i18n-aware frontend, and API-connected product flows.",
-      "Designed scalable frontend foundations for online-store and platform workflows."
+      "Established scalable frontend foundations for online-store and platform workflows."
     ],
     tags: [
       "React",
@@ -217,7 +217,7 @@ export const projects = [
     links: [],
     highlights: [
       "Stabilized a large React client application using Redux, Redux Saga, React Router, Webpack, and Babel.",
-      "Standardized reusable UI, routing, state management, and API-connected interface patterns.",
+      "Aligned reusable UI, routing, state management, and API-connected interface patterns.",
       "Reduced legacy maintenance risk while product teams continued shipping storefront and admin features.",
       "Modernized custom build pipelines, Sass/PostCSS, code splitting, and production frontend workflows.",
       "Refactored legacy frontend code in small, reviewable steps while preserving existing behavior."

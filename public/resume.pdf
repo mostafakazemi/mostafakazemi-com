@@ -16,7 +16,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 7468 >>
+<< /Length 7473 >>
 stream
 BT
 /F2 20 Tf
@@ -62,19 +62,19 @@ BT
 /F1 8.2 Tf
 10.4 TL
 44 662.8 Td
-(browser-extension frontend architecture for remote product teams. Worked on frontend systems for a Chrome extension listed with 40,000+) Tj
+(browser-extension frontend architecture for remote product teams. Contributed to frontend systems for a Chrome extension listed with) Tj
 ET
 BT
 /F1 8.2 Tf
 10.4 TL
 44 652.4 Td
-(users, with focus on TypeScript, Shadow DOM, cross-context messaging, performance, testing, and maintainable UI boundaries. Owns) Tj
+(40,000+ users, with focus on TypeScript, Shadow DOM, cross-context messaging, performance, testing, and maintainable UI boundaries. Owns) Tj
 ET
 BT
 /F1 8.2 Tf
 10.4 TL
 44 642 Td
-(production frontend work from ambiguous requirements through architecture, implementation, code review, and release-ready delivery.) Tj
+(production frontend delivery from ambiguous requirements through architecture, implementation, code review, and release-ready execution.) Tj
 ET
 BT
 /F1 8.2 Tf
@@ -178,7 +178,7 @@ BT
 /F1 8.2 Tf
 10 TL
 53 447.4999999999999 Td
-(- Standardized TypeScript component patterns across public and platform surfaces, reducing duplicate UI work and making feature delivery) Tj
+(- Unified TypeScript component patterns across public and platform surfaces, reducing duplicate UI effort and making feature delivery) Tj
 ET
 BT
 /F1 8.2 Tf
@@ -268,25 +268,25 @@ BT
 /F1 8.2 Tf
 10 TL
 53 291.2999999999997 Td
-(- Designed cross-context messaging between content scripts, background processes, and extension UI, creating reliable state flow across) Tj
+(- Orchestrated cross-context messaging between content scripts, background processes, and extension UI, creating reliable state flow) Tj
 ET
 BT
 /F1 8.2 Tf
 10 TL
 53 281.2999999999997 Td
-(browser-extension contexts.) Tj
+(across browser-extension contexts.) Tj
 ET
 BT
 /F1 8.2 Tf
 10 TL
 53 270.1999999999997 Td
-(- Standardized reusable Vue and TypeScript component patterns with Storybook, giving extension and Nuxt platform surfaces a more) Tj
+(- Defined reusable Vue and TypeScript component patterns with Storybook, giving extension and Nuxt platform surfaces a more consistent) Tj
 ET
 BT
 /F1 8.2 Tf
 10 TL
 53 260.1999999999997 Td
-(consistent UI foundation.) Tj
+(UI foundation.) Tj
 ET
 BT
 /F1 8.2 Tf
@@ -340,7 +340,7 @@ BT
 /F1 8.2 Tf
 10 TL
 53 166.1999999999996 Td
-(- Integrated REST API workflows with backend teams, aligning frontend state, error handling, and data flows with production contracts.) Tj
+(- Connected REST API workflows with backend teams, aligning frontend state, error handling, and data flows with production contracts.) Tj
 ET
 BT
 /F1 8.2 Tf
@@ -378,7 +378,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
 endobj
 8 0 obj
-<< /Length 5402 >>
+<< /Length 5566 >>
 stream
 BT
 /F2 9.2 Tf
@@ -412,19 +412,19 @@ BT
 /F1 8 Tf
 9.8 TL
 44 692.4 Td
-(Responsibilities: Architected Vue 3 and TypeScript UI modules for extension surfaces at 40,000+ user product scale.; Designed content-script,) Tj
+(Responsibilities: Architected Vue 3 and TypeScript UI modules for browser-extension surfaces at 40,000+ user product scale while keeping UI) Tj
 ET
 BT
 /F1 8 Tf
 9.8 TL
 44 682.6 Td
-(Shadow DOM, and cross-context messaging flows for third-party page integration.; Standardized reusable extension UI patterns so product) Tj
+(boundaries easier to maintain.; Mapped content-script, Shadow DOM, and cross-context messaging flows for third-party page integration.;) Tj
 ET
 BT
 /F1 8 Tf
 9.8 TL
 44 672.8 Td
-(iterations could ship without duplicating browser-specific logic.) Tj
+(Created reusable extension UI patterns so product iterations could ship faster without duplicating browser-specific integration logic.) Tj
 ET
 BT
 /F1 8 Tf
@@ -436,7 +436,7 @@ BT
 /F1 8 Tf
 9.8 TL
 44 651.2 Td
-(Solution: Designed modular extension UI patterns that integrated with external pages while keeping product UI isolated, testable, and) Tj
+(Solution: Built modular extension UI patterns that integrated with external pages while keeping product UI isolated, testable, and) Tj
 ET
 BT
 /F1 8 Tf
@@ -484,19 +484,19 @@ BT
 /F1 8 Tf
 9.8 TL
 44 561.9999999999999 Td
-(Responsibilities: Owned React and Next.js feature delivery for e-commerce platform experiences.; Standardized reusable components and API) Tj
+(Responsibilities: Owned React and Next.js feature delivery across an e-commerce platform supporting 6,000+ stores, 5M+ users, and high) Tj
 ET
 BT
 /F1 8 Tf
 9.8 TL
 44 552.1999999999999 Td
-(integration patterns across storefront and platform surfaces.; Modernized legacy and newer React areas so product work could move with less) Tj
+(transaction volume.; Unified reusable components and API integration patterns across storefront and platform surfaces to reduce repeated) Tj
 ET
 BT
 /F1 8 Tf
 9.8 TL
 44 542.3999999999999 Td
-(architectural friction.) Tj
+(implementation effort.; Modernized legacy and newer React areas so product delivery could move with less architectural friction.) Tj
 ET
 BT
 /F1 8 Tf
@@ -508,7 +508,7 @@ BT
 /F1 8 Tf
 9.8 TL
 44 520.8 Td
-(Solution: Designed reusable frontend systems and application patterns that carried multiple e-commerce product workflows.) Tj
+(Solution: Shaped reusable frontend systems and application patterns that carried multiple e-commerce product workflows.) Tj
 ET
 BT
 /F1 8 Tf
@@ -604,13 +604,13 @@ BT
 /F1 8.2 Tf
 10 TL
 53 318.39999999999986 Td
-(- Designed browser-extension UI architecture for third-party educational platforms, keeping injected experiences isolated, maintainable,) Tj
+(- Established browser-extension UI architecture for third-party educational platforms, keeping injected experiences isolated,) Tj
 ET
 BT
 /F1 8.2 Tf
 10 TL
 53 308.39999999999986 Td
-(and ready for product iteration.) Tj
+(maintainable, and ready for product iteration.) Tj
 ET
 BT
 /F1 8.2 Tf
@@ -654,7 +654,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
 endobj
 10 0 obj
-<< /Title (Mostafa Kazemi Resume) /Author (Mostafa Kazemi) /Subject (Senior Frontend Engineer Resume) /Keywords (Mostafa Kazemi, Senior Frontend Engineer, React, Next.js, Vue, Nuxt.js, TypeScript) /Creator (mostafakazemi.com) /Producer (mostafakazemi.com Resume Generator) /CreationDate (D:20260705183437Z) >>
+<< /Title (Mostafa Kazemi Resume) /Author (Mostafa Kazemi) /Subject (Senior Frontend Engineer Resume) /Keywords (Mostafa Kazemi, Senior Frontend Engineer, React, Next.js, Vue, Nuxt.js, TypeScript) /Creator (mostafakazemi.com) /Producer (mostafakazemi.com Resume Generator) /CreationDate (D:20260705190052Z) >>
 endobj
 xref
 0 11
@@ -665,12 +665,12 @@ xref
 0000000224 00000 n 
 0000000326 00000 n 
 0000000431 00000 n 
-0000007950 00000 n 
-0000008096 00000 n 
-0000013549 00000 n 
-0000013695 00000 n 
+0000007955 00000 n 
+0000008101 00000 n 
+0000013718 00000 n 
+0000013864 00000 n 
 trailer
 << /Size 11 /Root 1 0 R /Info 10 0 R >>
 startxref
-14021
+14190
 %%EOF
