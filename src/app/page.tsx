@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
+import { WhyHireMe } from "@/components/WhyHireMe";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <WhyHireMe />
         <Skills />
         <Projects />
         <CaseStudies />

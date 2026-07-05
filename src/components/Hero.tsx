@@ -4,6 +4,13 @@ import { siteConfig } from "@/data/portfolio";
 const profileBlurDataUrl =
   "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoYABgAPt1mq1EopSOiqAgBEBuJYgDGBYvWXtIKJrWUpvVjDsiuqyn94vYvE/XvAAD+79edCjgI0L4Cvh7AJQ5opeVj52eVjZrQS8j2MRcw1qf+lvUEDM9cupo5bBIVeIRDk61OGTDfo5uKstcuzX0ieMRVTx7b8YSx/ReQ2kZtsbm/PK1oZvngfbMl2E2PrvcfQI17yMZCPuKSiLYoAYaPLtJZJAAA";
 
+const proofPoints = [
+  "React / Next.js",
+  "Vue / Nuxt.js",
+  "Chrome extension listed with 40,000+ users",
+  "E-commerce platform with 6,000+ stores"
+];
+
 export function Hero() {
   return (
     <section
@@ -30,6 +37,17 @@ export function Hero() {
             I own scalable web applications, reusable UI systems, and
             browser-integrated experiences for remote-first product teams.
           </p>
+
+          <div className="mt-6 flex max-w-2xl flex-wrap gap-2">
+            {proofPoints.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a

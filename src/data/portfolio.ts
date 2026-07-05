@@ -100,6 +100,8 @@ export const projects = [
     type: "Browser Extension / EdTech / Remote US Team",
     description:
       "Served as Frontend Engineer on the Jack Westin MCAT Chrome Extension, a production browser-integrated experience serving 40,000+ users on a US-based edtech platform.",
+    impact:
+      "Scale: Chrome extension listed with 40,000+ users. Focus: Vue 3, TypeScript, Shadow DOM, cross-context messaging, and browser-extension UI architecture.",
     links: [
       {
         label: "Chrome Web Store",
@@ -130,6 +132,8 @@ export const projects = [
     type: "EdTech Platform / Vue / Nuxt / Production Web Applications",
     description:
       "Led senior frontend work across Jack Westin public-facing and operations-facing Vue/Nuxt platforms for an active edtech product.",
+    impact:
+      "Impact: Delivered maintainable Nuxt/Vue platform work for MCAT student workflows, public-facing pages, testing, and reusable UI systems.",
     links: [{ label: "Website", href: "https://jackwestin.com/" }],
     highlights: [
       "Owned delivery across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
@@ -154,6 +158,8 @@ export const projects = [
     type: "Component Library / Design System / Web Components",
     description:
       "Standardized reusable UI libraries and component systems used across Jack Westin frontend products.",
+    impact:
+      "Impact: Made repeated UI patterns more consistent, testable, documented, and easier to reuse across product surfaces.",
     links: [],
     highlights: [
       "Designed reusable Vue UI components and frontend primitives for repeated product use.",
@@ -176,14 +182,16 @@ export const projects = [
     title: "Sazito",
     type: "E-commerce Platform / SaaS / Online Store Builder",
     description:
-      "Owned frontend delivery on Sazito, an online store builder for the Iranian market that enables businesses to create and manage online stores.",
+      "Owned frontend delivery on Sazito, an online store builder for the Iranian market supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+    impact:
+      "Scale: 6,000+ stores, 5M+ users, and high transaction volume. Focus: React, Next.js, TypeScript, reusable UI, API-connected workflows, and maintainable e-commerce frontend architecture.",
     links: [
       { label: "Main Website", href: "https://sazito.com/" },
       { label: "Example Store", href: "https://davidjones.ir/" },
       { label: "Example Store", href: "https://xiaomixiaomi.ir/" }
     ],
     highlights: [
-      "Delivered modern React and Next.js experiences for e-commerce and SaaS workflows.",
+      "Delivered modern React and Next.js experiences for e-commerce and SaaS workflows at meaningful platform scale.",
       "Turned public-site and content requirements into maintainable, production-ready frontend surfaces.",
       "Standardized reusable UI primitives and components with TypeScript and Tailwind CSS.",
       "Structured Redux Toolkit, auth-aware UI, i18n-aware frontend, and API-connected product flows.",
@@ -204,6 +212,8 @@ export const projects = [
     type: "Large React Frontend / Storefront & Admin Platform / Legacy Modernization",
     description:
       "Modernized a large legacy React frontend platform powering storefront, admin, shop, and theme-related production surfaces.",
+    impact:
+      "Impact: Reduced legacy maintenance risk while preserving behavior across active storefront and admin product areas.",
     links: [],
     highlights: [
       "Stabilized a large React client application using Redux, Redux Saga, React Router, Webpack, and Babel.",
@@ -238,7 +248,7 @@ export const experiences = [
     company: "Sazito",
     type: "Part-time · Jun 2022 - Present",
     description:
-      "Owned React and Next.js frontend delivery for an online store builder platform. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
+      "Owned React and Next.js frontend delivery for an online store builder platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
   }
 ];
 

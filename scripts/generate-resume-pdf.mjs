@@ -256,6 +256,13 @@ function addSummary() {
   });
 }
 
+function addBestFit() {
+  heading("Best Fit");
+  for (const item of resume.bestFit) {
+    bullet(item);
+  }
+}
+
 function addAchievements() {
   heading("Selected Achievements");
   for (const item of resume.achievements) {
@@ -356,6 +363,7 @@ function buildContent() {
   addPage();
   addHeader();
   addSummary();
+  addBestFit();
   addExperience();
   addCaseStudies();
   addEducation();

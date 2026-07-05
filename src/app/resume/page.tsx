@@ -172,6 +172,14 @@ export default function ResumePage() {
               </p>
             </Section>
 
+            <Section title="Best Fit">
+              <ul className="list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 dark:text-slate-300">
+                {resume.bestFit.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </Section>
+
             <Section title="Work Experience">
               <div className="grid gap-8">
                 {resume.experience.map((role) => (

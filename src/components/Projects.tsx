@@ -35,6 +35,9 @@ export function Projects() {
                   <p className="mt-4 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
                     {project.description}
                   </p>
+                  <p className="mt-4 rounded-2xl border border-sky-100 bg-sky-50 px-4 py-3 text-sm font-medium leading-7 text-sky-900 dark:border-sky-900/60 dark:bg-sky-950/50 dark:text-sky-200">
+                    {project.impact}
+                  </p>
 
                   {project.links.length > 0 ? (
                     <div className="mt-6 flex flex-wrap gap-3">

@@ -23,18 +23,19 @@ export function About() {
             About
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Senior frontend work beyond basic UI implementation.
+            Senior frontend work across product UI, architecture, and scale.
           </h2>
         </div>
 
         <div className="space-y-6 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
           <p>
             I&apos;m Mostafa Kazemi, a Senior Frontend Engineer with experience
-            owning production web applications, browser extensions, reusable UI
-            systems, and scalable frontend architectures. I have delivered
-            remotely with a US-based edtech company and bring strong async
-            collaboration, code review, task management, and production-level
-            frontend engineering habits.
+            owning React/Next.js and Vue/Nuxt.js production applications,
+            browser-extension UI architecture, reusable component systems, and
+            scalable frontend foundations. I have delivered remotely with a
+            US-based edtech company and bring strong async collaboration, code
+            review, task management, and production-level frontend engineering
+            habits.
           </p>
           <p>
             My work goes beyond screen implementation: I focus on architecture,

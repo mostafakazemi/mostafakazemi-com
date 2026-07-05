@@ -17,17 +17,25 @@
     "linkedin": "https://www.linkedin.com/in/mostafakazemi/"
   },
   "summary": [
-    "Senior Frontend Engineer with 6+ years of experience owning frontend architecture, browser extension UI, reusable component systems, and production web applications for remote-first teams.",
-    "Specialized in React, Next.js, Vue, Nuxt.js, TypeScript, state management, testing strategy, performance-focused UI engineering, and developer tooling.",
-    "Turns ambiguous product requirements into scalable interfaces, maintainable code paths, and reliable browser-integrated experiences used by thousands of users.",
+    "Senior Frontend Engineer with 6+ years of experience building React/Next.js and Vue/Nuxt.js platforms, reusable component systems, and browser-extension frontend architecture for remote product teams.",
+    "Worked on frontend systems for a Chrome extension listed with 40,000+ users, with focus on TypeScript, Shadow DOM, cross-context messaging, performance, testing, and maintainable UI boundaries.",
+    "Owns production frontend work from ambiguous requirements through architecture, implementation, code review, and release-ready delivery.",
     "Experienced in asynchronous collaboration with US-based and international teams across product, design, backend, QA, and engineering leadership.",
     "Open to Senior Frontend Engineer roles with European and remote-first companies."
   ],
+  "bestFit": [
+    "Senior Frontend Engineer roles in remote-first product teams",
+    "React/Next.js and Vue/Nuxt.js production web application development",
+    "Frontend systems for e-commerce platforms with 6,000+ stores, 5M+ users, and high transaction volume",
+    "Browser-extension frontend architecture with TypeScript, Shadow DOM, and cross-context messaging",
+    "Reusable component systems, Storybook workflows, and scalable UI foundations",
+    "Frontend performance, maintainability, testing strategy, and developer-experience improvements"
+  ],
   "achievements": [
-    "Architected browser-extension UI patterns for third-party educational platforms, making injected experiences safer to isolate, maintain, and evolve.",
-    "Standardized reusable component systems across product surfaces, cutting duplicated frontend decisions and accelerating consistent delivery.",
-    "Modernized TypeScript and state-management patterns in production codebases, lowering architectural drift as products scaled.",
-    "Drove performance and developer-experience upgrades across React, Next.js, Vue, and Nuxt.js systems, creating faster feedback loops for remote teams."
+    "Designed browser-extension UI architecture for third-party educational platforms, keeping injected experiences isolated, maintainable, and ready for product iteration.",
+    "Built reusable component systems across product surfaces, reducing repeated UI decisions and giving teams a more consistent delivery foundation.",
+    "Modernized TypeScript, API integration, and state-management patterns in production codebases, lowering architectural drift as products scaled.",
+    "Raised frontend delivery confidence with Cypress, Storybook, typed workflows, and performance-focused refactoring across React, Next.js, Vue, and Nuxt.js systems."
   ],
   "skills": [
     {
@@ -75,7 +83,7 @@
       "period": "Jun 2022 – Present",
       "type": "Part-time",
       "highlights": [
-        "Owned React and Next.js frontend delivery for evolving e-commerce workflows, turning store-builder requirements into scalable product interfaces.",
+        "Owned React and Next.js frontend delivery for e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
         "Standardized TypeScript component patterns across public and platform surfaces, reducing duplicate UI work and making feature delivery easier to extend.",
         "Refactored Redux and REST API integration flows in complex product areas, making state transitions clearer and lowering maintenance risk.",
         "Hardened performance-sensitive UI paths through targeted refactoring and modern tooling, creating faster and more reliable storefront experiences.",
@@ -162,7 +170,7 @@
     },
     {
       "title": "Sazito E-commerce Platform",
-      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows.",
+      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
       "responsibilities": [
         "Owned React and Next.js feature delivery for e-commerce platform experiences.",
         "Standardized reusable components and API integration patterns across storefront and platform surfaces.",
@@ -175,7 +183,7 @@
         "Performance and maintainability"
       ],
       "solution": "Designed reusable frontend systems and application patterns that carried multiple e-commerce product workflows.",
-      "impact": "Raised product scalability, frontend consistency, and developer experience across platform surfaces.",
+      "impact": "Raised frontend scalability, consistency, and developer experience across high-traffic e-commerce platform surfaces.",
       "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
     }
   ]

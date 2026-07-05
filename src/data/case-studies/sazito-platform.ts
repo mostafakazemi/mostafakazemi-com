@@ -7,7 +7,7 @@ export const caseStudy = {
   period: "2022 - Present",
   role: "Senior Frontend Engineer",
   summary:
-    "A React and Next.js case study focused on e-commerce platform work, online store builder experiences, reusable UI components, API-connected frontend flows, and maintainable frontend structure.",
+    "A React and Next.js case study focused on e-commerce platform work for an online store builder supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
   technologies: [
     "React",
     "Next.js",
@@ -20,7 +20,7 @@ export const caseStudy = {
     "Performance Optimization"
   ],
   problem:
-    "The platform needed frontend work that could support e-commerce flows, store-builder experiences, API integrations, and ongoing product changes while staying maintainable across both modern Next.js surfaces and legacy React areas.",
+    "The platform needed frontend work that could support e-commerce flows, store-builder experiences, API integrations, and ongoing product changes at meaningful scale: 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
   responsibilities: [
     "Owned React and Next.js frontend experiences for e-commerce and online store builder workflows.",
     "Standardized reusable UI components and frontend patterns with TypeScript and Tailwind CSS.",
@@ -36,10 +36,10 @@ export const caseStudy = {
     "Improving performance and maintainability while preserving existing production behavior."
   ],
   results: [
-    "Created scalable frontend structure for e-commerce and SaaS-style product workflows.",
+    "Created scalable frontend structure for e-commerce and SaaS-style product workflows operating across thousands of stores.",
     "Reduced repeated UI work through reusable components shared across platform areas.",
     "Raised maintainability through TypeScript, clearer component boundaries, and careful refactoring.",
-    "Kept platform delivery moving across modern and legacy frontend surfaces."
+    "Kept platform delivery moving across modern and legacy frontend surfaces serving high-volume storefront usage."
   ],
   learnings: [
     "E-commerce platforms benefit from reusable UI primitives that can adapt across many product contexts.",
