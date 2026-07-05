@@ -182,7 +182,7 @@ export const projects = [
     title: "Sazito",
     type: "E-commerce Platform / SaaS / Online Store Builder",
     description:
-      "Owned frontend delivery on Sazito, an online store builder for the Iranian market supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+      "Owned frontend delivery on Sazito, an online store builder for the Iranian market supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
     impact:
       "Scale: 6,000+ stores, 5M+ users, and high transaction volume. Focus: React, Next.js, TypeScript, reusable UI, API-connected workflows, and maintainable e-commerce frontend architecture.",
     links: [
@@ -248,7 +248,7 @@ export const experiences = [
     company: "Sazito",
     type: "Part-time · Jun 2022 - Present",
     description:
-      "Owned React and Next.js frontend delivery for an online store builder platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
+      "Owned React and Next.js frontend delivery for an online store builder platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
   }
 ];
 

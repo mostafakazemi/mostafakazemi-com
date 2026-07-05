@@ -7,7 +7,7 @@ export const caseStudy = {
   period: "2022 - Present",
   role: "Senior Frontend Engineer",
   summary:
-    "A React and Next.js case study focused on e-commerce platform work for an online store builder supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+    "A React and Next.js case study focused on e-commerce platform work for an online store builder supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
   technologies: [
     "React",
     "Next.js",
@@ -20,7 +20,7 @@ export const caseStudy = {
     "Performance Optimization"
   ],
   problem:
-    "The platform needed frontend work that could support e-commerce flows, store-builder experiences, API integrations, and ongoing product changes at meaningful scale: 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+    "The platform needed frontend work that could support e-commerce flows, store-builder experiences, API integrations, and ongoing product changes at meaningful scale: 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
   responsibilities: [
     "Owned React and Next.js frontend experiences for e-commerce and online store builder workflows.",
     "Standardized reusable UI components and frontend patterns with TypeScript and Tailwind CSS.",

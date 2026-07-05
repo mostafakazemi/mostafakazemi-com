@@ -83,7 +83,7 @@
       "period": "Jun 2022 – Present",
       "type": "Part-time",
       "highlights": [
-        "Owned React and Next.js frontend delivery for e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+        "Owned React and Next.js frontend delivery for e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
         "Standardized TypeScript component patterns across public and platform surfaces, reducing duplicate UI work and making feature delivery easier to extend.",
         "Refactored Redux and REST API integration flows in complex product areas, making state transitions clearer and lowering maintenance risk.",
         "Hardened performance-sensitive UI paths through targeted refactoring and modern tooling, creating faster and more reliable storefront experiences.",
@@ -170,7 +170,7 @@
     },
     {
       "title": "Sazito E-commerce Platform",
-      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 1 trillion toman in monthly transaction volume.",
+      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
       "responsibilities": [
         "Owned React and Next.js feature delivery for e-commerce platform experiences.",
         "Standardized reusable components and API integration patterns across storefront and platform surfaces.",
