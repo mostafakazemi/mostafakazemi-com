@@ -27,13 +27,13 @@ function makeDocument(variantKey) {
     let tx = x; if (align === "center") tx += (boxWidth - estimate(value, size)) / 2; if (align === "right") tx += boxWidth - estimate(value, size);
     state.commands.push("BT", `/${bold ? "F2" : "F1"} ${size} Tf`, `${tx.toFixed(2)} ${(page.height - y).toFixed(2)} Td`, `(${escapePdf(value)}) Tj`, "ET");
   };
-  const paragraph = (value, { size = 8.8, lineHeight = 11, after = 3.2, indent = 0, bold = false } = {}) => {
+  const paragraph = (value, { size = 8.8, lineHeight = 11, after = 3.2, indent = 0, bold = false, align = "left" } = {}) => {
     const lines = wrap(value, size, width - indent); ensure(lines.length * lineHeight + after);
-    lines.forEach((line) => { text(line, { x: page.left + indent, size, bold }); state.y += lineHeight; }); state.y += after;
+    lines.forEach((line) => { text(line, { x: page.left + indent, size, bold, align, boxWidth: width - indent }); state.y += lineHeight; }); state.y += after;
   };
   const heading = (value) => {
-    ensure(20); state.y += 4; text(value.toUpperCase(), { size: 9, bold: true }); state.y += 11;
-    const py = page.height - state.y + 3; state.commands.push("0.55 w", `${page.left} ${py} m`, `${page.left + width} ${py} l`, "S"); state.y += 3;
+    ensure(28); state.y += 4; text(value.toUpperCase(), { size: 9, bold: true }); state.y += 9;
+    const py = page.height - state.y; state.commands.push("0.55 w", `${page.left} ${py} m`, `${page.left + width} ${py} l`, "S"); state.y += 12;
   };
   const bullet = (value) => {
     const size = 8.65, lineHeight = 10.6, indent = 11; const lines = wrap(value, size, width - indent); ensure(lines.length * lineHeight + 2);
@@ -44,7 +44,7 @@ function makeDocument(variantKey) {
   addPage();
   text(resume.profile.name, { size: 19, bold: true, align: "center" }); state.y += 18;
   text(variant.title, { size: 10, align: "center" }); state.y += 12;
-  paragraph(`${resume.profile.location} | ${resume.profile.availability} | ${resume.profile.email} | ${resume.profile.phone}`, { size: 7.5, lineHeight: 9, after: 0 });
+  paragraph(`${resume.profile.location} | ${resume.profile.availability} | ${resume.profile.email} | ${resume.profile.phone}`, { size: 7.5, lineHeight: 9, after: 0, align: "center" });
   text("mostafakazemi.com | linkedin.com/in/mostafakazemi | github.com/mostafakazemi", { size: 7.5, align: "center" }); state.y += 12;
 
   heading("Summary"); paragraph(variant.summary, { size: 8.9, lineHeight: 11, after: 1 });

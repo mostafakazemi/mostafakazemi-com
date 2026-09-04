@@ -21,7 +21,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 sm:px-6 sm:py-18 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:px-8 lg:py-20">
         <div className="order-2 flex flex-col justify-center lg:order-1">
           <p className="mb-4 inline-flex w-fit rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-800 dark:border-sky-900/80 dark:bg-sky-950/60 dark:text-sky-200">
-            Based in Iran · Open to remote roles and relocation
+            Based in Iran · Available for remote work
           </p>
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
             {siteConfig.name}
