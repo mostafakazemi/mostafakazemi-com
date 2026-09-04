@@ -12,265 +12,106 @@ export const siteConfig = {
 };
 
 export const navItems = [
-  { label: "Home", href: "/#home" },
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Case Studies", href: "/#case-studies" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Resume", href: "/resume" },
-  { label: "Contact", href: "/#contact" }
+  { label: "Home", href: "/#home" }, { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" }, { label: "Projects", href: "/#projects" },
+  { label: "Case Studies", href: "/#case-studies" }, { label: "Experience", href: "/#experience" },
+  { label: "Resume", href: "/resume" }, { label: "Contact", href: "/#contact" }
 ];
 
 export const skillGroups = [
-  {
-    title: "Frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "Vue.js",
-      "Nuxt.js",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "SCSS"
-    ]
-  },
-  {
-    title: "Architecture & Engineering",
-    skills: [
-      "Frontend Architecture",
-      "Component Systems",
-      "Design Systems",
-      "Browser Extensions",
-      "Chrome Extension Development",
-      "Manifest V3",
-      "Shadow DOM",
-      "Web Components",
-      "Performance Optimization",
-      "Maintainability",
-      "Refactoring",
-      "Legacy Migration",
-      "Scalable UI Systems"
-    ]
-  },
-  {
-    title: "State, Forms & APIs",
-    skills: [
-      "Redux",
-      "Redux Toolkit",
-      "Redux Saga",
-      "Pinia",
-      "Redux Form",
-      "API Integration",
-      "REST APIs",
-      "Authentication Flows",
-      "Form-heavy UIs",
-      "i18n-aware frontend"
-    ]
-  },
-  {
-    title: "Testing & Tooling",
-    skills: [
-      "Cypress",
-      "Vitest",
-      "Playwright",
-      "Jest",
-      "Vue Test Utils",
-      "MSW",
-      "Storybook",
-      "Vite",
-      "Webpack",
-      "Babel",
-      "pnpm",
-      "ESLint",
-      "Prettier",
-      "Git",
-      "Docker",
-      "WebStorm"
-    ]
-  }
+  { title: "Vue", skills: ["Vue 3", "Nuxt.js", "Pinia", "Vuex", "Vue Test Utils", "Vitest"] },
+  { title: "React", skills: ["React", "Next.js", "Redux", "Redux Toolkit", "Redux Saga", "React Router"] },
+  { title: "Browser and UI", skills: ["TypeScript", "Chrome Extensions", "Manifest V3", "Shadow DOM", "Web Components", "Storybook", "Tailwind CSS", "Sass"] },
+  { title: "Testing and Tooling", skills: ["Cypress", "Playwright", "MSW", "Vite", "Webpack", "Babel", "pnpm", "Git"] }
 ];
 
 export const projects = [
   {
     title: "The Jack Westin MCAT® Chrome Extension",
-    type: "Browser Extension / EdTech / Remote US Team",
-    description:
-      "Served as Frontend Engineer on the Jack Westin MCAT Chrome Extension, a production browser-integrated experience serving 40,000+ users on a US-based edtech platform.",
-    impact:
-      "Scale: Chrome extension listed with 40,000+ users. Focus: Vue 3, TypeScript, Shadow DOM, cross-context messaging, and browser-extension UI architecture.",
+    type: "Vue 3 / TypeScript / Chrome Extension",
+    description: "Worked on the browser extension that places Jack Westin tutor solutions beside AAMC practice questions. The Chrome Web Store currently lists 40,000 users.",
+    impact: "The work covered real study flows rather than a demo: written and video solutions, login and subscription states, daily passages, live sessions, retakes, analytics, and error reporting.",
     links: [
-      {
-        label: "Chrome Web Store",
-        href: "https://chromewebstore.google.com/detail/the-jack-westin-mcat%C2%AE-chr/jgglfdpjpddcdaeapbcfgckfheabbdpi?hl=en"
-      },
+      { label: "Chrome Web Store", href: "https://chromewebstore.google.com/detail/the-jack-westin-mcat%C2%AE-chr/jgglfdpjpddcdaeapbcfgckfheabbdpi?hl=en" },
       { label: "Website", href: "https://jackwestin.com/" }
     ],
     highlights: [
-      "Architected frontend systems for extension UI across browser contexts and injected third-party page surfaces.",
-      "Mapped content-script, background communication, extension messaging, and user-state flows for reliable browser behavior.",
-      "Isolated injected UI with Shadow DOM patterns to protect host pages and keep extension rendering maintainable.",
-      "Defined reusable Vue and TypeScript components for extension side-panel and browser-integrated experiences.",
-      "Strengthened Cypress, Storybook, and review workflows for safer remote extension delivery."
+      "Built Vue 3 and TypeScript features for the injected study side panel.",
+      "Implemented authentication, subscription, solution, resource-card, and retake states.",
+      "Used Shadow DOM and Web Components to isolate product UI from third-party pages.",
+      "Worked across content scripts, background code, storage, caching, messaging, analytics, and Sentry reporting.",
+      "Tested components and flows with Storybook, Vitest, Vue Test Utils, Playwright, Cypress, and MSW."
     ],
-    tags: [
-      "Vue",
-      "TypeScript",
-      "Chrome Extension",
-      "Manifest V3",
-      "Shadow DOM",
-      "Tailwind CSS",
-      "Vite",
-      "Storybook"
-    ]
+    tags: ["Vue 3", "TypeScript", "Manifest V3", "Shadow DOM", "Vite", "Storybook"]
   },
   {
-    title: "Jack Westin Website & Nuxt Platforms",
-    type: "EdTech Platform / Vue / Nuxt / Production Web Applications",
-    description:
-      "Led senior frontend delivery across Jack Westin public-facing and operations-facing Vue/Nuxt platforms for an active edtech product.",
-    impact:
-      "Impact: Delivered maintainable Nuxt/Vue platform engineering for MCAT student workflows, public-facing pages, testing, and reusable UI systems.",
+    title: "Jack Westin Web Applications",
+    type: "Vue / Nuxt.js / EdTech",
+    description: "Shipped public-site and student-product features across Jack Westin's Nuxt applications while working asynchronously with a US-based remote team.",
+    impact: "Examples include navigation and marketing pages, billing and payment UI, study-plan updates, subscription screens, and reusable component integration.",
     links: [{ label: "Website", href: "https://jackwestin.com/" }],
     highlights: [
-      "Owned delivery across Nuxt 2 and newer Nuxt/Vue 3 application architectures.",
-      "Translated product and marketing requirements into reliable public and production web experiences.",
-      "Shaped SSR, generation, page-level, and reusable Vue component patterns for scalable delivery.",
-      "Raised maintainability, frontend structure, production UI quality, and tooling coverage across product surfaces.",
-      "Drove testing, mocks, type checks, and documentation workflows to reduce release risk."
+      "Worked across Nuxt 2 and newer Vue/Nuxt codebases.",
+      "Built responsive pages and product flows from design and product requirements.",
+      "Integrated REST APIs and handled loading, error, and authentication states.",
+      "Added tests, mocks, type checks, and documentation for reviewable remote delivery."
     ],
-    tags: [
-      "Vue",
-      "Nuxt.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Storybook",
-      "Cypress",
-      "Vitest",
-      "Playwright"
-    ]
+    tags: ["Vue", "Nuxt.js", "TypeScript", "Cypress", "Playwright"]
   },
   {
-    title: "Jack Westin UI Libraries",
-    type: "Component Library / Design System / Web Components",
-    description:
-      "Consolidated reusable UI libraries and component systems used across Jack Westin frontend products.",
-    impact:
-      "Impact: Made repeated UI patterns more consistent, testable, documented, and easier to reuse across product surfaces.",
+    title: "Jack Westin Shared UI Library",
+    type: "Component Library / Web Components",
+    description: "Contributed reusable Vue components used by product applications and the Chrome extension, including Web Component builds for isolated browser contexts.",
+    impact: "The library includes documented UI states, API mocks, component tests, accessibility checks, and separate package and Web Component build paths.",
     links: [],
     highlights: [
-      "Created reusable Vue UI components and frontend primitives for repeated product use.",
-      "Created Storybook-based component documentation and reviewable UI states for faster async collaboration.",
-      "Shaped production component-library architecture and package structure for cross-product adoption.",
-      "Hardened typed builds, testing utilities, accessibility-minded UI patterns, and Web Component outputs.",
-      "Scaled reusable UI across multiple product surfaces and development workflows."
+      "Built session, daily-passage, dialog, dropdown, toast, and shared form components.",
+      "Added responsive variants and handled authenticated, loading, error, and external-link states.",
+      "Documented components and edge cases in Storybook with MSW-backed API mocks.",
+      "Added Vitest and Vue Test Utils coverage, plus browser checks with Playwright."
     ],
-    tags: [
-      "Vue",
-      "TypeScript",
-      "Storybook",
-      "Web Components",
-      "Component Library",
-      "Design System",
-      "Testing"
-    ]
+    tags: ["Vue 3", "TypeScript", "Storybook", "Vitest", "MSW", "Web Components"]
   },
   {
-    title: "Sazito",
-    type: "E-commerce Platform / SaaS / Online Store Builder",
-    description:
-      "Owned frontend delivery on Sazito, an online store builder for the Iranian market supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
-    impact:
-      "Scale: 6,000+ stores, 5M+ users, and high transaction volume. Focus: React, Next.js, TypeScript, reusable UI, API-connected workflows, and maintainable e-commerce frontend architecture.",
+    title: "Sazito Commerce Platform",
+    type: "React / Next.js / E-commerce",
+    description: "Build and maintain features across Sazito's storefront and admin products for online merchants, working in both modern Next.js code and a large legacy React application.",
+    impact: "Recent work includes bulk product imports, advanced payment settings, shipment tracking, customer reviews, marketing attribution, product search, and quick-add-to-cart flows.",
     links: [
       { label: "Main Website", href: "https://sazito.com/" },
       { label: "Example Store", href: "https://davidjones.ir/" },
       { label: "Example Store", href: "https://xiaomixiaomi.ir/" }
     ],
     highlights: [
-      "Delivered modern React and Next.js experiences for e-commerce and SaaS workflows at meaningful platform scale.",
-      "Turned public-site and content requirements into maintainable, production-ready frontend surfaces.",
-      "Unified reusable UI primitives and components with TypeScript and Tailwind CSS.",
-      "Structured Redux Toolkit, auth-aware UI, i18n-aware frontend, and API-connected product flows.",
-      "Established scalable frontend foundations for online-store and platform workflows."
+      "Implemented CSV and XLSX product imports with async job and error states.",
+      "Built review dashboards, rating flows, image uploads, and responsive admin tables.",
+      "Added payment, shipment, product, cart, and marketing-attribution features.",
+      "Worked with Redux, Redux Saga, REST APIs, internationalized storefronts, and custom Webpack builds.",
+      "Refactored legacy areas incrementally while preserving active product behavior."
     ],
-    tags: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "E-commerce",
-      "SaaS"
-    ]
-  },
-  {
-    title: "Sazito Legacy Frontend Platform",
-    type: "Large React Frontend / Storefront & Admin Platform / Legacy Modernization",
-    description:
-      "Modernized a large legacy React frontend platform powering storefront, admin, shop, and theme-related production surfaces.",
-    impact:
-      "Impact: Reduced legacy maintenance risk while preserving behavior across active storefront and admin product areas.",
-    links: [],
-    highlights: [
-      "Stabilized a large React client application using Redux, Redux Saga, React Router, Webpack, and Babel.",
-      "Aligned reusable UI, routing, state management, and API-connected interface patterns.",
-      "Reduced legacy maintenance risk while product teams continued shipping storefront and admin features.",
-      "Modernized custom build pipelines, Sass/PostCSS, code splitting, and production frontend workflows.",
-      "Refactored legacy frontend code in small, reviewable steps while preserving existing behavior."
-    ],
-    tags: [
-      "React",
-      "Redux",
-      "Redux Saga",
-      "React Router",
-      "Webpack",
-      "Babel",
-      "Sass",
-      "Legacy Frontend"
-    ]
+    tags: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "Tailwind CSS"]
   }
 ];
 
 export const experiences = [
   {
-    title: "Frontend Engineer",
-    company: "Jack Westin",
-    type: "Remote / Contract · Jun 2022 - Jun 2026",
-    description:
-      "Served as Frontend Engineer for a US-based edtech platform across a Chrome extension serving 40,000+ users, Vue/Nuxt.js applications, reusable UI libraries, Shadow DOM integrations, cross-context messaging, testing, frontend tooling, and component architecture. Coordinated remote async delivery through ClickUp, Git, code reviews, and technical documentation."
+    title: "Senior Frontend Engineer", company: "Sazito", type: "Part-time · Jun 2022 - Present",
+    description: "Build storefront and admin features for an online store builder with React, Next.js, TypeScript, Redux, REST APIs, and Tailwind CSS. The work spans product imports, payments, reviews, shipment tracking, marketing attribution, search, cart flows, and ongoing maintenance of a large legacy React application."
   },
   {
-    title: "Senior Frontend Engineer",
-    company: "Sazito",
-    type: "Part-time · Jun 2022 - Present",
-    description:
-      "Owned React and Next.js frontend delivery for an online store builder platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume. Shaped public website experiences, content frontend, reusable UI components, e-commerce flows, API integrations, legacy React modernization, Redux-based state management, custom Webpack pipelines, and maintainable frontend architecture."
+    title: "Frontend Engineer", company: "Jack Westin", type: "Remote · Jun 2022 - Jun 2026",
+    description: "Worked with a US-based edtech team across Vue and Nuxt applications, a shared component library, and a Chrome extension listed with 40,000 users. Built product features, browser-extension flows, Web Components, tests, analytics, and error reporting."
+  },
+  {
+    title: "Frontend Developer", company: "Chamedoon", type: "Apr 2020 - Jun 2022",
+    description: "Built responsive customer-facing features with Vue, Nuxt.js, Vuex, TypeScript, Sass, and REST APIs. Worked with product and backend teammates to implement requirements, handle API states, debug issues, and ship fixes."
   }
 ];
 
 export const contactLinks = [
-  {
-    label: "Email",
-    href: `mailto:${siteConfig.email}`
-  },
-  {
-    label: "LinkedIn",
-    href: siteConfig.links.linkedin
-  },
-  {
-    label: "GitHub",
-    href: siteConfig.links.github
-  },
-  {
-    label: "Telegram",
-    href: siteConfig.links.telegram
-  },
-  {
-    label: "WhatsApp",
-    href: siteConfig.links.whatsapp
-  }
+  { label: "Email", href: `mailto:${siteConfig.email}` },
+  { label: "LinkedIn", href: siteConfig.links.linkedin },
+  { label: "GitHub", href: siteConfig.links.github },
+  { label: "Telegram", href: siteConfig.links.telegram },
+  { label: "WhatsApp", href: siteConfig.links.whatsapp }
 ];

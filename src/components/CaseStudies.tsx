@@ -17,8 +17,8 @@ export function CaseStudies() {
             Engineering Case Studies
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            Deeper looks at selected frontend systems, architecture decisions,
-            browser-extension work, and production UI engineering.
+            More detail on the product features, technical constraints, and
+            implementation work behind selected projects.
           </p>
         </div>
 

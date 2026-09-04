@@ -2,461 +2,90 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = path.resolve(__dirname, "..");
-const dataPath = path.join(rootDir, "src/data/resume.json");
-const outputPath = path.join(rootDir, "public/resume.pdf");
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const resume = JSON.parse(await fs.readFile(path.join(root, "src/data/resume.json"), "utf8"));
+const page = { width: 612, height: 792, left: 42, right: 42, top: 35, bottom: 34 };
+const width = page.width - page.left - page.right;
 
-const resume = JSON.parse(await fs.readFile(dataPath, "utf8"));
-
-function displayUrl(url) {
-  return url.replace("https://www.", "").replace("https://", "").replace(/\/$/, "");
+function clean(value) {
+  return String(value).replaceAll("–", "-").replaceAll("—", "-").replace(/[^\x09\x0A\x0D\x20-\x7E]/g, "");
+}
+function escapePdf(value) { return clean(value).replace(/\\/g, "\\\\").replace(/\(/g, "\\(").replace(/\)/g, "\\)"); }
+function estimate(value, size) { return clean(value).length * size * 0.47; }
+function wrap(value, size, maxWidth) {
+  const words = clean(value).split(/\s+/).filter(Boolean); const lines = []; let line = "";
+  for (const word of words) { const next = line ? `${line} ${word}` : word; if (!line || estimate(next, size) <= maxWidth) line = next; else { lines.push(line); line = word; } }
+  if (line) lines.push(line); return lines;
 }
 
-const page = {
-  width: 612,
-  height: 792,
-  marginX: 44,
-  marginTop: 42,
-  marginBottom: 42
-};
-const contentWidth = page.width - page.marginX * 2;
-
-const fonts = {
-  regular: "F1",
-  bold: "F2",
-  italic: "F3"
-};
-
-const state = {
-  pages: [],
-  commands: [],
-  y: page.marginTop
-};
-
-function normalizeText(value) {
-  return String(value)
-    .replaceAll("Turkiye", "Turkey")
-    .replaceAll("–", "-")
-    .replace(/[^\x09\x0A\x0D\x20-\x7E\xA0-\xFF]/g, "");
-}
-
-function pdfEscape(value) {
-  return normalizeText(value)
-    .replace(/\\/g, "\\\\")
-    .replace(/\(/g, "\\(")
-    .replace(/\)/g, "\\)");
-}
-
-function addPage() {
-  state.commands = [];
-  state.pages.push(state.commands);
-  state.y = page.marginTop;
-}
-
-function ensureSpace(height) {
-  if (state.y + height > page.height - page.marginBottom) {
-    addPage();
-  }
-}
-
-function writeText(text, options = {}) {
-  const {
-    x = page.marginX,
-    y = state.y,
-    size = 10,
-    font = fonts.regular,
-    leading = size + 4,
-    align = "left",
-    width = contentWidth
-  } = options;
-  const textX =
-    align === "center"
-      ? x + (width - estimateWidth(text, size)) / 2
-      : align === "right"
-        ? x + width - estimateWidth(text, size)
-        : x;
-
-  state.commands.push("BT");
-  state.commands.push(`/${font} ${size} Tf`);
-  state.commands.push(`${leading} TL`);
-  state.commands.push(`${textX} ${page.height - y} Td`);
-  state.commands.push(`(${pdfEscape(text)}) Tj`);
-  state.commands.push("ET");
-}
-
-function estimateWidth(text, size) {
-  return normalizeText(text).length * size * 0.46;
-}
-
-function wrapText(text, size, maxWidth) {
-  const words = normalizeText(text).split(/\s+/).filter(Boolean);
-  const lines = [];
-  let line = "";
-
-  for (const word of words) {
-    const next = line ? `${line} ${word}` : word;
-    if (estimateWidth(next, size) <= maxWidth || !line) {
-      line = next;
-    } else {
-      lines.push(line);
-      line = word;
-    }
-  }
-
-  if (line) {
-    lines.push(line);
-  }
-
-  return lines;
-}
-
-function paragraph(text, options = {}) {
-  const {
-    size = 8.2,
-    font = fonts.regular,
-    x = page.marginX,
-    indent = 0,
-    maxWidth = contentWidth,
-    lineHeight = 10.2,
-    spaceAfter = 1.2,
-    align = "left"
-  } = options;
-  const lines = wrapText(text, size, maxWidth - indent);
-
-  ensureSpace(lines.length * lineHeight + spaceAfter);
-
-  for (const line of lines) {
-    writeText(line, {
-      x: x + indent,
-      size,
-      font,
-      leading: lineHeight,
-      align,
-      width: maxWidth - indent
-    });
-    state.y += lineHeight;
-  }
-
-  state.y += spaceAfter;
-}
-
-function heading(text, options = {}) {
-  const { minSpace = 70 } = options;
-  ensureSpace(minSpace);
-  state.y += 8;
-  writeText(text.toUpperCase(), {
-    size: 9.2,
-    font: fonts.bold
-  });
-  state.y += 6;
-  drawLine(page.marginX, state.y, page.marginX + contentWidth);
-  state.y += 11;
-}
-
-function bullet(text) {
-  paragraph(`- ${text}`, {
-    indent: 9,
-    lineHeight: 10,
-    spaceAfter: 1.1
-  });
-}
-
-function labelValue(label, value, options = {}) {
-  const { size = 8, lineHeight = 9.8, spaceAfter = 1.2, font = fonts.regular } = options;
-  paragraph(`${label}: ${value}`, {
-    size,
-    font,
-    lineHeight,
-    spaceAfter
-  });
-}
-
-function drawLine(x1, y, x2, width = 0.65) {
-  const pdfY = page.height - y;
-  state.commands.push(`${width} w`);
-  state.commands.push(`${x1} ${pdfY} m`);
-  state.commands.push(`${x2} ${pdfY} l`);
-  state.commands.push("S");
-}
-
-function addCenteredText(text, options = {}) {
-  const { size = 8, font = fonts.regular, lineHeight = size + 2.5, spaceAfter = 0 } = options;
-  paragraph(text, {
-    size,
-    font,
-    lineHeight,
-    spaceAfter,
-    align: "center"
-  });
-}
-
-function addInlineRow(left, right, options = {}) {
-  const { size = 8, font = fonts.bold, rightFont = fonts.regular, lineHeight = size + 2 } = options;
-  ensureSpace(lineHeight);
-  writeText(left, {
-    size,
-    font
-  });
-  if (right) {
-    writeText(right, {
-      size: size - 0.2,
-      font: rightFont,
-      align: "right"
-    });
-  }
-  state.y += lineHeight;
-}
-
-function addHeader() {
-  writeText(resume.profile.name, {
-    size: 20,
-    font: fonts.bold,
-    align: "center"
-  });
-  state.y += 18;
-  writeText(resume.profile.title, {
-    size: 9.5,
-    font: fonts.regular,
-    align: "center"
-  });
-  state.y += 12;
-  addCenteredText(
-    [
-      resume.profile.location,
-      resume.profile.remote,
-      resume.profile.email,
-      resume.profile.phone
-    ].join(" | "),
-    {
-      size: 7.4,
-      lineHeight: 9,
-      spaceAfter: 0.8
-    }
-  );
-  addCenteredText(
-    [
-      displayUrl(resume.profile.website),
-      displayUrl(resume.profile.linkedin),
-      displayUrl(resume.profile.github)
-    ].join(" | "),
-    {
-      size: 7.4,
-      lineHeight: 9,
-      spaceAfter: 3
-    }
-  );
-}
-
-function addSummary() {
-  heading("Professional Summary");
-  paragraph(resume.summary.join(" "), {
-    lineHeight: 10.4,
-    spaceAfter: 2
-  });
-}
-
-function addBestFit() {
-  heading("Best Fit");
-  for (const item of resume.bestFit) {
-    bullet(item);
-  }
-}
-
-function addAchievements() {
-  heading("Selected Achievements");
-  for (const item of resume.achievements) {
-    bullet(item);
-  }
-}
-
-function addSkills() {
-  heading("Skills");
-  for (const group of resume.skills) {
-    labelValue(group.title, group.items.join(", "));
-  }
-  state.y += 2;
-}
-
-function addExperience() {
-  heading("Work Experience");
-  for (const role of resume.experience) {
-    ensureSpace(100);
-    addInlineRow(
-      `${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`,
-      [role.period, role.type].filter(Boolean).join(" | "),
-      {
-        size: 9.2,
-        font: fonts.bold,
-        rightFont: fonts.regular,
-        lineHeight: 12
-      }
-    );
-    paragraph(`Technologies: ${role.technologies.join(", ")}`, {
-      size: 7.8,
-      font: fonts.italic,
-      lineHeight: 9.6,
-      spaceAfter: 2
-    });
-    for (const item of role.highlights) {
-      bullet(item);
-    }
-    state.y += 6;
-  }
-}
-
-function addCaseStudies() {
-  heading("Selected Case Studies", {
-    minSpace: 220
-  });
-  for (const study of resume.caseStudies) {
-    ensureSpace(125);
-    addInlineRow(study.title, "", {
-      size: 9.1,
-      lineHeight: 12
-    });
-    labelValue("Problem", study.problem, {
-      spaceAfter: 1
-    });
-    labelValue("Responsibilities", study.responsibilities.join("; "), {
-      spaceAfter: 1
-    });
-    labelValue("Technical Challenges", study.technicalChallenges.join(", "), {
-      spaceAfter: 1
-    });
-    labelValue("Solution", study.solution, {
-      spaceAfter: 1
-    });
-    labelValue("Impact", study.impact, {
-      spaceAfter: 1
-    });
-    paragraph(`Technologies: ${study.technologies.join(", ")}`, {
-      size: 7.8,
-      font: fonts.italic,
-      lineHeight: 9.4,
-      spaceAfter: 6
-    });
-  }
-}
-
-function addEducation() {
-  heading("Education");
-  for (const item of resume.education) {
-    paragraph([item.school, item.country].filter(Boolean).join(", "), {
-      size: 8.4,
-      font: fonts.bold,
-      lineHeight: 10,
-      spaceAfter: 1
-    });
-    paragraph(item.degree, {
-      lineHeight: 10,
-      spaceAfter: 0.8
-    });
-    paragraph(`Graduated: ${item.graduated}`, {
-      lineHeight: 10,
-      spaceAfter: 1.6
-    });
-  }
-}
-
-function buildContent() {
-  addPage();
-  addHeader();
-  addSummary();
-  addBestFit();
-  addExperience();
-  addCaseStudies();
-  addEducation();
-  addSkills();
-  addAchievements();
-}
-
-function streamForCommands(commands) {
-  return Buffer.from(`${commands.join("\n")}\n`, "latin1");
-}
-
-function pdfDate(date = new Date()) {
-  const pad = (value) => String(value).padStart(2, "0");
-  return `D:${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
-}
-
-function pdfString(value) {
-  return `(${pdfEscape(value)})`;
-}
-
-function createPdf() {
-  buildContent();
-
-  const objects = [];
-  const addObject = (content) => {
-    objects.push(Buffer.isBuffer(content) ? content : Buffer.from(content, "latin1"));
-    return objects.length;
+function makeDocument(variantKey) {
+  const variant = resume.variants[variantKey];
+  const state = { pages: [], commands: [], y: page.top };
+  const addPage = () => { state.commands = []; state.pages.push(state.commands); state.y = page.top; };
+  const ensure = (height) => { if (state.y + height > page.height - page.bottom) addPage(); };
+  const text = (value, { x = page.left, y = state.y, size = 8.8, bold = false, align = "left", boxWidth = width } = {}) => {
+    let tx = x; if (align === "center") tx += (boxWidth - estimate(value, size)) / 2; if (align === "right") tx += boxWidth - estimate(value, size);
+    state.commands.push("BT", `/${bold ? "F2" : "F1"} ${size} Tf`, `${tx.toFixed(2)} ${(page.height - y).toFixed(2)} Td`, `(${escapePdf(value)}) Tj`, "ET");
+  };
+  const paragraph = (value, { size = 8.8, lineHeight = 11, after = 3.2, indent = 0, bold = false } = {}) => {
+    const lines = wrap(value, size, width - indent); ensure(lines.length * lineHeight + after);
+    lines.forEach((line) => { text(line, { x: page.left + indent, size, bold }); state.y += lineHeight; }); state.y += after;
+  };
+  const heading = (value) => {
+    ensure(20); state.y += 4; text(value.toUpperCase(), { size: 9, bold: true }); state.y += 11;
+    const py = page.height - state.y + 3; state.commands.push("0.55 w", `${page.left} ${py} m`, `${page.left + width} ${py} l`, "S"); state.y += 3;
+  };
+  const bullet = (value) => {
+    const size = 8.65, lineHeight = 10.6, indent = 11; const lines = wrap(value, size, width - indent); ensure(lines.length * lineHeight + 2);
+    text("-", { x: page.left + 1, size: 8.8, bold: true });
+    lines.forEach((line) => { text(line, { x: page.left + indent, size }); state.y += lineHeight; }); state.y += 1.7;
   };
 
-  const catalogId = addObject("placeholder");
-  const pagesId = addObject("placeholder");
-  const regularFontId = addObject(
-    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>"
-  );
-  const boldFontId = addObject(
-    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"
-  );
-  const italicFontId = addObject(
-    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>"
-  );
-  const pageIds = [];
+  addPage();
+  text(resume.profile.name, { size: 19, bold: true, align: "center" }); state.y += 18;
+  text(variant.title, { size: 10, align: "center" }); state.y += 12;
+  paragraph(`${resume.profile.location} | ${resume.profile.availability} | ${resume.profile.email} | ${resume.profile.phone}`, { size: 7.5, lineHeight: 9, after: 0 });
+  text("mostafakazemi.com | linkedin.com/in/mostafakazemi | github.com/mostafakazemi", { size: 7.5, align: "center" }); state.y += 12;
 
-  for (const commands of state.pages) {
-    const stream = streamForCommands(commands);
-    const contentId = addObject(
-      Buffer.concat([
-        Buffer.from(`<< /Length ${stream.length} >>\nstream\n`, "latin1"),
-        stream,
-        Buffer.from("endstream", "latin1")
-      ])
-    );
-    const pageId = addObject(
-      `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${page.width} ${page.height}] /Resources << /Font << /F1 ${regularFontId} 0 R /F2 ${boldFontId} 0 R /F3 ${italicFontId} 0 R >> >> /Contents ${contentId} 0 R >>`
-    );
-    pageIds.push(pageId);
+  heading("Summary"); paragraph(variant.summary, { size: 8.9, lineHeight: 11, after: 1 });
+  heading("Experience");
+  for (const role of variant.experience) {
+    ensure(32);
+    text(`${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`, { size: 9.1, bold: true });
+    text([role.period, role.type].filter(Boolean).join(" | "), { size: 8.1, align: "right" }); state.y += 11;
+    paragraph(`Technologies: ${role.technologies.join(", ")}`, { size: 7.9, lineHeight: 9.6, after: 2.5 });
+    role.highlights.forEach(bullet); state.y += 2.5;
   }
+  heading("Skills");
+  for (const group of resume.skills[variantKey]) paragraph(`${group.title}: ${group.items.join(", ")}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
+  heading("Education");
+  const education = resume.education[0];
+  text(`${education.degree} - ${education.school}, ${education.country}`, { size: 8.8, bold: true });
+  text(`Graduated ${education.graduated}`, { size: 8.2, align: "right" });
+  return state.pages;
+}
 
-  const infoId = addObject(
-    `<< /Title ${pdfString(`${resume.profile.name} Resume`)} /Author ${pdfString(resume.profile.name)} /Subject ${pdfString("Senior Frontend Engineer Resume")} /Keywords ${pdfString("Mostafa Kazemi, Senior Frontend Engineer, React, Next.js, Vue, Nuxt.js, TypeScript")} /Creator ${pdfString("mostafakazemi.com")} /Producer ${pdfString("mostafakazemi.com Resume Generator")} /CreationDate ${pdfString(pdfDate())} >>`
-  );
-
-  objects[catalogId - 1] = Buffer.from(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`, "latin1");
-  objects[pagesId - 1] = Buffer.from(
-    `<< /Type /Pages /Kids [${pageIds.map((id) => `${id} 0 R`).join(" ")}] /Count ${pageIds.length} >>`,
-    "latin1"
-  );
-
-  const chunks = [Buffer.from("%PDF-1.4\n%\xE2\xE3\xCF\xD3\n", "binary")];
-  const offsets = [0];
-
-  for (let index = 0; index < objects.length; index += 1) {
-    offsets.push(Buffer.concat(chunks).length);
-    chunks.push(Buffer.from(`${index + 1} 0 obj\n`, "latin1"));
-    chunks.push(objects[index]);
-    chunks.push(Buffer.from("\nendobj\n", "latin1"));
-  }
-
-  const xrefOffset = Buffer.concat(chunks).length;
-  chunks.push(Buffer.from(`xref\n0 ${objects.length + 1}\n`, "latin1"));
-  chunks.push(Buffer.from("0000000000 65535 f \n", "latin1"));
-  for (let index = 1; index < offsets.length; index += 1) {
-    chunks.push(Buffer.from(`${String(offsets[index]).padStart(10, "0")} 00000 n \n`, "latin1"));
-  }
-  chunks.push(
-    Buffer.from(
-      `trailer\n<< /Size ${objects.length + 1} /Root ${catalogId} 0 R /Info ${infoId} 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`,
-      "latin1"
-    )
-  );
-
+function buildPdf(pages) {
+  const objects = [null]; const add = (value) => { objects.push(value); return objects.length - 1; };
+  const fontRegular = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
+  const fontBold = add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>");
+  const pageIds = [], contentIds = [];
+  for (const commands of pages) { const stream = Buffer.from(`${commands.join("\n")}\n`, "latin1"); contentIds.push(add({ stream })); pageIds.push(add(null)); }
+  const pagesId = add(null);
+  pageIds.forEach((id, index) => { objects[id] = `<< /Type /Page /Parent ${pagesId} 0 R /MediaBox [0 0 ${page.width} ${page.height}] /Resources << /Font << /F1 ${fontRegular} 0 R /F2 ${fontBold} 0 R >> >> /Contents ${contentIds[index]} 0 R >>`; });
+  objects[pagesId] = `<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map((id) => `${id} 0 R`).join(" ")}] >>`;
+  const catalog = add(`<< /Type /Catalog /Pages ${pagesId} 0 R >>`);
+  const chunks = [Buffer.from("%PDF-1.4\n%\xE2\xE3\xCF\xD3\n", "latin1")], offsets = [0]; let offset = chunks[0].length;
+  for (let id = 1; id < objects.length; id++) { offsets[id] = offset; const value = objects[id]; const body = value?.stream ? Buffer.concat([Buffer.from(`<< /Length ${value.stream.length} >>\nstream\n`, "latin1"), value.stream, Buffer.from("endstream", "latin1")]) : Buffer.from(String(value), "latin1"); const obj = Buffer.concat([Buffer.from(`${id} 0 obj\n`, "latin1"), body, Buffer.from("\nendobj\n", "latin1")]); chunks.push(obj); offset += obj.length; }
+  const xrefOffset = offset; const xref = ["xref", `0 ${objects.length}`, "0000000000 65535 f "];
+  for (let id = 1; id < objects.length; id++) xref.push(`${String(offsets[id]).padStart(10, "0")} 00000 n `);
+  chunks.push(Buffer.from(`${xref.join("\n")}\ntrailer\n<< /Size ${objects.length} /Root ${catalog} 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`, "latin1"));
   return Buffer.concat(chunks);
 }
 
-await fs.mkdir(path.dirname(outputPath), { recursive: true });
-await fs.writeFile(outputPath, createPdf());
-console.log(`Generated ${path.relative(rootDir, outputPath)}`);
+const outputs = {
+  vue: path.join(root, "public/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf"),
+  react: path.join(root, "public/resume/react/mostafa-kazemi-senior-frontend-react.pdf")
+};
+for (const [key, output] of Object.entries(outputs)) { await fs.mkdir(path.dirname(output), { recursive: true }); await fs.writeFile(output, buildPdf(makeDocument(key))); console.log(`Generated ${path.relative(root, output)}`); }
+await fs.copyFile(outputs.react, path.join(root, "public/resume.pdf"));

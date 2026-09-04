@@ -1,0 +1,13 @@
+Dear Hiring Team,
+
+I am applying for a Senior Frontend Engineer role with [Company]. I have more than six years of experience building production web applications with React, Next.js, Vue, Nuxt.js, and TypeScript.
+
+At Jack Westin, I worked with a US-based remote team on Vue and Nuxt applications, a shared component library, and a Chrome extension listed with 40,000 users. My work included the extension side panel, login and subscription states, written and video solution views, browser messaging, Shadow DOM integration, analytics, and automated tests.
+
+At Sazito, I work across React and Next.js storefront and admin products for an online store builder. I have shipped product imports, payment settings, customer-review tools, shipment tracking, marketing attribution, product search, and cart workflows while also maintaining a large legacy React codebase.
+
+I enjoy turning product requirements into clear, dependable interfaces and working closely with design, backend, product, and QA teammates. I would be glad to discuss how my experience relates to [Role] and the problems your team is working on.
+
+Sincerely,
+
+Mostafa Kazemi

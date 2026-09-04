@@ -7,8 +7,8 @@ const profileBlurDataUrl =
 const proofPoints = [
   "React / Next.js",
   "Vue / Nuxt.js",
-  "Chrome extension listed with 40,000+ users",
-  "E-commerce platform with 6,000+ stores"
+  "Chrome extension listed with 40,000 users",
+  "Remote product work with a US-based team"
 ];
 
 export function Hero() {
@@ -21,7 +21,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-14 sm:px-6 sm:py-18 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:px-8 lg:py-20">
         <div className="order-2 flex flex-col justify-center lg:order-1">
           <p className="mb-4 inline-flex w-fit rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-800 dark:border-sky-900/80 dark:bg-sky-950/60 dark:text-sky-200">
-            Remote-ready Senior Frontend Engineer
+            Based in Iran · Open to remote roles and relocation
           </p>
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
             {siteConfig.name}
@@ -30,12 +30,12 @@ export function Hero() {
             {siteConfig.title}
           </p>
           <h2 className="mt-6 max-w-3xl text-balance text-2xl font-semibold leading-tight text-slate-900 sm:text-3xl lg:text-[2.35rem] dark:text-slate-100">
-            Senior frontend architecture, browser extensions, and product UI
-            systems across React, Next.js, Vue, Nuxt.js, and TypeScript.
+            I build production web applications and browser-extension features
+            with React, Next.js, Vue, Nuxt.js, and TypeScript.
           </h2>
           <p className="mt-5 max-w-2xl text-pretty text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-300">
-            I own scalable web applications, reusable UI systems, and
-            browser-integrated experiences for remote-first product teams.
+            Recent work includes e-commerce storefront and admin tools, an
+            MCAT study extension, Nuxt applications, and shared Vue components.
           </p>
 
           <div className="mt-6 flex max-w-2xl flex-wrap gap-2">
@@ -63,11 +63,10 @@ export function Hero() {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="/resume"
               className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-sky-400 hover:text-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
             >
-              Download Resume PDF
+              Choose a Resume
             </a>
           </div>
         </div>

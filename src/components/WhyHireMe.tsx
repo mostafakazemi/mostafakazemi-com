@@ -1,18 +1,18 @@
 const reasons = [
   {
-    title: "Senior Frontend Across Modern Stacks",
+    title: "Production Work in Both Stacks",
     description:
-      "Production experience across React, Next.js, Vue, Nuxt.js, and TypeScript, including e-commerce platform work supporting 6,000+ stores and 5M+ users."
+      "Hands-on work with React and Next.js commerce products, plus four years of Vue and Nuxt.js edtech development."
   },
   {
-    title: "Architecture Beyond Page Delivery",
+    title: "Concrete Product Features",
     description:
-      "Frontend architecture, state management, testing, reusable component systems, and performance work for products that need to stay maintainable as teams and features grow."
+      "Product imports, payments, reviews, shipping, study tools, authentication states, browser messaging, analytics, and automated tests."
   },
   {
-    title: "Browser Extension Product Scale",
+    title: "Remote Team Experience",
     description:
-      "Browser-extension UI architecture for a Chrome extension listed with 40,000+ users, including Shadow DOM isolation, cross-context messaging, and reusable Vue 3 interfaces."
+      "Four years of asynchronous work with a US-based team across product, design, backend, QA, code review, and releases."
   }
 ];
 
@@ -25,13 +25,12 @@ export function WhyHireMe() {
             WHY HIRE ME
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            A senior frontend engineer for product teams that need scale,
-            clarity, and delivery.
+            A senior frontend engineer who can work across product details and
+            existing codebases.
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            I bring broad frontend range without diluting focus: architecture,
-            reusable UI systems, browser-integrated products, and production
-            delivery across React/Next.js and Vue/Nuxt.js.
+            I can join a Vue- or React-focused team, follow a feature through its
+            API and UI states, and leave the surrounding code easier to work with.
           </p>
         </div>
 

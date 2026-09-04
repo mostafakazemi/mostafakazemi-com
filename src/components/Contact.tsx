@@ -16,8 +16,8 @@ export function Contact() {
               <p className="mt-5 text-pretty text-base leading-8 text-slate-300">
                 I&apos;m open to remote contract and full-time remote frontend
                 engineering opportunities. If you need help with React, Next.js,
-                Vue, Nuxt.js, browser extensions, frontend architecture, reusable
-                UI systems, or scalable frontend platforms, feel free to reach out.
+                Vue, Nuxt.js, browser extensions, or shared UI components, feel
+                free to reach out.
               </p>
             </div>
 

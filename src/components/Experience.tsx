@@ -9,7 +9,7 @@ export function Experience() {
             Experience
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Remote product engineering experience.
+            Product engineering experience since 2020.
           </h2>
         </div>
 

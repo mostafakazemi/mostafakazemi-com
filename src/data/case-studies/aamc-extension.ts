@@ -2,48 +2,34 @@ import type { CaseStudy } from "./types";
 
 export const caseStudy = {
   slug: "aamc-extension",
-  title: "AAMC Chrome Extension",
+  title: "Jack Westin MCAT Chrome Extension",
   company: "Jack Westin",
   period: "2022 - Jun 2026",
   role: "Frontend Engineer",
-  summary:
-    "A production browser-extension case study focused on Vue 3 and TypeScript extension interfaces for a Chrome extension serving 40,000+ users, while keeping injected UI isolated, maintainable, and performance-conscious.",
-  technologies: [
-    "Vue 3",
-    "TypeScript",
-    "Browser Extensions",
-    "Shadow DOM",
-    "State Management",
-    "Cross-context Communication",
-    "Content Scripts",
-    "Performance Optimization"
-  ],
-  problem:
-    "Students needed browser-integrated study tooling that could appear inside third-party educational pages without disrupting the host page. At 40,000+ Chrome Web Store users, the frontend architecture needed to stay isolated from page styles and markup, coordinate state across extension contexts, and remain maintainable as product needs evolved.",
+  summary: "Vue 3 and TypeScript work on a production Chrome extension that adds Jack Westin tutor solutions beside AAMC practice questions. The Chrome Web Store lists 40,000 users.",
+  technologies: ["Vue 3", "TypeScript", "Chrome Extensions", "Shadow DOM", "Web Components", "Vite", "Storybook", "Vitest", "Cypress"],
+  problem: "The extension had to place a full study interface inside pages controlled by another product. It needed to recognize question and passage states, show the right written or video solution, and keep its styles and behavior separate from the host page.",
   responsibilities: [
-    "Architected Vue 3 and TypeScript UI modules for browser-integrated study workflows.",
-    "Implemented isolated UI rendering patterns with Shadow DOM to reduce style and DOM conflicts on host pages.",
-    "Structured state management and data flow across injected UI, content-script, and extension contexts.",
-    "Implemented cross-context communication patterns for extension messaging and user-state updates.",
-    "Created reusable UI primitives for browser-integrated experiences.",
-    "Reduced extension runtime overhead by keeping injected UI lightweight and limiting unnecessary processing in browser flows."
+    "Built features for the injected side panel, including solution, resource, login, subscription, and retake states.",
+    "Used Shadow DOM and Web Components to isolate interface markup and styles from AAMC pages.",
+    "Worked on communication and shared state across content scripts, background code, storage, and extension UI.",
+    "Added analytics events, filtered noisy error reports, and improved Sentry context for production issues.",
+    "Tested components and user states with Storybook, Vitest, Vue Test Utils, Playwright, Cypress, and MSW."
   ],
   challenges: [
-    "Rendering product UI inside third-party pages while minimizing style collisions and DOM interference.",
-    "Coordinating state between extension contexts without relying on private page-specific assumptions.",
-    "Keeping extension UI predictable across browser lifecycle events and changing host-page conditions.",
-    "Balancing feature delivery with long-term maintainability in a production browser-extension codebase."
+    "Keeping injected UI stable when host-page markup and browser lifecycle events change.",
+    "Synchronizing authentication, subscription, question, passage, and solution state across extension contexts.",
+    "Avoiding style collisions and controlling overlays, dialogs, and media inside Shadow DOM."
   ],
   results: [
-    "Delivered production browser-extension experiences for MCAT study workflows at 40,000+ user product scale.",
-    "Raised maintainability through typed Vue components, reusable UI patterns, and clearer frontend boundaries.",
-    "Stabilized browser-integrated experiences by isolating UI and managing cross-context communication carefully.",
-    "Established frontend architecture that can evolve across browser-integrated product surfaces."
+    "Shipped written and video solution flows, daily-passage and live-session resources, and improved retake behavior.",
+    "Kept browser-specific behavior behind typed components, composables, messaging, and storage utilities.",
+    "Made production issues easier to investigate through analytics validation, Sentry filtering, and clearer error context."
   ],
   learnings: [
-    "Browser extensions benefit from strict boundaries between host-page behavior and product UI.",
-    "Shadow DOM is most effective when paired with disciplined state management and messaging patterns.",
-    "Small performance choices matter more when UI is injected into pages outside the product team's full control."
+    "Injected interfaces need explicit boundaries for DOM, CSS, state, and browser communication.",
+    "Authentication and subscription changes should invalidate related cached data in one predictable place.",
+    "Component stories and realistic API mocks are especially useful for browser states that are hard to reproduce manually."
   ],
   featured: true
 } satisfies CaseStudy;

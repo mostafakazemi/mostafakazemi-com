@@ -2,51 +2,34 @@ import type { CaseStudy } from "./types";
 
 export const caseStudy = {
   slug: "jackwestin-platform",
-  title: "Jack Westin Platform",
+  title: "Jack Westin Web Applications and UI Library",
   company: "Jack Westin",
   period: "2022 - Jun 2026",
   role: "Frontend Engineer",
-  summary:
-    "A Vue and Nuxt.js case study focused on architectural frontend responsibility across edtech platform delivery, public-facing web experiences, reusable UI libraries, component systems, SSR and generation workflows, testing, and remote collaboration with a US-based team.",
-  technologies: [
-    "Vue",
-    "Nuxt.js",
-    "Vue 3",
-    "TypeScript",
-    "Storybook",
-    "Cypress",
-    "Vitest",
-    "Playwright",
-    "Component Libraries",
-    "SSR",
-    "Static Generation"
-  ],
-  problem:
-    "The platform needed maintainable frontend delivery across public-facing edtech pages, Nuxt/Vue application surfaces, and reusable UI systems while supporting production workflows, testing, and remote collaboration across time zones.",
+  summary: "Frontend work across Nuxt applications and a shared Vue 3 component library for a US-based remote edtech team.",
+  technologies: ["Vue", "Vue 3", "Nuxt.js", "TypeScript", "Storybook", "Vitest", "Vue Test Utils", "Playwright", "MSW", "Web Components"],
+  problem: "Product work spanned public pages, student workflows, older Nuxt code, newer Vue components, and UI that also needed to run as standalone Web Components.",
   responsibilities: [
-    "Owned Vue and Nuxt.js frontend experiences for edtech platform surfaces.",
-    "Translated product requirements into public-facing website pages, production UI, and reusable Vue components.",
-    "Organized component libraries and Storybook-based UI documentation workflows.",
-    "Shaped SSR and generation workflows across Nuxt-based frontend applications.",
-    "Drove testing coverage and tooling through Cypress, Vitest, Playwright, and typed workflows.",
-    "Coordinated remote delivery with a US-based team through async communication, reviews, and task management."
+    "Shipped navigation, billing, study-plan, subscription, marketing, and other student-facing flows in Nuxt applications.",
+    "Built reusable session, daily-passage, dialog, toast, dropdown, and form components.",
+    "Added responsive variants and handled authenticated, loading, error, canceled, and external-link states.",
+    "Documented component behavior in Storybook and reused MSW handlers between stories and tests.",
+    "Worked asynchronously through scoped tasks, merge requests, code reviews, and written implementation notes."
   ],
   challenges: [
-    "Working across Nuxt 2 and newer Nuxt/Vue 3 architectures with different conventions and constraints.",
-    "Keeping public-facing UI maintainable while supporting production delivery needs.",
-    "Balancing reusable component design with product-specific page implementation.",
-    "Maintaining reliable frontend workflows across remote collaboration and multiple product surfaces."
+    "Supporting both older Nuxt conventions and newer Vue 3 component patterns.",
+    "Making the same components work in application pages and isolated Web Component builds.",
+    "Covering API and session edge cases without depending on live production data."
   ],
   results: [
-    "Delivered production Vue and Nuxt.js applications used by MCAT students.",
-    "Raised frontend maintainability through reusable UI systems and component documentation.",
-    "Reduced delivery risk through testing, typed implementation, and reviewable UI states.",
-    "Operated effectively with a US-based remote team across product, design, and engineering workflows."
+    "Delivered product pages and components used across the website, student product, and browser extension.",
+    "Added automated coverage for responsive behavior, dialogs, API failures, session state, and Web Component styling.",
+    "Created reviewable UI states that teammates could inspect without reproducing every backend condition."
   ],
   learnings: [
-    "Reusable UI systems are strongest when documentation and production usage evolve together.",
-    "Nuxt applications benefit from clear boundaries between page implementation, data flow, and shared components.",
-    "Remote frontend delivery depends on readable code, explicit review context, and steady communication."
+    "A shared component is useful only when its API covers real product states without hiding too much behavior.",
+    "Mocks are most valuable when stories and tests share the same response contracts.",
+    "Small written handoffs reduce ambiguity when a remote team works across time zones."
   ],
   featured: true
 } satisfies CaseStudy;

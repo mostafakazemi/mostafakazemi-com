@@ -9,11 +9,11 @@ export function Skills() {
             Skills
           </p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Frontend engineering stack for production teams.
+            Tools I use in production frontend work.
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            A practical mix of product development, architecture, browser
-            extension work, reusable UI systems, testing, and build tooling.
+            Grouped by the work they support, without treating every tool as a
+            separate specialty.
           </p>
         </div>
 

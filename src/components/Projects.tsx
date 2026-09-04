@@ -12,9 +12,8 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            A selection of real-world products, platforms, and frontend systems
-            I’ve owned or shaped across web applications, browser extensions,
-            reusable UI libraries, and e-commerce platforms.
+            Real product work from browser extensions, Vue and Nuxt applications,
+            shared components, and React and Next.js commerce tools.
           </p>
         </div>
 

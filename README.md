@@ -30,13 +30,13 @@ Open `http://localhost:3000`.
 
 ## Build
 
-Create a production build. This also regenerates `public/resume.pdf` from `src/data/resume.json` before the Next.js build runs:
+Create a production build. This also regenerates the Vue-focused and React-focused resume PDFs and the general cover letter before the Next.js build runs:
 
 ```bash
 pnpm build
 ```
 
-Generate the resume PDF only:
+Generate both resume PDFs only:
 
 ```bash
 pnpm generate:resume
@@ -75,4 +75,9 @@ Then configure the DNS records exactly as Vercel instructs. DNS requirements can
 
 ## Content
 
-Portfolio content is centralized in `src/data/portfolio.ts`. Resume content is centralized in `src/data/resume.json` and powers both `/resume` and `public/resume.pdf`.
+Portfolio content is centralized in `src/data/portfolio.ts`. Resume content is centralized in `src/data/resume.json` and powers `/resume` plus these downloads:
+
+- `public/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf`
+- `public/resume/react/mostafa-kazemi-senior-frontend-react.pdf`
+
+The general cover letter source is `src/data/general-cover-letter.txt`; its PDF is written to `public/cover-letter/general/`.

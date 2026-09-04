@@ -1,0 +1,352 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 5718 >>
+stream
+BT
+/F2 19 Tf
+243.49 757.00 Td
+(Mostafa Kazemi) Tj
+ET
+BT
+/F1 10 Tf
+204.95 739.00 Td
+(Senior Frontend Engineer - Vue.js / Nuxt.js) Tj
+ET
+BT
+/F1 7.5 Tf
+42.00 727.00 Td
+(Iran | Open to remote roles and relocation | mostafa.kazeminejhad@gmail.com | +98 918 344 6857) Tj
+ET
+BT
+/F1 7.5 Tf
+172.05 718.00 Td
+(mostafakazemi.com | linkedin.com/in/mostafakazemi | github.com/mostafakazemi) Tj
+ET
+BT
+/F2 9 Tf
+42.00 702.00 Td
+(SUMMARY) Tj
+ET
+0.55 w
+42 694 m
+570 694 l
+S
+BT
+/F1 8.9 Tf
+42.00 688.00 Td
+(Senior Frontend Engineer with 6+ years of experience building production web applications with Vue, Nuxt.js, TypeScript,) Tj
+ET
+BT
+/F1 8.9 Tf
+42.00 677.00 Td
+(React, and Next.js. From 2022 to 2026, I worked with a US-based remote team on Vue/Nuxt applications, a reusable Vue component) Tj
+ET
+BT
+/F1 8.9 Tf
+42.00 666.00 Td
+(library, and a Chrome extension listed with 40,000 users. Experienced with browser extensions, Shadow DOM, state management,) Tj
+ET
+BT
+/F1 8.9 Tf
+42.00 655.00 Td
+(API integration, testing, and asynchronous product delivery.) Tj
+ET
+BT
+/F2 9 Tf
+42.00 639.00 Td
+(EXPERIENCE) Tj
+ET
+0.55 w
+42 631 m
+570 631 l
+S
+BT
+/F2 9.1 Tf
+42.00 625.00 Td
+(Senior Frontend Engineer - Sazito) Tj
+ET
+BT
+/F1 8.1 Tf
+455.79 625.00 Td
+(Jun 2022 - Present | Part-time) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 614.00 Td
+(Technologies: React, Next.js, TypeScript, Redux, Redux Saga, REST APIs, Tailwind CSS) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 601.90 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 601.90 Td
+(Build and maintain storefront and admin features for Sazito's online store builder using React, Next.js, TypeScript, and Redux.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 589.60 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 589.60 Td
+(Implemented product import workflows for CSV and XLSX files, including async job states, expired downloads, and upload error) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 579.00 Td
+(handling.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 566.70 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 566.70 Td
+(Built customer-review management screens, rating flows, image uploads, and responsive admin tables.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 554.40 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 554.40 Td
+(Added and maintained payment settings, shipment tracking, marketing attribution, product search, and quick-add-to-cart) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 543.80 Td
+(workflows.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 531.50 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 531.50 Td
+(Modernize a large legacy React application in small changes while keeping active storefront and admin behavior intact.) Tj
+ET
+BT
+/F2 9.1 Tf
+42.00 516.70 Td
+(Frontend Engineer - Jack Westin \(US-based remote team\)) Tj
+ET
+BT
+/F1 8.1 Tf
+497.67 516.70 Td
+(Jun 2022 - Jun 2026) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 505.70 Td
+(Technologies: Vue 3, Nuxt.js, TypeScript, Pinia, Chrome Extensions, Shadow DOM, Storybook, Vitest, Cypress) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 493.60 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 493.60 Td
+(Built Vue 3 and TypeScript features for a Chrome extension listed with 40,000 users, including its injected study side panel.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 481.30 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 481.30 Td
+(Implemented login and subscription states, written and video solution views, daily-passage and live-session resources, and) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 470.70 Td
+(retake flows.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 458.40 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 458.40 Td
+(Used Shadow DOM and Web Components to keep injected interfaces and styles isolated from third-party pages.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 446.10 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 446.10 Td
+(Worked on messaging, storage, caching, analytics, and error reporting across content scripts, background code, and extension) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 435.50 Td
+(UI.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 423.20 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 423.20 Td
+(Built and tested reusable Vue components in a shared library with Storybook, Vitest, Vue Test Utils, Playwright, and MSW.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 410.90 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 410.90 Td
+(Delivered public-site and student-product features across Nuxt applications, including navigation, billing, study-plan, and) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 400.30 Td
+(marketing flows.) Tj
+ET
+BT
+/F2 9.1 Tf
+42.00 385.50 Td
+(Frontend Developer - Chamedoon) Tj
+ET
+BT
+/F1 8.1 Tf
+497.67 385.50 Td
+(Apr 2020 - Jun 2022) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 374.50 Td
+(Technologies: Vue.js, Nuxt.js, Vuex, TypeScript, JavaScript, REST APIs, Sass) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 362.40 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 362.40 Td
+(Built customer-facing Vue and Nuxt features from product requirements and API specifications.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 350.10 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 350.10 Td
+(Created responsive interfaces with Sass and maintained Vuex state for data-driven workflows.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 337.80 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 337.80 Td
+(Worked with backend and product teammates to handle API errors, debug production issues, and ship fixes.) Tj
+ET
+BT
+/F2 9 Tf
+42.00 319.00 Td
+(SKILLS) Tj
+ET
+0.55 w
+42 310.99999999999983 m
+570 310.99999999999983 l
+S
+BT
+/F1 8.45 Tf
+42.00 305.00 Td
+(Core: Vue 3, Vue.js, Nuxt.js, TypeScript, JavaScript, HTML, CSS, Sass, Tailwind CSS) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 293.20 Td
+(State and APIs: Pinia, Vuex, REST APIs, Authentication, Browser Extension Messaging) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 281.40 Td
+(Testing and UI: Vitest, Cypress, Playwright, Vue Test Utils, Storybook, MSW, Web Components, Shadow DOM) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 269.60 Td
+(Tooling: Vite, Webpack, pnpm, Git, ESLint) Tj
+ET
+BT
+/F2 9 Tf
+42.00 253.80 Td
+(EDUCATION) Tj
+ET
+0.55 w
+42 245.79999999999995 m
+570 245.79999999999995 l
+S
+BT
+/F2 8.8 Tf
+42.00 239.80 Td
+(Bachelor of Software Engineering - University of Ilam, Iran) Tj
+ET
+BT
+/F1 8.2 Tf
+516.04 239.80 Td
+(Graduated 2012) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000000160 00000 n 
+0000005929 00000 n 
+0000006065 00000 n 
+0000006122 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+6171
+%%EOF

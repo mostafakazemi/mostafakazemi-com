@@ -1,190 +1,111 @@
 {
   "profile": {
     "name": "Mostafa Kazemi",
-    "alternateNames": [
-      "Mostafa Kazeminejad",
-      "Mostafa Kazemi Nejad",
-      "مصطفی کاظمی",
-      "مصطفی کاظمی نژاد"
-    ],
+    "alternateNames": ["Mostafa Kazeminejad", "Mostafa Kazemi Nejad", "مصطفی کاظمی", "مصطفی کاظمی نژاد"],
     "title": "Senior Frontend Engineer",
-    "location": "Istanbul, Türkiye",
-    "remote": "Open to Remote Worldwide",
+    "location": "Iran",
+    "availability": "Open to remote roles and relocation",
     "email": "mostafa.kazeminejhad@gmail.com",
     "phone": "+98 918 344 6857",
     "website": "https://mostafakazemi.com",
     "github": "https://github.com/mostafakazemi",
     "linkedin": "https://www.linkedin.com/in/mostafakazemi/"
   },
-  "summary": [
-    "Senior Frontend Engineer with 6+ years of experience building React/Next.js and Vue/Nuxt.js platforms, reusable component systems, and browser-extension frontend architecture for remote product teams.",
-    "Contributed to frontend systems for a Chrome extension listed with 40,000+ users, with focus on TypeScript, Shadow DOM, cross-context messaging, performance, testing, and maintainable UI boundaries.",
-    "Owns production frontend delivery from ambiguous requirements through architecture, implementation, code review, and release-ready execution.",
-    "Experienced in asynchronous collaboration with US-based and international teams across product, design, backend, QA, and engineering leadership.",
-    "Open to Senior Frontend Engineer roles with European and remote-first companies."
-  ],
-  "bestFit": [
-    "Senior Frontend Engineer roles in remote-first product teams",
-    "React/Next.js and Vue/Nuxt.js production web application development",
-    "Frontend systems for e-commerce platforms with 6,000+ stores, 5M+ users, and high transaction volume",
-    "Browser-extension frontend architecture with TypeScript, Shadow DOM, and cross-context messaging",
-    "Reusable component systems, Storybook workflows, and scalable UI foundations",
-    "Frontend performance, maintainability, testing strategy, and developer-experience improvements"
-  ],
-  "achievements": [
-    "Established browser-extension UI architecture for third-party educational platforms, keeping injected experiences isolated, maintainable, and ready for product iteration.",
-    "Built reusable component systems across product surfaces, reducing repeated UI decisions and giving teams a more consistent delivery foundation.",
-    "Modernized TypeScript, API integration, and state-management patterns in production codebases, lowering architectural drift as products scaled.",
-    "Raised frontend delivery confidence with Cypress, Storybook, typed workflows, and performance-focused refactoring across React, Next.js, Vue, and Nuxt.js systems."
-  ],
-  "skills": [
-    {
-      "title": "Frontend",
-      "items": [
-        "React",
-        "Next.js",
-        "Vue.js",
-        "Nuxt.js",
-        "JavaScript",
-        "TypeScript",
-        "HTML5",
-        "CSS3",
-        "Tailwind CSS"
-      ]
+  "education": [{"school": "University of Ilam", "country": "Iran", "degree": "Bachelor of Software Engineering", "graduated": "2012"}],
+  "skills": {
+    "vue": [
+      {"title": "Core", "items": ["Vue 3", "Vue.js", "Nuxt.js", "TypeScript", "JavaScript", "HTML", "CSS", "Sass", "Tailwind CSS"]},
+      {"title": "State and APIs", "items": ["Pinia", "Vuex", "REST APIs", "Authentication", "Browser Extension Messaging"]},
+      {"title": "Testing and UI", "items": ["Vitest", "Cypress", "Playwright", "Vue Test Utils", "Storybook", "MSW", "Web Components", "Shadow DOM"]},
+      {"title": "Tooling", "items": ["Vite", "Webpack", "pnpm", "Git", "ESLint"]}
+    ],
+    "react": [
+      {"title": "Core", "items": ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Sass", "Tailwind CSS"]},
+      {"title": "State and APIs", "items": ["Redux", "Redux Toolkit", "Redux Saga", "React Router", "REST APIs", "Authentication"]},
+      {"title": "Testing and UI", "items": ["Jest", "Playwright", "Cypress", "Storybook", "Component Libraries", "Responsive UI"]},
+      {"title": "Tooling", "items": ["Webpack", "Vite", "Babel", "pnpm", "Git", "ESLint"]}
+    ]
+  },
+  "variants": {
+    "vue": {
+      "label": "Vue-focused",
+      "title": "Senior Frontend Engineer - Vue.js / Nuxt.js",
+      "summary": "Senior Frontend Engineer with 6+ years of experience building production web applications with Vue, Nuxt.js, TypeScript, React, and Next.js. From 2022 to 2026, I worked with a US-based remote team on Vue/Nuxt applications, a reusable Vue component library, and a Chrome extension listed with 40,000 users. Experienced with browser extensions, Shadow DOM, state management, API integration, testing, and asynchronous product delivery.",
+      "experience": [
+        {
+          "title": "Senior Frontend Engineer", "company": "Sazito", "period": "Jun 2022 - Present", "type": "Part-time",
+          "technologies": ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "REST APIs", "Tailwind CSS"],
+          "highlights": [
+            "Build and maintain storefront and admin features for Sazito's online store builder using React, Next.js, TypeScript, and Redux.",
+            "Implemented product import workflows for CSV and XLSX files, including async job states, expired downloads, and upload error handling.",
+            "Built customer-review management screens, rating flows, image uploads, and responsive admin tables.",
+            "Added and maintained payment settings, shipment tracking, marketing attribution, product search, and quick-add-to-cart workflows.",
+            "Modernize a large legacy React application in small changes while keeping active storefront and admin behavior intact."
+          ]
+        },
+        {
+          "title": "Frontend Engineer", "company": "Jack Westin", "location": "US-based remote team", "period": "Jun 2022 - Jun 2026",
+          "technologies": ["Vue 3", "Nuxt.js", "TypeScript", "Pinia", "Chrome Extensions", "Shadow DOM", "Storybook", "Vitest", "Cypress"],
+          "highlights": [
+            "Built Vue 3 and TypeScript features for a Chrome extension listed with 40,000 users, including its injected study side panel.",
+            "Implemented login and subscription states, written and video solution views, daily-passage and live-session resources, and retake flows.",
+            "Used Shadow DOM and Web Components to keep injected interfaces and styles isolated from third-party pages.",
+            "Worked on messaging, storage, caching, analytics, and error reporting across content scripts, background code, and extension UI.",
+            "Built and tested reusable Vue components in a shared library with Storybook, Vitest, Vue Test Utils, Playwright, and MSW.",
+            "Delivered public-site and student-product features across Nuxt applications, including navigation, billing, study-plan, and marketing flows."
+          ]
+        },
+        {
+          "title": "Frontend Developer", "company": "Chamedoon", "period": "Apr 2020 - Jun 2022",
+          "technologies": ["Vue.js", "Nuxt.js", "Vuex", "TypeScript", "JavaScript", "REST APIs", "Sass"],
+          "highlights": [
+            "Built customer-facing Vue and Nuxt features from product requirements and API specifications.",
+            "Created responsive interfaces with Sass and maintained Vuex state for data-driven workflows.",
+            "Worked with backend and product teammates to handle API errors, debug production issues, and ship fixes."
+          ]
+        }
+      ],
+      "selectedWork": [{"title": "Jack Westin MCAT Chrome Extension", "description": "Vue 3 and TypeScript extension that adds written and video tutor solutions beside AAMC practice questions. Work included the injected side panel, authentication and subscription states, resource cards, retake flows, analytics, cross-context communication, and Shadow DOM isolation.", "link": "chromewebstore.google.com/detail/jgglfdpjpddcdaeapbcfgckfheabbdpi"}]
     },
-    {
-      "title": "State Management",
-      "items": ["Redux", "Redux Toolkit", "Pinia"]
-    },
-    {
-      "title": "Testing",
-      "items": ["Cypress", "Playwright", "Vitest", "Jest"]
-    },
-    {
-      "title": "Tooling",
-      "items": ["Vite", "Webpack", "Storybook", "pnpm", "Git"]
-    },
-    {
-      "title": "Architecture",
-      "items": [
-        "Design Systems",
-        "Component Libraries",
-        "Frontend Architecture",
-        "Browser Extensions",
-        "REST APIs",
-        "Performance Optimization"
-      ]
+    "react": {
+      "label": "React-focused",
+      "title": "Senior Frontend Engineer - React / Next.js",
+      "summary": "Senior Frontend Engineer with 6+ years of experience building production web applications with React, Next.js, TypeScript, Vue, and Nuxt.js. At Sazito, I work across storefront and admin products for an online store builder, including product import, payments, customer reviews, shipment tracking, and marketing attribution. I also spent four years with a US-based remote team building edtech web applications, shared UI components, and a Chrome extension listed with 40,000 users.",
+      "experience": [
+        {
+          "title": "Senior Frontend Engineer", "company": "Sazito", "period": "Jun 2022 - Present", "type": "Part-time",
+          "technologies": ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "REST APIs", "Tailwind CSS", "Webpack"],
+          "highlights": [
+            "Build and maintain storefront and admin features for Sazito's online store builder using React, Next.js, TypeScript, and Redux.",
+            "Implemented product import workflows for CSV and XLSX files, including async job states, expired downloads, and upload error handling.",
+            "Built customer-review management screens, rating flows, image uploads, and responsive admin tables.",
+            "Added and maintained payment settings, shipment tracking, marketing attribution, product search, and quick-add-to-cart workflows.",
+            "Worked across REST API integrations, authentication-aware UI, form-heavy admin tools, internationalized storefronts, and custom Webpack builds.",
+            "Modernize a large legacy React application in small changes while keeping active storefront and admin behavior intact."
+          ]
+        },
+        {
+          "title": "Frontend Engineer", "company": "Jack Westin", "location": "US-based remote team", "period": "Jun 2022 - Jun 2026",
+          "technologies": ["Vue 3", "Nuxt.js", "TypeScript", "Chrome Extensions", "Shadow DOM", "Storybook", "Vitest", "Cypress"],
+          "highlights": [
+            "Built frontend features across Nuxt applications and a Chrome extension listed with 40,000 users.",
+            "Implemented extension login and subscription states, written and video solution views, resource cards, and retake flows.",
+            "Worked on messaging, storage, caching, analytics, and error reporting across browser-extension contexts.",
+            "Built reusable components and Web Component outputs in a shared Vue library, with Storybook and automated tests.",
+            "Collaborated asynchronously with product, design, backend, and QA teammates in a US-based remote team."
+          ]
+        },
+        {
+          "title": "Frontend Developer", "company": "Chamedoon", "period": "Apr 2020 - Jun 2022",
+          "technologies": ["Vue.js", "Nuxt.js", "Vuex", "TypeScript", "JavaScript", "REST APIs", "Sass"],
+          "highlights": [
+            "Built customer-facing Vue and Nuxt features from product requirements and API specifications.",
+            "Created responsive interfaces with Sass and maintained Vuex state for data-driven workflows.",
+            "Worked with backend and product teammates to handle API errors, debug production issues, and ship fixes."
+          ]
+        }
+      ],
+      "selectedWork": [{"title": "Sazito Commerce Platform", "description": "React and Next.js work across active storefront and admin products. Recent features include bulk product imports, advanced payment settings, shipment tracking, customer-review tools, marketing attribution, product search, and quick-add-to-cart flows.", "link": "sazito.com"}]
     }
-  ],
-  "experience": [
-    {
-      "title": "Senior Frontend Engineer",
-      "company": "Sazito",
-      "period": "Jun 2022 – Present",
-      "type": "Part-time",
-      "highlights": [
-        "Owned React and Next.js frontend delivery for e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
-        "Unified TypeScript component patterns across public and platform surfaces, reducing duplicate UI effort and making feature delivery easier to extend.",
-        "Refactored Redux and REST API integration flows in complex product areas, making state transitions clearer and lowering maintenance risk.",
-        "Hardened performance-sensitive UI paths through targeted refactoring and modern tooling, creating faster and more reliable storefront experiences.",
-        "Shaped frontend architecture choices for online-store and SaaS workflows, giving teams reusable foundations for long-term product growth."
-      ],
-      "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
-    },
-    {
-      "title": "Frontend Engineer",
-      "company": "Jack Westin",
-      "location": "US-based Remote Team",
-      "period": "Jun 2022 – Jun 2026",
-      "highlights": [
-        "Architected frontend systems for a Chrome extension serving 40,000+ users, designing Vue 3 and TypeScript UI modules for browser-integrated study workflows.",
-        "Isolated injected extension interfaces with Shadow DOM, solving host-page style and DOM conflict risks while preserving predictable product UI behavior.",
-        "Orchestrated cross-context messaging between content scripts, background processes, and extension UI, creating reliable state flow across browser-extension contexts.",
-        "Defined reusable Vue and TypeScript component patterns with Storybook, giving extension and Nuxt platform surfaces a more consistent UI foundation.",
-        "Strengthened Cypress-based testing and frontend scalability practices, reducing release risk for browser-extension, Nuxt.js, and component-library workflows."
-      ],
-      "technologies": [
-        "Vue.js",
-        "Nuxt.js",
-        "Vue 3",
-        "TypeScript",
-        "Browser Extensions",
-        "Cypress",
-        "Storybook",
-        "Component Libraries"
-      ]
-    },
-    {
-      "title": "Frontend Developer",
-      "company": "Chamedoon",
-      "period": "Apr 2020 – Jun 2022",
-      "highlights": [
-        "Delivered Vue and Nuxt production features in a growing customer-facing application, turning product requirements into stable frontend workflows.",
-        "Created responsive Sass interfaces for mixed desktop and mobile usage, giving users consistent behavior across devices.",
-        "Connected REST API workflows with backend teams, aligning frontend state, error handling, and data flows with production contracts.",
-        "Structured Vuex state and TypeScript patterns as the application grew, making complex UI flows easier to reason about and maintain.",
-        "Refactored performance-sensitive views and debugging hotspots, reducing UI friction and increasing codebase reliability.",
-        "Partnered with product and backend teams through releases, translating feedback into frontend fixes and user-facing enhancements.",
-        "Established testing and issue-investigation habits in an early-stage codebase, creating a stronger foundation for long-term frontend maintenance."
-      ],
-      "technologies": [
-        "Vue.js",
-        "Nuxt.js",
-        "Vuex",
-        "TypeScript",
-        "JavaScript",
-        "REST APIs",
-        "Sass",
-        "CSS",
-        "HTML5",
-        "Git"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "school": "University of Ilam",
-      "country": "Iran",
-      "degree": "Bachelor of Software Engineering",
-      "graduated": "2012"
-    }
-  ],
-  "caseStudies": [
-    {
-      "title": "Jack Westin Browser Extension",
-      "problem": "Students needed browser-integrated study experiences inside third-party educational platforms without fragile host-page coupling for a Chrome extension listed with 40,000+ users.",
-      "responsibilities": [
-        "Architected Vue 3 and TypeScript UI modules for browser-extension surfaces at 40,000+ user product scale while keeping UI boundaries easier to maintain.",
-        "Mapped content-script, Shadow DOM, and cross-context messaging flows for third-party page integration.",
-        "Created reusable extension UI patterns so product iterations could ship faster without duplicating browser-specific integration logic."
-      ],
-      "technicalChallenges": [
-        "Third-party page integration",
-        "Shadow DOM isolation",
-        "State synchronization",
-        "Performance-sensitive browser contexts"
-      ],
-      "solution": "Built modular extension UI patterns that integrated with external pages while keeping product UI isolated, testable, and maintainable.",
-      "impact": "Created a more scalable browser-extension foundation for educational workflows and a more consistent experience across browser-integrated products.",
-      "technologies": ["Vue 3", "TypeScript", "Browser Extensions", "Shadow DOM", "State Management"]
-    },
-    {
-      "title": "Sazito E-commerce Platform",
-      "problem": "Product teams needed scalable frontend foundations for online-store and e-commerce workflows across a platform supporting 6,000+ stores, 5M+ users, and roughly 10 trillion rial in monthly transaction volume.",
-      "responsibilities": [
-        "Owned React and Next.js feature delivery across an e-commerce platform supporting 6,000+ stores, 5M+ users, and high transaction volume.",
-        "Unified reusable components and API integration patterns across storefront and platform surfaces to reduce repeated implementation effort.",
-        "Modernized legacy and newer React areas so product delivery could move with less architectural friction."
-      ],
-      "technicalChallenges": [
-        "Reusable UI architecture",
-        "Redux state management",
-        "REST API workflows",
-        "Performance and maintainability"
-      ],
-      "solution": "Shaped reusable frontend systems and application patterns that carried multiple e-commerce product workflows.",
-      "impact": "Raised frontend scalability, consistency, and developer experience across high-traffic e-commerce platform surfaces.",
-      "technologies": ["React", "Next.js", "TypeScript", "Redux", "REST APIs", "Tailwind CSS"]
-    }
-  ]
+  }
 }
