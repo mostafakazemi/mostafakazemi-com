@@ -29,7 +29,7 @@ function paragraph(value, { size = 10.2, lineHeight = 15, after = 11, bold = fal
 text(resume.profile.name, { size: 18, bold: true, align: "center" }); y += 19;
 text(resume.profile.title, { size: 10.5, align: "center" }); y += 14;
 text(`${resume.profile.location} | ${resume.profile.availability}`, { size: 8, align: "center" }); y += 11;
-text(`${resume.profile.email} | ${resume.profile.phone}`, { size: 8, align: "center" }); y += 11;
+text(resume.profile.email, { size: 8, align: "center" }); y += 11;
 text("mostafakazemi.com | linkedin.com/in/mostafakazemi | github.com/mostafakazemi", { size: 8, align: "center" }); y += 14;
 commands.push("0.6 w", `${page.left} ${page.height - y} m`, `${page.left + contentWidth} ${page.height - y} l`, "S"); y += 22;
 

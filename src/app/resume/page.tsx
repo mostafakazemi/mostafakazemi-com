@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import resume from "@/data/resume.json";
+import { siteConfig } from "@/data/portfolio";
 
-const domain = "https://mostafakazemi.com";
+const domain = siteConfig.domain;
 const title = "Resume - Mostafa Kazemi | Senior Frontend Engineer";
-const description = "Resume for Mostafa Kazemi, a Senior Frontend Engineer with React, Next.js, Vue, Nuxt.js, TypeScript, and browser-extension experience.";
+const description = `Resume for Mostafa Kazemi, a Senior Frontend Engineer based in ${siteConfig.location} with React, Next.js, Vue, Nuxt.js, TypeScript, and browser-extension experience.`;
 
 export const metadata: Metadata = {
   title, description,
@@ -16,10 +17,17 @@ const combinedSkills = Array.from(new Set([...resume.skills.react.flatMap((group
 const personJsonLd = {
   "@context": "https://schema.org", "@type": "Person", name: resume.profile.name,
   alternateName: resume.profile.alternateNames, jobTitle: resume.profile.title,
-  url: resume.profile.website, email: `mailto:${resume.profile.email}`, telephone: resume.profile.phone,
-  address: { "@type": "PostalAddress", addressCountry: "IR" },
+  url: resume.profile.website, email: `mailto:${resume.profile.email}`,
+  address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
   sameAs: [resume.profile.website, resume.profile.github, resume.profile.linkedin], knowsAbout: combinedSkills
 };
+
+const resumeDownloads = [
+  { label: "Vue Resume - Iran", href: "/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf", primary: false },
+  { label: "React Resume - Iran", href: "/resume/react/mostafa-kazemi-senior-frontend-react.pdf", primary: true },
+  { label: "Vue Resume - Istanbul", href: "/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf", primary: false },
+  { label: "React Resume - Istanbul", href: "/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf", primary: true }
+] as const;
 
 function Section({ title: sectionTitle, children }: Readonly<{ title: string; children: React.ReactNode }>) {
   return <section className="pt-8"><div className="border-b border-slate-900 pb-2 dark:border-slate-200"><h2 className="text-xs font-bold uppercase tracking-[0.14em] text-slate-950 dark:text-white">{sectionTitle}</h2></div><div className="mt-5">{children}</div></section>;
@@ -34,8 +42,18 @@ export default function ResumePage() {
         <nav className="mb-8 flex flex-wrap items-center justify-between gap-3 text-sm">
           <Link href="/" className="rounded-full border border-slate-300 bg-white px-4 py-2 font-semibold text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">Back to Portfolio</Link>
           <div className="flex flex-wrap gap-2">
-            <a href="/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf" download className="rounded-full border border-sky-300 bg-white px-4 py-2 font-semibold text-sky-800 dark:border-sky-700 dark:bg-slate-900 dark:text-sky-200">Download Vue Resume</a>
-            <a href="/resume/react/mostafa-kazemi-senior-frontend-react.pdf" download className="rounded-full bg-sky-500 px-4 py-2 font-semibold text-slate-950">Download React Resume</a>
+            {resumeDownloads.map((download) => (
+              <a
+                key={download.href}
+                href={download.href}
+                download
+                className={download.primary
+                  ? "rounded-full bg-sky-500 px-4 py-2 font-semibold text-slate-950 transition hover:bg-sky-400"
+                  : "rounded-full border border-sky-300 bg-white px-4 py-2 font-semibold text-sky-800 transition hover:border-sky-400 hover:bg-sky-50 dark:border-sky-700 dark:bg-slate-900 dark:text-sky-200 dark:hover:bg-slate-800"}
+              >
+                {download.label}
+              </a>
+            ))}
           </div>
         </nav>
 
@@ -44,8 +62,8 @@ export default function ResumePage() {
             <h1 className="text-3xl font-bold tracking-tight">{resume.profile.name}</h1>
             <p className="mt-1 text-sm font-medium text-slate-700 dark:text-slate-300">{resume.profile.title}</p>
             <address className="mt-3 flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs not-italic text-slate-600 dark:text-slate-300">
-              <span>{resume.profile.location}</span><span>{resume.profile.availability}</span>
-              <a href={`mailto:${resume.profile.email}`}>{resume.profile.email}</a><span>{resume.profile.phone}</span>
+              <span>{siteConfig.location}</span><span>{siteConfig.availability}</span>
+              <a href={`mailto:${resume.profile.email}`}>{resume.profile.email}</a>
               <a href={resume.profile.linkedin}>LinkedIn</a><a href={resume.profile.github}>GitHub</a>
             </address>
           </header>

@@ -79,5 +79,7 @@ Portfolio content is centralized in `src/data/portfolio.ts`. Resume content is c
 
 - `public/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf`
 - `public/resume/react/mostafa-kazemi-senior-frontend-react.pdf`
+- `public/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf`
+- `public/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf`
 
 The general cover letter source is `src/data/general-cover-letter.txt`; its PDF is written to `public/cover-letter/general/`.

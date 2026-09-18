@@ -18,8 +18,10 @@ function wrap(value, size, maxWidth) {
   if (line) lines.push(line); return lines;
 }
 
-function makeDocument(variantKey) {
+function makeDocument(variantKey, profileOverride = {}) {
   const variant = resume.variants[variantKey];
+  const profileLocation = profileOverride.location ?? resume.profile.location;
+  const profileAvailability = profileOverride.availability ?? resume.profile.availability;
   const state = { pages: [], commands: [], y: page.top };
   const addPage = () => { state.commands = []; state.pages.push(state.commands); state.y = page.top; };
   const ensure = (height) => { if (state.y + height > page.height - page.bottom) addPage(); };
@@ -44,7 +46,7 @@ function makeDocument(variantKey) {
   addPage();
   text(resume.profile.name, { size: 19, bold: true, align: "center" }); state.y += 18;
   text(variant.title, { size: 10, align: "center" }); state.y += 12;
-  paragraph(`${resume.profile.location} | ${resume.profile.availability} | ${resume.profile.email} | ${resume.profile.phone}`, { size: 7.5, lineHeight: 9, after: 0, align: "center" });
+  paragraph(`${profileLocation} | ${profileAvailability} | ${resume.profile.email}`, { size: 7.5, lineHeight: 9, after: 0, align: "center" });
   text("mostafakazemi.com | linkedin.com/in/mostafakazemi | github.com/mostafakazemi", { size: 7.5, align: "center" }); state.y += 12;
 
   heading("Summary"); paragraph(variant.summary, { size: 8.9, lineHeight: 11, after: 1 });
@@ -83,9 +85,31 @@ function buildPdf(pages) {
   return Buffer.concat(chunks);
 }
 
-const outputs = {
-  vue: path.join(root, "public/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf"),
-  react: path.join(root, "public/resume/react/mostafa-kazemi-senior-frontend-react.pdf")
-};
-for (const [key, output] of Object.entries(outputs)) { await fs.mkdir(path.dirname(output), { recursive: true }); await fs.writeFile(output, buildPdf(makeDocument(key))); console.log(`Generated ${path.relative(root, output)}`); }
-await fs.copyFile(outputs.react, path.join(root, "public/resume.pdf"));
+const outputs = [
+  {
+    key: "vue",
+    output: path.join(root, "public/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf")
+  },
+  {
+    key: "react",
+    output: path.join(root, "public/resume/react/mostafa-kazemi-senior-frontend-react.pdf")
+  },
+  {
+    key: "vue",
+    output: path.join(root, "public/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf"),
+    profile: { location: "Istanbul, Turkey", availability: "Open to Remote Worldwide" }
+  },
+  {
+    key: "react",
+    output: path.join(root, "public/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf"),
+    profile: { location: "Istanbul, Turkey", availability: "Open to Remote Worldwide" }
+  }
+];
+
+for (const { key, output, profile } of outputs) {
+  await fs.mkdir(path.dirname(output), { recursive: true });
+  await fs.writeFile(output, buildPdf(makeDocument(key, profile)));
+  console.log(`Generated ${path.relative(root, output)}`);
+}
+
+await fs.copyFile(outputs[1].output, path.join(root, "public/resume.pdf"));

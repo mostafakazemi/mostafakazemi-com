@@ -2,12 +2,13 @@ export const siteConfig = {
   name: "Mostafa Kazemi",
   title: "Senior Frontend Engineer",
   domain: "https://mostafakazemi.com",
+  location: "Istanbul, Turkey",
+  availability: "Open to Remote Worldwide",
   email: "mostafa.kazeminejhad@gmail.com",
   links: {
     github: "https://github.com/mostafakazemi",
     linkedin: "https://www.linkedin.com/in/mostafakazemi/",
-    telegram: "https://t.me/mesikd",
-    whatsapp: "https://wa.me/989183446857"
+    telegram: "https://t.me/mesikd"
   }
 };
 
@@ -112,6 +113,5 @@ export const contactLinks = [
   { label: "Email", href: `mailto:${siteConfig.email}` },
   { label: "LinkedIn", href: siteConfig.links.linkedin },
   { label: "GitHub", href: siteConfig.links.github },
-  { label: "Telegram", href: siteConfig.links.telegram },
-  { label: "WhatsApp", href: siteConfig.links.whatsapp }
+  { label: "Telegram", href: siteConfig.links.telegram }
 ];

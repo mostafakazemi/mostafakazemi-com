@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/data/portfolio";
 import "./globals.css";
 
 const title = "Mostafa Kazemi - Senior Frontend Engineer";
 const description =
-  "Mostafa Kazemi is a Senior Frontend Engineer specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.";
-const domain = "https://mostafakazemi.com";
+  `Mostafa Kazemi is a Senior Frontend Engineer based in ${siteConfig.location}, specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.`;
+const domain = siteConfig.domain;
 const profileImage = "/profile-og.webp";
 const alternateNames = [
   "Mostafa Kazeminejad",
@@ -33,6 +34,7 @@ const personStructuredData = {
   name: "Mostafa Kazemi",
   alternateName: alternateNames,
   jobTitle: "Senior Frontend Engineer",
+  address: { "@type": "PostalAddress", addressLocality: "Istanbul", addressCountry: "TR" },
   url: domain,
   image: `${domain}${profileImage}`,
   email: "mailto:mostafa.kazeminejhad@gmail.com",
