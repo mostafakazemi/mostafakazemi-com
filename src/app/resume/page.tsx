@@ -23,10 +23,8 @@ const personJsonLd = {
 };
 
 const resumeDownloads = [
-  { label: "Vue Resume - Iran", href: "/resume/vue/mostafa-kazemi-senior-frontend-vue.pdf", primary: false },
-  { label: "React Resume - Iran", href: "/resume/react/mostafa-kazemi-senior-frontend-react.pdf", primary: true },
-  { label: "Vue Resume - Istanbul", href: "/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf", primary: false },
-  { label: "React Resume - Istanbul", href: "/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf", primary: true }
+  { label: "Download Vue Resume", href: "/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf", primary: false },
+  { label: "Download React Resume", href: "/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf", primary: true }
 ] as const;
 
 function Section({ title: sectionTitle, children }: Readonly<{ title: string; children: React.ReactNode }>) {
