@@ -11,6 +11,10 @@
     "linkedin": "https://www.linkedin.com/in/mostafakazemi/"
   },
   "education": [{"school": "University of Ilam", "country": "Iran", "degree": "Bachelor of Software Engineering", "graduated": "2012"}],
+  "aiAssistedDevelopment": {
+    "tools": ["ChatGPT (Codex)", "Claude", "Gemini", "Cursor", "GitHub Copilot"],
+    "description": "Applied AI-assisted development workflows to plan features, review code, improve accessibility, write tests, resolve merge conflicts, and organize file structures and routes while validating all production changes."
+  },
   "skills": {
     "vue": [
       {"title": "Core", "items": ["Vue 3", "Vue.js", "Nuxt.js", "TypeScript", "JavaScript", "HTML", "CSS", "Sass", "Tailwind CSS"]},

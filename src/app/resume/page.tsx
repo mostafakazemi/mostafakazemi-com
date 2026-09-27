@@ -98,6 +98,10 @@ export default function ResumePage() {
                 </div>
               ))}
             </div>
+            <p className="mt-8 text-sm leading-7 text-slate-700 dark:text-slate-300">
+              <span className="font-semibold text-slate-950 dark:text-white">AI-assisted development ({resume.aiAssistedDevelopment.tools.join(", ")}):</span>{" "}
+              {resume.aiAssistedDevelopment.description}
+            </p>
           </Section>
 
           <Section title="Education">

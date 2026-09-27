@@ -7,7 +7,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Length 5701 >>
+<< /Length 6120 >>
 stream
 BT
 /F2 19 Tf
@@ -307,22 +307,37 @@ BT
 (Tooling: Vite, Webpack, pnpm, Git, ESLint) Tj
 ET
 BT
+/F1 8.45 Tf
+42.00 236.80 Td
+(AI-assisted development \(ChatGPT \(Codex\), Claude, Gemini, Cursor, GitHub Copilot\): Applied AI-assisted development workflows to plan) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 226.40 Td
+(features, review code, improve accessibility, write tests, resolve merge conflicts, and organize file structures and routes while) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 216.00 Td
+(validating all production changes.) Tj
+ET
+BT
 /F2 9 Tf
-42.00 232.80 Td
+42.00 200.20 Td
 (EDUCATION) Tj
 ET
 0.55 w
-42 223.79999999999995 m
-570 223.79999999999995 l
+42 191.20000000000005 m
+570 191.20000000000005 l
 S
 BT
 /F2 8.8 Tf
-42.00 211.80 Td
+42.00 179.20 Td
 (Bachelor of Software Engineering - University of Ilam, Iran) Tj
 ET
 BT
 /F1 8.2 Tf
-516.04 211.80 Td
+516.04 179.20 Td
 (Graduated 2012) Tj
 ET
 endstream
@@ -342,11 +357,11 @@ xref
 0000000015 00000 n 
 0000000085 00000 n 
 0000000160 00000 n 
-0000005912 00000 n 
-0000006048 00000 n 
-0000006105 00000 n 
+0000006331 00000 n 
+0000006467 00000 n 
+0000006524 00000 n 
 trailer
 << /Size 7 /Root 6 0 R >>
 startxref
-6154
+6573
 %%EOF

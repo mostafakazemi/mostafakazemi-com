@@ -58,6 +58,7 @@ function makeDocument(variantKey) {
   }
   heading("Skills");
   for (const group of resume.skills[variantKey]) paragraph(`${group.title}: ${group.items.join(", ")}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
+  paragraph(`AI-assisted development (${resume.aiAssistedDevelopment.tools.join(", ")}): ${resume.aiAssistedDevelopment.description}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
   heading("Education");
   const education = resume.education[0];
   text(`${education.degree} - ${education.school}, ${education.country}`, { size: 8.8, bold: true });
