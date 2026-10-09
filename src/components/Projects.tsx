@@ -1,40 +1,35 @@
 import { projects } from "@/data/portfolio";
+import { SectionHeading } from "@/components/SectionHeading";
 
 export function Projects() {
   return (
-    <section id="projects" className="border-b border-slate-200 py-20 dark:border-slate-800">
+    <section id="projects" className="border-b border-neutral-200 py-16 dark:border-neutral-800 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
-            PROJECTS
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Featured Projects
-          </h2>
-          <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            Real product work from browser extensions, Vue and Nuxt applications,
-            shared components, and React and Next.js commerce tools.
-          </p>
-        </div>
+        <SectionHeading
+          index="04"
+          label="Selected work"
+          title="Products and systems built for real users."
+          description="A cross-stack record of product delivery across browser extensions, education, travel, and commerce."
+        />
 
-        <div className="mt-12 grid gap-6">
-          {projects.map((project) => (
+        <div className="grid items-start gap-4 md:grid-cols-2">
+          {projects.map((project, projectIndex) => (
             <article
               key={project.title}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/70 md:p-8 dark:border-slate-800 dark:bg-slate-900/80 dark:hover:shadow-black/20"
+              className={`rounded-md border border-neutral-200 bg-white p-5 transition-colors hover:border-sky-400 dark:border-neutral-800 dark:bg-neutral-900/70 dark:hover:border-sky-700 sm:p-6 ${projectIndex === 0 ? "md:col-span-2" : ""}`}
             >
-              <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className={projectIndex === 0 ? "grid gap-7 lg:grid-cols-[0.9fr_1.1fr]" : ""}>
                 <div>
-                  <p className="text-sm font-medium text-sky-700 dark:text-sky-300">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.08em] text-sky-700 dark:text-sky-300">
                     {project.type}
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">
+                  <h3 className="mt-2 text-xl font-semibold text-neutral-950 dark:text-white">
                     {project.title}
                   </h3>
-                  <p className="mt-4 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
+                  <p className="mt-3 text-pretty text-sm leading-6 text-neutral-600 dark:text-neutral-300">
                     {project.description}
                   </p>
-                  <p className="mt-4 rounded-2xl border border-sky-100 bg-sky-50 px-4 py-3 text-sm font-medium leading-7 text-sky-900 dark:border-sky-900/60 dark:bg-sky-950/50 dark:text-sky-200">
+                  <p className="mt-4 border-l-2 border-sky-500 pl-3 text-sm font-medium leading-6 text-neutral-800 dark:text-neutral-200">
                     {project.impact}
                   </p>
 
@@ -46,7 +41,7 @@ export function Projects() {
                           href={link.href}
                           target="_blank"
                           rel="noreferrer"
-                          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-sky-400 hover:text-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
+                          className="rounded-sm border border-neutral-300 px-3 py-1.5 text-xs font-semibold text-neutral-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
                         >
                           {link.label}
                         </a>
@@ -55,11 +50,11 @@ export function Projects() {
                   ) : null}
                 </div>
 
-                <div>
-                  <ul className="space-y-3">
+                <div className={projectIndex === 0 ? "mt-5 lg:mt-0" : "mt-5"}>
+                  <ul className={projectIndex === 0 ? "grid gap-x-5 gap-y-2 sm:grid-cols-2" : "space-y-2"}>
                     {project.highlights.map((highlight) => (
-                      <li key={highlight} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+                      <li key={highlight} className="flex gap-2.5 text-[13px] leading-6 text-neutral-600 dark:text-neutral-300">
+                        <span className="mt-[0.65rem] h-1 w-1 shrink-0 rounded-full bg-sky-500" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -69,7 +64,7 @@ export function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={`${project.title}-${tag}`}
-                        className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:bg-slate-950 dark:text-slate-300"
+                        className="rounded-sm bg-neutral-100 px-2.5 py-1 text-[11px] font-semibold text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300"
                       >
                         {tag}
                       </span>

@@ -8,7 +8,7 @@ export function TechnologyTags({
       {technologies.map((technology) => (
         <span
           key={technology}
-          className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:bg-slate-950 dark:text-slate-300"
+          className="rounded-sm bg-neutral-100 px-2.5 py-1 text-[11px] font-semibold text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300"
         >
           {technology}
         </span>

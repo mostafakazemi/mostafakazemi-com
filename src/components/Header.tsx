@@ -10,9 +10,9 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-slate-50/85 backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/85">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-neutral-50/85 backdrop-blur-xl dark:border-neutral-800/80 dark:bg-neutral-950/85">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Primary navigation"
       >
         <Link
@@ -20,12 +20,12 @@ export function Header() {
           className="group inline-flex items-center gap-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-500"
           onClick={() => setIsOpen(false)}
         >
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-slate-950 text-sm font-semibold text-white shadow-sm dark:bg-sky-400 dark:text-slate-950">
+          <span className="grid h-9 w-9 place-items-center rounded-md bg-neutral-950 font-mono text-xs font-semibold text-white dark:bg-sky-400 dark:text-neutral-950">
             MK
           </span>
           <span className="hidden leading-tight sm:block">
             <span className="block text-sm font-semibold">{siteConfig.name}</span>
-            <span className="block text-xs text-slate-500 dark:text-slate-400">
+            <span className="block text-xs text-neutral-500 dark:text-neutral-400">
               {siteConfig.title}
             </span>
           </span>
@@ -36,7 +36,9 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-200/70 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+              className={item.label === "Resume"
+                ? "rounded-sm bg-neutral-950 px-3 py-2 text-xs font-semibold text-white transition hover:bg-sky-600 dark:bg-neutral-100 dark:text-neutral-950 dark:hover:bg-sky-300"
+                : "rounded-sm px-2.5 py-2 text-xs font-medium text-neutral-600 transition hover:bg-neutral-200/70 hover:text-neutral-950 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white"}
             >
               {item.label}
             </Link>
@@ -47,7 +49,7 @@ export function Header() {
           <ThemeToggle />
           <button
             type="button"
-            className="inline-flex h-10 items-center rounded-full border border-slate-300 bg-white px-4 text-sm font-medium text-slate-800 shadow-sm transition hover:border-slate-400 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 lg:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:bg-slate-800"
+            className="inline-flex h-9 items-center rounded-sm border border-neutral-300 bg-white px-3 text-xs font-medium text-neutral-800 transition hover:border-neutral-400 hover:bg-neutral-100 lg:hidden dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:border-neutral-500 dark:hover:bg-neutral-800"
             onClick={() => setIsOpen((current) => !current)}
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
@@ -60,7 +62,7 @@ export function Header() {
       <div
         id="mobile-navigation"
         className={cn(
-          "border-t border-slate-200 px-4 py-3 transition lg:hidden dark:border-slate-800",
+          "border-t border-neutral-200 px-4 py-3 transition lg:hidden dark:border-neutral-800",
           isOpen ? "block" : "hidden"
         )}
       >
@@ -69,7 +71,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-800"
+              className="rounded-sm px-3 py-3 text-sm font-medium text-neutral-700 transition hover:bg-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-800"
               onClick={() => setIsOpen(false)}
             >
               {item.label}

@@ -1,36 +1,31 @@
 import { skillGroups } from "@/data/portfolio";
+import { SectionHeading } from "@/components/SectionHeading";
 
 export function Skills() {
   return (
-    <section id="skills" className="border-b border-slate-200 py-20 dark:border-slate-800">
+    <section id="skills" className="border-b border-neutral-200 py-16 dark:border-neutral-800 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
-            Skills
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            Tools I use in production frontend work.
-          </h2>
-          <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            Grouped by the work they support, without treating every tool as a
-            separate specialty.
-          </p>
-        </div>
+        <SectionHeading
+          index="03"
+          label="Capabilities"
+          title="A broad frontend toolkit, applied where it fits."
+          description="Frameworks, state management, browser APIs, testing, and build tools used across production products."
+        />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="grid items-start gap-4 md:grid-cols-2">
           {skillGroups.map((group) => (
             <article
               key={group.title}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/80"
+              className="rounded-md border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900/70 sm:p-6"
             >
-              <h3 className="text-lg font-semibold text-slate-950 dark:text-white">
+              <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.08em] text-neutral-700 dark:text-neutral-200">
                 {group.title}
               </h3>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-300"
+                    className="rounded-sm border border-neutral-200 bg-neutral-50 px-2.5 py-1.5 text-[13px] font-medium text-neutral-700 dark:border-neutral-700 dark:bg-neutral-950 dark:text-neutral-300"
                   >
                     {skill}
                   </span>

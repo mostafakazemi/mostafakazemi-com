@@ -130,8 +130,8 @@ function BulletList({
   return (
     <ul className="grid gap-3">
       {items.map((item) => (
-        <li key={item} className="flex gap-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
+        <li key={item} className="flex gap-3 text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">
+          <span className="mt-[0.7rem] h-1.5 w-1.5 shrink-0 rounded-full bg-sky-500" />
           <span>{item}</span>
         </li>
       ))}
@@ -148,7 +148,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+    <div className="min-h-screen bg-neutral-50 text-neutral-950 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100">
       <Header />
       <main>
         <script
@@ -158,10 +158,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
           }}
         />
 
-        <article className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
           <Link
             href="/#case-studies"
-            className="mb-8 inline-flex rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-sky-400 hover:text-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
+            className="mb-7 inline-flex items-center gap-2 rounded-sm border border-neutral-300 bg-white px-3 py-2 text-xs font-semibold text-neutral-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
           >
             Back to Case Studies
           </Link>
@@ -169,19 +169,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <CaseStudyHeader caseStudy={caseStudy} />
 
           <CaseStudySection title="Summary">
-            <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+            <p className="max-w-3xl text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">
               {caseStudy.summary}
             </p>
           </CaseStudySection>
 
           <CaseStudySection title="Problem">
-            <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+            <p className="max-w-3xl text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">
               {caseStudy.problem}
             </p>
           </CaseStudySection>
 
           <CaseStudySection title="My Role">
-            <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+            <p className="max-w-3xl text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">
               {caseStudy.role} on {caseStudy.company}
               {caseStudy.period ? `, ${caseStudy.period}` : ""}.
             </p>

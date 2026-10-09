@@ -6,11 +6,11 @@ export function CaseStudySection({
   title: string;
 }>) {
   return (
-    <section className="border-b border-slate-200 py-10 last:border-b-0 dark:border-slate-800">
-      <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-700 dark:text-sky-300">
+    <section className="grid gap-3 border-b border-neutral-200 py-7 last:border-b-0 dark:border-neutral-800 sm:py-8 md:grid-cols-[10rem_minmax(0,1fr)] md:gap-8">
+      <h2 className="font-mono text-[11px] font-medium uppercase tracking-[0.1em] text-neutral-500 dark:text-neutral-400">
         {title}
       </h2>
-      <div className="mt-5">{children}</div>
+      <div>{children}</div>
     </section>
   );
 }

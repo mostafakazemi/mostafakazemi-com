@@ -11,7 +11,7 @@ import { WhyHireMe } from "@/components/WhyHireMe";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+    <div className="min-h-screen bg-neutral-50 text-neutral-950 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100">
       <Header />
       <main>
         <Hero />
