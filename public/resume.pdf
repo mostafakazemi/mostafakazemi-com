@@ -7,7 +7,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
 endobj
 3 0 obj
-<< /Length 5999 >>
+<< /Length 7757 >>
 stream
 BT
 /F2 19 Tf
@@ -16,8 +16,8 @@ BT
 ET
 BT
 /F1 10 Tf
-207.30 739.00 Td
-(Senior Frontend Engineer - React / Next.js) Tj
+176.75 739.00 Td
+(Senior Frontend Engineer - React, Next.js, Vue, Nuxt.js) Tj
 ET
 BT
 /F1 7.5 Tf
@@ -41,293 +41,368 @@ S
 BT
 /F1 8.9 Tf
 42.00 681.00 Td
-(Senior Frontend Engineer with 6+ years of experience building production web applications with React, Next.js, TypeScript,) Tj
+(Senior Frontend Engineer with 6+ years delivering production products across React/Next.js and Vue/Nuxt. At Sazito, I moved) Tj
 ET
 BT
 /F1 8.9 Tf
 42.00 670.00 Td
-(Vue, and Nuxt.js. At Sazito, I work across storefront and admin products for an online store builder, including product) Tj
+(from part-time to full-time in July 2026 after four years alongside my Jack Westin role; I own frontend initiatives across) Tj
 ET
 BT
 /F1 8.9 Tf
 42.00 659.00 Td
-(import, payments, customer reviews, shipment tracking, and marketing attribution. I also spent four years with a US-based) Tj
+(commerce workflows and cut theme-builder build time from 15 minutes to 2. At Jack Westin, I owned a backward-compatible Nuxt 2) Tj
 ET
 BT
 /F1 8.9 Tf
 42.00 648.00 Td
-(remote team building edtech web applications, shared UI components, and a Chrome extension listed with 40,000 users.) Tj
+(to Nuxt Bridge migration, a Vue 3 UI kit reused across products, Nuxt 4 SSR marketing pages, and frontend delivery for a) Tj
+ET
+BT
+/F1 8.9 Tf
+42.00 637.00 Td
+(Chrome extension listed with 40,000+ users. Earlier, as Chamedoon's sole frontend developer, I raised historical Lighthouse) Tj
+ET
+BT
+/F1 8.9 Tf
+42.00 626.00 Td
+(scores to 98 Performance, 100 Accessibility, 100 Best Practices, and 96 SEO.) Tj
 ET
 BT
 /F2 9 Tf
-42.00 632.00 Td
+42.00 610.00 Td
 (EXPERIENCE) Tj
 ET
 0.55 w
-42 623 m
-570 623 l
+42 601 m
+570 601 l
 S
 BT
 /F2 9.1 Tf
-42.00 611.00 Td
+42.00 589.00 Td
 (Senior Frontend Engineer - Sazito) Tj
 ET
 BT
 /F1 8.1 Tf
-455.79 611.00 Td
-(Jun 2022 - Present | Part-time) Tj
+501.47 589.00 Td
+(Jun 2022 - Present) Tj
 ET
 BT
 /F1 7.9 Tf
-42.00 600.00 Td
+42.00 578.00 Td
+(Part-time through Jun 2026; Full-time from Jul 2026) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 567.00 Td
+(E-commerce platform serving 6,000+ stores, 5M+ users, and 10 trillion Iranian rials \(IRR\) in monthly transaction volume.) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 556.00 Td
 (Technologies: React, Next.js, TypeScript, Redux, Redux Saga, REST APIs, Tailwind CSS, Webpack) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 587.90 Td
+43.00 543.90 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 587.90 Td
-(Build and maintain storefront and admin features for Sazito's online store builder using React, Next.js, TypeScript, and Redux.) Tj
+53.00 543.90 Td
+(Moved Sazito's marketing and landing pages from React to Next.js as the sole frontend owner, strengthening SSR, SEO, and Core) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 533.30 Td
+(Web Vitals.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 575.60 Td
+43.00 521.00 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 575.60 Td
-(Implemented product import workflows for CSV and XLSX files, including async job states, expired downloads, and upload error) Tj
-ET
-BT
-/F1 8.65 Tf
-53.00 565.00 Td
-(handling.) Tj
+53.00 521.00 Td
+(Cut theme-builder build time from 15 minutes to 2 by restructuring theme-generation and build workflows.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 552.70 Td
+43.00 508.70 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 552.70 Td
-(Built customer-review management screens, rating flows, image uploads, and responsive admin tables.) Tj
+53.00 508.70 Td
+(Delivered merchant-controlled font and primary/accent color settings, plus customer reviews with photo/video attachments and) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 498.10 Td
+(admin moderation.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 540.40 Td
+43.00 485.80 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 540.40 Td
-(Added and maintained payment settings, shipment tracking, marketing attribution, product search, and quick-add-to-cart) Tj
+53.00 485.80 Td
+(Migrated the legacy React application's Sass/node-sass styling to Tailwind CSS while preserving active storefront and admin) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 529.80 Td
-(workflows.) Tj
+53.00 475.20 Td
+(behavior.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 517.50 Td
+43.00 462.90 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 517.50 Td
-(Worked across REST API integrations, authentication-aware UI, form-heavy admin tools, internationalized storefronts, and custom) Tj
+53.00 462.90 Td
+(Partnered with a teammate on a Node.js SDK/API for standalone merchant themes, optimizing request and payload data;) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 506.90 Td
-(Webpack builds.) Tj
+53.00 452.30 Td
+(independently built a sample Next.js theme using the SDK.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 494.60 Td
+43.00 440.00 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 494.60 Td
-(Modernize a large legacy React application in small changes while keeping active storefront and admin behavior intact.) Tj
+53.00 440.00 Td
+(Review teammate changes and deliver storefront/admin workflows for product imports, payments, shipping, search, and cart,) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 429.40 Td
+(aligning implementation across the platform.) Tj
 ET
 BT
 /F2 9.1 Tf
-42.00 479.80 Td
+42.00 414.60 Td
 (Frontend Engineer - Jack Westin \(US-based remote team\)) Tj
 ET
 BT
 /F1 8.1 Tf
-497.67 479.80 Td
+497.67 414.60 Td
 (Jun 2022 - Jun 2026) Tj
 ET
 BT
 /F1 7.9 Tf
-42.00 468.80 Td
-(Technologies: Vue 3, Nuxt.js, TypeScript, Chrome Extensions, Shadow DOM, Storybook, Vitest, Cypress) Tj
+42.00 403.60 Td
+(Technologies: Vue 3, Nuxt 2, Nuxt Bridge, Nuxt 4, TypeScript, Chrome Extensions, Shadow DOM, Storybook, Vitest, Cypress) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 456.70 Td
+43.00 391.50 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 456.70 Td
-(Built frontend features across Nuxt applications and a Chrome extension listed with 40,000 users.) Tj
+53.00 391.50 Td
+(Owned frontend delivery for a Chrome extension listed with 40,000+ users, implementing Vue 3 study UI with Shadow DOM isolation) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 380.90 Td
+(and cross-context messaging.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 444.40 Td
+43.00 368.60 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 444.40 Td
-(Implemented extension login and subscription states, written and video solution views, resource cards, and retake flows.) Tj
+53.00 368.60 Td
+(Led the Nuxt 2 to Nuxt Bridge migration for the main site, upgrading dependencies incrementally while preserving backward) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 358.00 Td
+(compatibility.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 432.10 Td
+43.00 345.70 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 432.10 Td
-(Worked on messaging, storage, caching, analytics, and error reporting across browser-extension contexts.) Tj
+53.00 345.70 Td
+(Built Vue 3 components for a shared UI kit adopted across multiple products, centralizing maintenance and aligning interface) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 335.10 Td
+(patterns.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 419.80 Td
+43.00 322.80 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 419.80 Td
-(Built reusable components and Web Component outputs in a shared Vue library, with Storybook and automated tests.) Tj
+53.00 322.80 Td
+(Delivered SEO-focused landing and marketing pages in Nuxt 4 using server-rendering and generation workflows.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 407.50 Td
+43.00 310.50 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 407.50 Td
-(Collaborated asynchronously with product, design, backend, and QA teammates in a US-based remote team.) Tj
+53.00 310.50 Td
+(Added comprehensive tests for extension and shared UI flows, reviewed teammate code, and collaborated remotely across product,) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 299.90 Td
+(design, backend, and QA.) Tj
 ET
 BT
 /F2 9.1 Tf
-42.00 392.70 Td
+42.00 285.10 Td
 (Frontend Developer - Chamedoon) Tj
 ET
 BT
 /F1 8.1 Tf
-497.67 392.70 Td
+497.67 285.10 Td
 (Apr 2020 - Jun 2022) Tj
 ET
 BT
 /F1 7.9 Tf
-42.00 381.70 Td
-(Technologies: Vue.js, Nuxt.js, Vuex, TypeScript, JavaScript, REST APIs, Sass) Tj
+42.00 274.10 Td
+(Travel product for flight booking and hotel reservations; the service was later discontinued during the COVID-era travel downturn.) Tj
+ET
+BT
+/F1 7.9 Tf
+42.00 263.10 Td
+(Technologies: Vue.js, Nuxt.js, Vuex, TypeScript, JavaScript, REST APIs, Sass, Core Web Vitals, Lighthouse) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 369.60 Td
+43.00 251.00 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 369.60 Td
-(Built customer-facing Vue and Nuxt features from product requirements and API specifications.) Tj
+53.00 251.00 Td
+(Served as the sole frontend developer, owning responsive Vue/Nuxt delivery for flight booking and hotel reservation workflows.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 357.30 Td
+43.00 238.70 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 357.30 Td
-(Created responsive interfaces with Sass and maintained Vuex state for data-driven workflows.) Tj
+53.00 238.70 Td
+(Raised historical Lighthouse scores from 65 to 98 in Performance, 75 to 100 in Accessibility, 90 to 100 in Best Practices, and) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 228.10 Td
+(78 to 96 in SEO.) Tj
 ET
 BT
 /F2 8.8 Tf
-43.00 345.00 Td
+43.00 215.80 Td
 (-) Tj
 ET
 BT
 /F1 8.65 Tf
-53.00 345.00 Td
-(Worked with backend and product teammates to handle API errors, debug production issues, and ship fixes.) Tj
+53.00 215.80 Td
+(Improved FCP, LCP, CLS, and TBT alongside accessibility, responsive Sass interfaces, Vuex/TypeScript state, and REST API flows.) Tj
+ET
+BT
+/F2 8.8 Tf
+43.00 203.50 Td
+(-) Tj
+ET
+BT
+/F1 8.65 Tf
+53.00 203.50 Td
+(Partnered directly with product and backend teams to shape requirements, debug production issues, and maintain the frontend.) Tj
 ET
 BT
 /F2 9 Tf
-42.00 326.20 Td
+42.00 184.70 Td
 (SKILLS) Tj
 ET
 0.55 w
-42 317.1999999999999 m
-570 317.1999999999999 l
+42 175.69999999999936 m
+570 175.69999999999936 l
 S
 BT
 /F1 8.45 Tf
-42.00 305.20 Td
-(Core: React, Next.js, TypeScript, JavaScript, HTML, CSS, Sass, Tailwind CSS) Tj
+42.00 163.70 Td
+(Core: React, Next.js, TypeScript, JavaScript, HTML, CSS, Sass, Tailwind CSS, Vue 3, Vue.js, Nuxt.js) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 293.40 Td
-(State and APIs: Redux, Redux Toolkit, Redux Saga, React Router, REST APIs, Authentication) Tj
+42.00 151.90 Td
+(State and APIs: Redux, Redux Toolkit, Redux Saga, React Router, REST APIs, Authentication, Pinia, Vuex, Browser Extension Messaging) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 281.60 Td
-(Testing and UI: Jest, Playwright, Cypress, Storybook, Component Libraries, Responsive UI) Tj
+42.00 140.10 Td
+(Testing and UI: Jest, Playwright, Cypress, Storybook, Component Libraries, Responsive UI, Vitest, Vue Test Utils, MSW, Web) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 269.80 Td
+42.00 129.70 Td
+(Components, Shadow DOM) Tj
+ET
+BT
+/F1 8.45 Tf
+42.00 117.90 Td
 (Tooling: Webpack, Vite, Babel, pnpm, Git, ESLint) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 258.00 Td
+42.00 106.10 Td
 (AI-assisted development \(ChatGPT \(Codex\), Claude, Gemini, Cursor, GitHub Copilot\): Applied AI-assisted development workflows to plan) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 247.60 Td
+42.00 95.70 Td
 (features, review code, improve accessibility, write tests, resolve merge conflicts, and organize file structures and routes while) Tj
 ET
 BT
 /F1 8.45 Tf
-42.00 237.20 Td
+42.00 85.30 Td
 (validating all production changes.) Tj
 ET
 BT
 /F2 9 Tf
-42.00 221.40 Td
+42.00 69.50 Td
 (EDUCATION) Tj
 ET
 0.55 w
-42 212.4000000000001 m
-570 212.4000000000001 l
+42 60.49999999999966 m
+570 60.49999999999966 l
 S
 BT
 /F2 8.8 Tf
-42.00 200.40 Td
+42.00 48.50 Td
 (Bachelor of Software Engineering - University of Ilam, Iran) Tj
 ET
 BT
 /F1 8.2 Tf
-516.04 200.40 Td
+516.04 48.50 Td
 (Graduated 2012) Tj
 ET
 endstream
@@ -347,11 +422,11 @@ xref
 0000000015 00000 n 
 0000000085 00000 n 
 0000000160 00000 n 
-0000006210 00000 n 
-0000006346 00000 n 
-0000006403 00000 n 
+0000007968 00000 n 
+0000008104 00000 n 
+0000008161 00000 n 
 trailer
 << /Size 7 /Root 6 0 R >>
 startxref
-6452
+8210
 %%EOF

@@ -4,32 +4,34 @@ export const caseStudy = {
   slug: "sazito-platform",
   title: "Sazito Commerce Platform",
   company: "Sazito",
-  period: "2022 - Present",
+  period: "Jun 2022 - Present",
   role: "Senior Frontend Engineer",
-  summary: "React and Next.js work across storefront and admin products for an online store builder, including new product features and ongoing maintenance of a large legacy application.",
-  technologies: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "React Router", "REST APIs", "Tailwind CSS", "Webpack"],
-  problem: "The team ships new merchant and storefront features while supporting older React, Redux, and custom Webpack code that is still active in production.",
+  summary: "After working part-time at Sazito from June 2022, I transitioned to full-time in July 2026, following the end of my Jack Westin role in June. Frontend ownership spans React and Next.js commerce products, from replatforming marketing pages and modernizing build workflows to merchant customization and reviews. The platform serves 6,000+ stores and 5M+ users, with 10 trillion Iranian rials (IRR) in monthly transaction volume.",
+  technologies: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "React Router", "REST APIs", "Tailwind CSS", "Webpack", "Node.js"],
+  problem: "The commerce platform needed to evolve merchant and storefront experiences while keeping a large legacy React application reliable and making theme development faster and more flexible.",
   responsibilities: [
-    "Implemented CSV and XLSX product import flows with async job, download, expired, and upload-error states.",
-    "Built customer-review dashboards, rating and recommendation flows, image uploads, and responsive tables.",
-    "Added payment settings, shipment tracking, marketing attribution, product search, and quick-add-to-cart features.",
-    "Worked with authentication-aware UI, form-heavy admin tools, REST APIs, Redux, Redux Saga, and internationalized storefronts.",
-    "Refactored legacy code in small changes while preserving existing storefront and admin behavior."
+    "Owned the React-to-Next.js migration of marketing and landing pages, improving SEO and Core Web Vitals through SSR and a modern delivery path.",
+    "Restructured theme-generation and build workflows, reducing theme-builder build time from 15 minutes to 2.",
+    "Implemented merchant controls for font and primary/accent colors, enabling store owners to personalize storefronts without code changes.",
+    "Delivered customer reviews with photo and video attachments and moderation tools for store administrators.",
+    "Migrated legacy Sass/node-sass styling to Tailwind CSS while maintaining active React storefront and admin flows.",
+    "Partnered with a teammate on a Node.js SDK/API for independent merchant themes, optimized request and payload data, and built a sample Next.js theme using the SDK."
   ],
   challenges: [
-    "Adding features to a large application with several storefront themes and separate admin and server bundles.",
-    "Keeping async imports, payments, tracking data, and API errors understandable to merchants.",
-    "Introducing newer styling and shared UI without forcing a risky full rewrite."
+    "Modernizing active React code without disrupting production storefronts and admin workflows.",
+    "Reducing build time while preserving a flexible theme system for many merchant stores.",
+    "Designing SDK-backed themes that can operate independently from the platform's existing theme catalog."
   ],
   results: [
-    "Shipped merchant workflows for bulk catalog updates, payments, reviews, shipping, analytics, and merchandising.",
-    "Improved failure handling for product imports, reviews, payments, widgets, and other API-driven screens.",
-    "Moved selected areas toward shared UI and Tailwind foundations while keeping legacy flows working."
+    "Cut theme-builder build time by 13 minutes, from 15 minutes to 2.",
+    "Expanded merchant control over branding and delivered review moderation with media attachments.",
+    "Improved the SEO and Core Web Vitals foundation for marketing pages through the Next.js migration.",
+    "Advanced a collaborative SDK effort and delivered a working reference theme using the new integration."
   ],
   learnings: [
-    "Legacy modernization works best when each change also solves a current product need.",
-    "Async jobs need explicit progress, failure, expiry, and recovery states in the interface.",
-    "Commerce interfaces must make pricing, payment, shipping, and tracking states easy to verify."
+    "Incremental migrations can deliver SEO and performance gains without pausing ongoing product work.",
+    "Build time is a product constraint: faster feedback makes theme iteration more practical for the team.",
+    "A theme SDK needs a real consuming implementation to validate its API and payload design."
   ],
   featured: true
 } satisfies CaseStudy;

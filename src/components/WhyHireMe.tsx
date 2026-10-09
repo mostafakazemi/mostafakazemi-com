@@ -2,17 +2,17 @@ const reasons = [
   {
     title: "Production Work in Both Stacks",
     description:
-      "Hands-on work with React and Next.js commerce products, plus four years of Vue and Nuxt.js edtech development."
+      "Six-plus years building production products across React/Next.js and Vue/Nuxt.js ecosystems."
   },
   {
     title: "Concrete Product Features",
     description:
-      "Product imports, payments, reviews, shipping, study tools, authentication states, browser messaging, analytics, and automated tests."
+      "A 15-to-2-minute theme-builder build reduction, a 40,000+ user extension, shared UI systems, SSR migrations, and merchant-facing commerce features."
   },
   {
     title: "Remote Team Experience",
     description:
-      "Four years of asynchronous work with a US-based team across product, design, backend, QA, code review, and releases."
+      "Four years of asynchronous collaboration with a US-based team, including product and code reviews, plus direct cross-functional delivery at Sazito."
   }
 ];
 
@@ -29,8 +29,9 @@ export function WhyHireMe() {
             existing codebases.
           </h2>
           <p className="mt-5 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
-            I can join a Vue- or React-focused team, follow a feature through its
-            API and UI states, and leave the surrounding code easier to work with.
+            I work across React/Next.js and Vue/Nuxt.js, taking features from
+            architecture and API integration through testing, release, and
+            maintainable follow-up work.
           </p>
         </div>
 

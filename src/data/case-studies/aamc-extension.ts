@@ -6,14 +6,14 @@ export const caseStudy = {
   company: "Jack Westin",
   period: "2022 - Jun 2026",
   role: "Frontend Engineer",
-  summary: "Vue 3 and TypeScript work on a production Chrome extension that adds Jack Westin tutor solutions beside AAMC practice questions. The Chrome Web Store lists 40,000 users.",
+  summary: "Owned frontend delivery for a Vue 3 and TypeScript Chrome extension that adds Jack Westin tutor solutions beside AAMC practice questions. The Chrome Web Store lists the product with 40,000+ users.",
   technologies: ["Vue 3", "TypeScript", "Chrome Extensions", "Shadow DOM", "Web Components", "Vite", "Storybook", "Vitest", "Cypress"],
   problem: "The extension had to place a full study interface inside pages controlled by another product. It needed to recognize question and passage states, show the right written or video solution, and keep its styles and behavior separate from the host page.",
   responsibilities: [
-    "Built features for the injected side panel, including solution, resource, login, subscription, and retake states.",
-    "Used Shadow DOM and Web Components to isolate interface markup and styles from AAMC pages.",
-    "Worked on communication and shared state across content scripts, background code, storage, and extension UI.",
-    "Added analytics events, filtered noisy error reports, and improved Sentry context for production issues.",
+    "Owned the injected study interface across written/video solutions, resource, sign-in, subscription, and retake states.",
+    "Applied Shadow DOM and Web Components to isolate extension UI and styles from third-party pages.",
+    "Structured cross-context messaging and state synchronization across content scripts, background code, storage, and extension UI.",
+    "Added analytics validation and clearer production error context for more actionable issue investigation.",
     "Tested components and user states with Storybook, Vitest, Vue Test Utils, Playwright, Cypress, and MSW."
   ],
   challenges: [

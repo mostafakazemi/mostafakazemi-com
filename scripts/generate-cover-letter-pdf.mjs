@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const resume = JSON.parse(await fs.readFile(path.join(root, "src/data/resume.json"), "utf8"));
 const source = await fs.readFile(path.join(root, "src/data/general-cover-letter.txt"), "utf8");
-const output = path.join(root, "public/cover-letter/general/mostafa-kazemi-general-senior-frontend-cover-letter.pdf");
+const output = path.join(root, "resume/mostafa-kazemi-general-cover-letter.pdf");
 const page = { width: 612, height: 792, left: 56, right: 56, top: 50, bottom: 50 };
 const contentWidth = page.width - page.left - page.right;
 const commands = [];
@@ -49,5 +49,4 @@ const xrefOffset = offset, xref = ["xref", `0 ${objects.length}`, "0000000000 65
 for (let id = 1; id < objects.length; id++) xref.push(`${String(offsets[id]).padStart(10, "0")} 00000 n `);
 chunks.push(Buffer.from(`${xref.join("\n")}\ntrailer\n<< /Size ${objects.length} /Root ${catalog} 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`, "latin1"));
 await fs.mkdir(path.dirname(output), { recursive: true }); await fs.writeFile(output, Buffer.concat(chunks));
-await fs.copyFile(output, path.join(root, "public/cover-letter.pdf"));
 console.log(`Generated ${path.relative(root, output)}`);

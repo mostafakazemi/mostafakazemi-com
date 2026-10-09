@@ -1,12 +1,14 @@
 Dear Hiring Team,
 
-I am applying for a Senior Frontend Engineer role with [Company]. I have more than six years of experience building production web applications with React, Next.js, Vue, Nuxt.js, and TypeScript.
+I am applying for the Senior Frontend Engineer role at [Company]. I bring more than six years of production experience across React, Next.js, Vue, Nuxt.js, and TypeScript, with a track record spanning frontend architecture, performance work, browser extensions, shared UI systems, and commerce products.
 
-At Jack Westin, I worked with a US-based remote team on Vue and Nuxt applications, a shared component library, and a Chrome extension listed with 40,000 users. My work included the extension side panel, login and subscription states, written and video solution views, browser messaging, Shadow DOM integration, analytics, and automated tests.
+In July 2026, I transitioned to full-time at Sazito after working part-time there since June 2022 alongside my Jack Westin role, which ended in June 2026. I own frontend initiatives across a commerce platform serving 6,000+ stores and 5M+ users, with 10 trillion Iranian rials in monthly transaction volume. I migrated marketing pages from React to Next.js, cut theme-builder build time from 15 minutes to 2, delivered merchant-controlled theme settings and customer reviews with media uploads, and am building a reference Next.js theme on a collaboratively developed Node.js SDK.
 
-At Sazito, I work across React and Next.js storefront and admin products for an online store builder. I have shipped product imports, payment settings, customer-review tools, shipment tracking, marketing attribution, product search, and cart workflows while also maintaining a large legacy React codebase.
+At Jack Westin, I led the backward-compatible migration of its main Nuxt 2 site to Nuxt Bridge, built Vue 3 components for a UI kit used across multiple products, and delivered SEO-focused Nuxt 4 marketing pages. I also owned frontend work for a Chrome extension listed with 40,000+ users, including its injected interface, Shadow DOM isolation, cross-context messaging, and automated tests.
 
-I enjoy turning product requirements into clear, dependable interfaces and working closely with design, backend, product, and QA teammates. I would be glad to discuss how my experience relates to [Role] and the problems your team is working on.
+Earlier, as the sole frontend developer at Chamedoon, I built responsive Vue/Nuxt booking experiences and improved historical Lighthouse scores to 98 Performance, 100 Accessibility, 100 Best Practices, and 96 SEO. Across these roles, I have paired hands-on delivery with code review and close collaboration with product, design, backend, and QA colleagues. I use AI development tools to accelerate planning, testing, accessibility reviews, and code review, while validating the final implementation myself.
+
+I would welcome the chance to discuss how this experience could help [Company] deliver reliable, scalable frontend products.
 
 Sincerely,
 

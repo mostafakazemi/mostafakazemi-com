@@ -4,13 +4,14 @@ const strengths = [
   "reusable Vue components",
   "Chrome extensions",
   "Shadow DOM and Web Components",
-  "Web Components",
   "state management",
   "authentication flows",
   "testing",
   "REST API integration",
   "responsive interfaces",
-  "legacy React maintenance"
+  "legacy React maintenance",
+  "Core Web Vitals and accessibility",
+  "SSR and SEO"
 ];
 
 export function About() {
@@ -29,16 +30,23 @@ export function About() {
         <div className="space-y-6 text-pretty text-base leading-8 text-slate-600 dark:text-slate-300">
           <p>
             I&apos;m Mostafa Kazemi, a Senior Frontend Engineer with more than six
-            years of experience. I build production applications with React,
-            Next.js, Vue, Nuxt.js, and TypeScript. From 2022 to 2026, I worked
-            remotely with Jack Westin in the US on web applications, a shared UI
-            library, and a Chrome extension listed with 40,000 users.
+            years of experience building production applications across React,
+            Next.js, Vue, Nuxt.js, and TypeScript. At Jack Westin, I owned a
+            backward-compatible Nuxt Bridge migration, built Vue 3 components
+            reused across products, delivered Nuxt 4 SSR marketing pages, and
+            led frontend delivery for a Chrome extension listed with 40,000+
+            users.
           </p>
           <p>
-            At Sazito, I work on storefront and admin features for an online
-            store builder. My recent work includes product imports, payment
-            settings, customer reviews, shipment tracking, marketing attribution,
-            product search, and cart flows.
+            In July 2026, I moved to full-time at Sazito after working
+            part-time there since June 2022 alongside my Jack Westin role,
+            which ended in June 2026.
+            I deliver storefront and admin
+            features for a platform serving 6,000+ stores and 5M+ users, with 10
+            trillion Iranian rials in monthly transaction volume. Recent work
+            includes migrating marketing pages to Next.js and cutting the
+            theme-builder build from 15 minutes to 2, as well as merchant theme
+            controls, customer reviews, and an SDK-powered reference theme.
           </p>
 
           <div className="grid gap-3 sm:grid-cols-2">

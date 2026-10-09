@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # editors
 .idea/
+
+# private application materials
+/resume/*.pdf

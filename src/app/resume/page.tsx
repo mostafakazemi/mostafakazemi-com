@@ -13,7 +13,15 @@ export const metadata: Metadata = {
   openGraph: { title, description, url: `${domain}/resume`, siteName: "Mostafa Kazemi", type: "profile" }
 };
 
-const combinedSkills = Array.from(new Set([...resume.skills.react.flatMap((group) => group.items), ...resume.skills.vue.flatMap((group) => group.items)]));
+const combinedSkillGroups = resume.skills.react.map((group) => ({
+  title: group.title,
+  items: Array.from(new Set(
+    [...resume.skills.react, ...resume.skills.vue]
+      .filter((candidate) => candidate.title === group.title)
+      .flatMap((candidate) => candidate.items)
+  ))
+}));
+const combinedSkills = combinedSkillGroups.flatMap((group) => group.items);
 const personJsonLd = {
   "@context": "https://schema.org", "@type": "Person", name: resume.profile.name,
   alternateName: resume.profile.alternateNames, jobTitle: resume.profile.title,
@@ -23,8 +31,7 @@ const personJsonLd = {
 };
 
 const resumeDownloads = [
-  { label: "Download Vue Resume", href: "/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf", primary: false },
-  { label: "Download React Resume", href: "/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf", primary: true }
+  { label: "Download Resume PDF", href: "/resume.pdf", primary: true }
 ] as const;
 
 function Section({ title: sectionTitle, children }: Readonly<{ title: string; children: React.ReactNode }>) {
@@ -32,7 +39,7 @@ function Section({ title: sectionTitle, children }: Readonly<{ title: string; ch
 }
 
 export default function ResumePage() {
-  const experience = resume.variants.react.experience;
+  const experience = resume.variants.general.experience;
   return (
     <main className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-slate-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }} />
@@ -66,8 +73,8 @@ export default function ResumePage() {
             </address>
           </header>
 
-          <Section title="Profile">
-            <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">Senior Frontend Engineer with more than six years of experience building production web applications with React, Next.js, Vue, Nuxt.js, and TypeScript. Recent work includes commerce storefront and admin tools, a Chrome extension listed with 40,000 users, Nuxt applications, and reusable Vue components for a US-based remote team.</p>
+          <Section title="Professional Summary">
+            <p className="text-sm leading-7 text-slate-700 dark:text-slate-300">{resume.variants.general.summary}</p>
           </Section>
 
           <Section title="Experience">
@@ -75,8 +82,10 @@ export default function ResumePage() {
               <section key={`${role.company}-${role.title}`}>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                   <h3 className="text-sm font-bold">{role.title} - {role.company}{"location" in role && role.location ? ` (${role.location})` : ""}</h3>
-                  <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{[role.period, "type" in role ? role.type : ""].filter(Boolean).join(" | ")}</p>
+                  <p className="text-xs font-medium text-slate-600 dark:text-slate-400">{role.period}</p>
                 </div>
+                {"type" in role && role.type ? <p className="mt-1 text-xs leading-5 text-slate-600 dark:text-slate-400">{role.type}</p> : null}
+                {"context" in role && role.context ? <p className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">{role.context}</p> : null}
                 <p className="mt-2 text-xs leading-6 text-slate-600 dark:text-slate-300"><span className="font-semibold text-slate-950 dark:text-white">Technologies:</span> {role.technologies.join(", ")}</p>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 dark:text-slate-300">{role.highlights.map((item) => <li key={item}>{item}</li>)}</ul>
               </section>
@@ -84,18 +93,11 @@ export default function ResumePage() {
           </Section>
 
           <Section title="Skills">
-            <div className="grid gap-8 md:grid-cols-2">
-              {(["react", "vue"] as const).map((stack) => (
-                <div key={stack}>
-                  <h3 className="text-sm font-bold capitalize">{stack}-focused stack</h3>
-                  <div className="mt-3 grid gap-3">
-                    {resume.skills[stack].map((group) => (
-                      <p key={`${stack}-${group.title}`} className="text-sm leading-7 text-slate-700 dark:text-slate-300">
-                        <span className="font-semibold text-slate-950 dark:text-white">{group.title}:</span>{" "}{group.items.join(", ")}
-                      </p>
-                    ))}
-                  </div>
-                </div>
+            <div className="grid gap-3">
+              {combinedSkillGroups.map((group) => (
+                <p key={group.title} className="text-sm leading-7 text-slate-700 dark:text-slate-300">
+                  <span className="font-semibold text-slate-950 dark:text-white">{group.title}:</span>{" "}{group.items.join(", ")}
+                </p>
               ))}
             </div>
             <p className="mt-8 text-sm leading-7 text-slate-700 dark:text-slate-300">

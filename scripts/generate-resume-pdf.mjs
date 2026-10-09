@@ -6,6 +6,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const resume = JSON.parse(await fs.readFile(path.join(root, "src/data/resume.json"), "utf8"));
 const page = { width: 612, height: 792, left: 42, right: 42, top: 35, bottom: 34 };
 const width = page.width - page.left - page.right;
+const combinedSkillGroups = resume.skills.react.map((group) => ({
+  title: group.title,
+  items: Array.from(new Set(
+    [...resume.skills.react, ...resume.skills.vue]
+      .filter((candidate) => candidate.title === group.title)
+      .flatMap((candidate) => candidate.items)
+  ))
+}));
 
 function clean(value) {
   return String(value).replaceAll("–", "-").replaceAll("—", "-").replace(/[^\x09\x0A\x0D\x20-\x7E]/g, "");
@@ -18,8 +26,8 @@ function wrap(value, size, maxWidth) {
   if (line) lines.push(line); return lines;
 }
 
-function makeDocument(variantKey) {
-  const variant = resume.variants[variantKey];
+function makeDocument() {
+  const variant = resume.variants.general;
   const state = { pages: [], commands: [], y: page.top };
   const addPage = () => { state.commands = []; state.pages.push(state.commands); state.y = page.top; };
   const ensure = (height) => { if (state.y + height > page.height - page.bottom) addPage(); };
@@ -52,12 +60,14 @@ function makeDocument(variantKey) {
   for (const role of variant.experience) {
     ensure(32);
     text(`${role.title} - ${role.company}${role.location ? ` (${role.location})` : ""}`, { size: 9.1, bold: true });
-    text([role.period, role.type].filter(Boolean).join(" | "), { size: 8.1, align: "right" }); state.y += 11;
+    text(role.period, { size: 8.1, align: "right" }); state.y += 11;
+    if (role.type) paragraph(role.type, { size: 7.9, lineHeight: 9.5, after: 1.5 });
+    if (role.context) paragraph(role.context, { size: 7.9, lineHeight: 9.5, after: 1.5 });
     paragraph(`Technologies: ${role.technologies.join(", ")}`, { size: 7.9, lineHeight: 9.6, after: 2.5 });
     role.highlights.forEach(bullet); state.y += 2.5;
   }
   heading("Skills");
-  for (const group of resume.skills[variantKey]) paragraph(`${group.title}: ${group.items.join(", ")}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
+  for (const group of combinedSkillGroups) paragraph(`${group.title}: ${group.items.join(", ")}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
   paragraph(`AI-assisted development (${resume.aiAssistedDevelopment.tools.join(", ")}): ${resume.aiAssistedDevelopment.description}`, { size: 8.45, lineHeight: 10.4, after: 1.4 });
   heading("Education");
   const education = resume.education[0];
@@ -84,22 +94,7 @@ function buildPdf(pages) {
   return Buffer.concat(chunks);
 }
 
-const defaultResumeOutput = path.join(root, "public/resume/istanbul/react/mostafa-kazemi-senior-frontend-react-istanbul.pdf");
-const outputs = [
-  {
-    key: "vue",
-    output: path.join(root, "public/resume/istanbul/vue/mostafa-kazemi-senior-frontend-vue-istanbul.pdf")
-  },
-  {
-    key: "react",
-    output: defaultResumeOutput
-  }
-];
-
-for (const { key, output } of outputs) {
-  await fs.mkdir(path.dirname(output), { recursive: true });
-  await fs.writeFile(output, buildPdf(makeDocument(key)));
-  console.log(`Generated ${path.relative(root, output)}`);
-}
-
-await fs.copyFile(defaultResumeOutput, path.join(root, "public/resume.pdf"));
+const output = path.join(root, "public/resume.pdf");
+await fs.mkdir(path.dirname(output), { recursive: true });
+await fs.writeFile(output, buildPdf(makeDocument()));
+console.log(`Generated ${path.relative(root, output)}`);

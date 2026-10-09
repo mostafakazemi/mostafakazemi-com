@@ -7,7 +7,7 @@ const profileBlurDataUrl =
 const proofPoints = [
   "React / Next.js",
   "Vue / Nuxt.js",
-  "Chrome extension listed with 40,000 users",
+  "Chrome extension listed with 40,000+ users",
   "Remote product work with a US-based team"
 ];
 
@@ -66,7 +66,7 @@ export function Hero() {
               href="/resume"
               className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-sky-400 hover:text-sky-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-sky-400 dark:hover:text-sky-300"
             >
-              Choose a Resume
+              View Resume
             </a>
           </div>
         </div>

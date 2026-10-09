@@ -4,32 +4,33 @@ export const caseStudy = {
   slug: "jackwestin-platform",
   title: "Jack Westin Web Applications and UI Library",
   company: "Jack Westin",
-  period: "2022 - Jun 2026",
+  period: "Jun 2022 - Jun 2026",
   role: "Frontend Engineer",
-  summary: "Frontend work across Nuxt applications and a shared Vue 3 component library for a US-based remote edtech team.",
-  technologies: ["Vue", "Vue 3", "Nuxt.js", "TypeScript", "Storybook", "Vitest", "Vue Test Utils", "Playwright", "MSW", "Web Components"],
-  problem: "Product work spanned public pages, student workflows, older Nuxt code, newer Vue components, and UI that also needed to run as standalone Web Components.",
+  summary: "Owned frontend initiatives across Jack Westin's remote edtech products: a backward-compatible Nuxt 2 to Nuxt Bridge migration, a shared Vue 3 UI kit, Nuxt 4 SSR marketing pages, and browser-extension experiences for a Chrome Web Store product listed with 40,000+ users.",
+  technologies: ["Vue", "Vue 3", "Nuxt 2", "Nuxt Bridge", "Nuxt 4", "TypeScript", "Browser Extensions", "Shadow DOM", "Cypress", "Storybook", "Vitest", "Vue Test Utils", "Playwright", "MSW", "Web Components"],
+  problem: "The team needed to evolve its public website and student products across older Nuxt 2 code, newer Vue 3 systems, and browser-extension interfaces while preserving compatibility and keeping UI patterns consistent.",
   responsibilities: [
-    "Shipped navigation, billing, study-plan, subscription, marketing, and other student-facing flows in Nuxt applications.",
-    "Built reusable session, daily-passage, dialog, toast, dropdown, and form components.",
-    "Added responsive variants and handled authenticated, loading, error, canceled, and external-link states.",
-    "Documented component behavior in Storybook and reused MSW handlers between stories and tests.",
-    "Worked asynchronously through scoped tasks, merge requests, code reviews, and written implementation notes."
+    "Led the main site's Nuxt 2 to Nuxt Bridge migration, upgrading dependencies incrementally and preserving backward compatibility.",
+    "Built Vue 3 components in a shared UI kit reused across multiple products, enabling centralized updates and more consistent interfaces.",
+    "Delivered SEO-focused marketing and landing pages in Nuxt 4 using server-rendering and generation workflows.",
+    "Owned frontend delivery for a Chrome extension listed with 40,000+ users, including Vue 3 UI, Shadow DOM isolation, and cross-context messaging.",
+    "Added comprehensive automated tests for extension and shared UI flows, and reviewed teammate code in a US-based remote team."
   ],
   challenges: [
-    "Supporting both older Nuxt conventions and newer Vue 3 component patterns.",
-    "Making the same components work in application pages and isolated Web Component builds.",
-    "Covering API and session edge cases without depending on live production data."
+    "Upgrading a mature Nuxt 2 codebase without breaking existing behavior or introducing a disruptive rewrite.",
+    "Keeping shared Vue 3 components portable across web apps and isolated browser-extension contexts.",
+    "Coordinating UI state and messaging across extension contexts while maintaining testable boundaries."
   ],
   results: [
-    "Delivered product pages and components used across the website, student product, and browser extension.",
-    "Added automated coverage for responsive behavior, dialogs, API failures, session state, and Web Component styling.",
-    "Created reviewable UI states that teammates could inspect without reproducing every backend condition."
+    "Modernized the main site through a backward-compatible Nuxt Bridge migration and delivered SEO-oriented Nuxt 4 pages.",
+    "Extended the shared UI kit across multiple products, reducing duplicated component maintenance and aligning common interaction patterns.",
+    "Shipped extension workflows for a product listed with 40,000+ users, with automated coverage for UI states and browser boundaries.",
+    "Improved remote delivery through code reviews, component documentation, and tests for realistic API and session states."
   ],
   learnings: [
-    "A shared component is useful only when its API covers real product states without hiding too much behavior.",
-    "Mocks are most valuable when stories and tests share the same response contracts.",
-    "Small written handoffs reduce ambiguity when a remote team works across time zones."
+    "Backward-compatible modernization lets a product adopt newer tooling without sacrificing delivery continuity.",
+    "A shared UI kit creates value when ownership, versioning, and adoption work across product boundaries.",
+    "Tests and clear written reviews make asynchronous cross-time-zone collaboration more dependable."
   ],
   featured: true
 } satisfies CaseStudy;
