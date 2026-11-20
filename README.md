@@ -31,7 +31,7 @@ Open `http://localhost:3000`.
 
 ## Build
 
-Create a production build. `prebuild` regenerates the case-study registry and `public/resume.pdf` first:
+Create a production build. `prebuild` regenerates the case-study registry first:
 
 ```bash
 pnpm build
@@ -47,7 +47,7 @@ pnpm lint
 
 ## Deploy
 
-Pushing to `main` runs `.github/workflows/deploy.yml`, which installs Chromium, lints, builds, and publishes `out/` to GitHub Pages. The custom domain `mostafakazemi.com` is configured in the repository's GitHub Pages settings.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which lints, builds, and publishes `out/` to GitHub Pages. CI does not install Chromium, so the committed `public/resume.pdf` is what gets deployed. The custom domain `mostafakazemi.com` is configured in the repository's GitHub Pages settings.
 
 ## Content
 
@@ -64,7 +64,7 @@ Pushing to `main` runs `.github/workflows/deploy.yml`, which installs Chromium, 
 The resume and cover letter share one letterhead and renderer (`scripts/lib/document.mjs`). Both are one-page US Letter PDFs with real, single-column text so applicant tracking systems can parse them. The generator warns if content overflows the page.
 
 ```bash
-# Resume -> public/resume.pdf (also runs on every build)
+# Resume -> public/resume.pdf (run after editing resume.json, then commit the PDF)
 pnpm generate:resume
 
 # Generic cover letter -> private/mostafa-kazemi-cover-letter.pdf
