@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import resume from "@/data/resume.json";
 import { siteConfig } from "@/data/portfolio";
+import { ogImage } from "@/lib/og";
 
 const domain = siteConfig.domain;
 const title = "Resume - Mostafa Kazemi | Senior Frontend Engineer";
@@ -10,7 +11,10 @@ const description = `Resume for Mostafa Kazemi, a Senior Frontend Engineer based
 export const metadata: Metadata = {
   title, description,
   alternates: { canonical: "/resume" },
-  openGraph: { title, description, url: `${domain}/resume`, siteName: "Mostafa Kazemi", type: "profile" }
+  openGraph: {
+    title, description, url: `${domain}/resume`, siteName: "Mostafa Kazemi", type: "profile",
+    images: [ogImage("/og.png", `${siteConfig.name} - ${siteConfig.title}`)]
+  }
 };
 
 const combinedSkillGroups = resume.skills.react.map((group) => ({

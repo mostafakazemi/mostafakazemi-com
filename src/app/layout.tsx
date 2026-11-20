@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { siteConfig } from "@/data/portfolio";
+import { ogImage } from "@/lib/og";
 import "./globals.css";
 
 const title = "Mostafa Kazemi - Senior Frontend Engineer";
 const description =
   `Mostafa Kazemi is a Senior Frontend Engineer based in ${siteConfig.location}, specializing in React, Next.js, Vue, Nuxt.js, TypeScript, Browser Extensions, Frontend Architecture, and reusable UI systems.`;
 const domain = siteConfig.domain;
-const profileImage = "/profile-og.webp";
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
+const profileImage = "/profile-960.jpg";
 const alternateNames = [
   "Mostafa Kazeminejad",
   "Mostafa Kazemi Nejad",
@@ -70,7 +73,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.png", sizes: "48x48", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
     ],
@@ -84,20 +87,13 @@ export const metadata: Metadata = {
     siteName: "Mostafa Kazemi",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: profileImage,
-        width: 1200,
-        height: 1200,
-        alt: "Mostafa Kazemi portrait"
-      }
-    ]
+    images: [ogImage("/og.png", `${siteConfig.name} - ${siteConfig.title}`)]
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: [profileImage]
+    images: [ogImage("/og.png", `${siteConfig.name} - ${siteConfig.title}`)]
   },
   robots: {
     index: true,
@@ -133,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" className={`dark ${inter.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script

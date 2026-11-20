@@ -13,8 +13,9 @@ import {
   type CaseStudy
 } from "@/data/case-studies";
 import { siteConfig } from "@/data/portfolio";
+import { ogImage } from "@/lib/og";
 
-const profileImage = "/profile-og.webp";
+const profileImage = "/profile-960.jpg";
 
 type PageProps = {
   params: Promise<{
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = `${caseStudy.title} Case Study | Mostafa Kazemi`;
   const description = caseStudy.summary;
   const url = `${siteConfig.domain}${getCaseStudyPath(caseStudy.slug)}`;
+  const image = ogImage(`${getCaseStudyPath(caseStudy.slug)}/og.png`, `${caseStudy.title} case study`);
 
   return {
     title,
@@ -63,20 +65,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url,
       siteName: siteConfig.name,
       type: "article",
-      images: [
-        {
-          url: profileImage,
-          width: 1200,
-          height: 1200,
-          alt: "Mostafa Kazemi portrait"
-        }
-      ]
+      images: [image]
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [profileImage]
+      images: [image]
     }
   };
 }
