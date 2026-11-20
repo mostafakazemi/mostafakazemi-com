@@ -17,14 +17,7 @@ export const metadata: Metadata = {
   }
 };
 
-const combinedSkillGroups = resume.skills.react.map((group) => ({
-  title: group.title,
-  items: Array.from(new Set(
-    [...resume.skills.react, ...resume.skills.vue]
-      .filter((candidate) => candidate.title === group.title)
-      .flatMap((candidate) => candidate.items)
-  ))
-}));
+const combinedSkillGroups = resume.skills;
 const combinedSkills = combinedSkillGroups.flatMap((group) => group.items);
 const personJsonLd = {
   "@context": "https://schema.org", "@type": "Person", name: resume.profile.name,
