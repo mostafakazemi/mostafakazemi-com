@@ -132,6 +132,11 @@ try {
   await page.evaluate(() => document.fonts.ready);
   const usedFont = await page.evaluate(() => document.fonts.check('9pt "Inter"'));
   if (!usedFont) console.warn("Inter did not load; falling back to system sans-serif.");
+  // Warn when the content no longer fits on one Letter page (11in minus 0.8in of vertical margins).
+  await page.setViewportSize({ width: Math.round((8.5 - 1.1) * 96), height: 1000 });
+  await page.emulateMedia({ media: "print" });
+  const overflow = await page.evaluate(() => Math.ceil(document.body.scrollHeight - 10.2 * 96));
+  if (overflow > 0) console.warn(`Resume overflows one page by ~${overflow}px; trim content.`);
   await fs.mkdir(path.dirname(output), { recursive: true });
   await page.pdf({ path: output, format: "Letter", printBackground: true, preferCSSPageSize: true, tagged: true, outline: false });
   if (process.env.RESUME_HTML) await fs.writeFile(process.env.RESUME_HTML, html);

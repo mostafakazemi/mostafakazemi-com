@@ -37,13 +37,14 @@
           "period": "Jun 2022 - Present",
           "type": "Part-time Jun 2022 - Jun 2026; full-time since Jul 2026",
           "context": "Multi-tenant e-commerce platform serving 6,000+ stores and 5M+ users.",
-          "technologies": ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "REST APIs", "Tailwind CSS", "Webpack"],
+          "technologies": ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "REST APIs", "Tailwind CSS", "Storybook", "Webpack"],
           "highlights": [
             "Moved Sazito's marketing and landing pages from React to Next.js as the sole frontend owner, strengthening SSR, SEO, and Core Web Vitals.",
+            "Built Sazito's UI kit, 59 themeable, RTL-first React/TypeScript components with 445 Storybook stories, now powering the admin panel and all 6,000+ storefronts across themes; the blog and marketing sites are adopting it next.",
             "Cut theme-builder build time from 15 minutes to 2 by restructuring theme-generation and build workflows.",
             "Delivered merchant-controlled font and primary/accent color settings, plus customer reviews with photo/video attachments and admin moderation.",
-            "Migrated the legacy React application's Sass/node-sass styling to Tailwind CSS while preserving active storefront and admin behavior.",
-            "Partnered with a teammate on a Node.js SDK/API for standalone merchant themes, optimizing request and payload data; independently built a sample Next.js theme using the SDK.",
+            "Migrated legacy Sass/node-sass styling to Tailwind CSS without disrupting active storefront and admin features.",
+            "Co-built a Node.js SDK/API for standalone merchant themes and built a sample Next.js theme on it.",
             "Review teammates' code and ship storefront/admin workflows for product imports, payments, shipping, search, and cart."
           ]
         },
@@ -58,7 +59,7 @@
             "Led the Nuxt 2 to Nuxt Bridge migration for the main site, upgrading dependencies incrementally while preserving backward compatibility.",
             "Built Vue 3 components for a shared UI kit adopted across multiple products, centralizing maintenance and aligning interface patterns.",
             "Delivered SEO-focused landing and marketing pages in Nuxt 4 using server-rendering and generation workflows.",
-            "Added tests for extension and shared UI flows and reviewed code with a remote team spanning product, design, backend, and QA."
+            "Added tests for extension and shared UI flows and reviewed code across a remote product, design, and QA team."
           ]
         },
         {

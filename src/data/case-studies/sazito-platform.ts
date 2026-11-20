@@ -7,13 +7,14 @@ export const caseStudy = {
   company: "Sazito",
   period: "Jun 2022 - Present",
   role: "Senior Frontend Engineer",
-  summary: "Frontend ownership at Sazito (part-time from June 2022, full-time since July 2026) spans React and Next.js commerce products, from replatforming marketing pages and modernizing build workflows to merchant customization and reviews. The platform serves 6,000+ stores and 5M+ users.",
+  summary: "Frontend ownership at Sazito (part-time from June 2022, full-time since July 2026) spans React and Next.js commerce products, from replatforming marketing pages, building the UI kit, and modernizing build workflows to merchant customization and reviews. The platform serves 6,000+ stores and 5M+ users.",
   screenshots: [sazitoHomeScreenshot],
   stores: sazitoStores,
-  technologies: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "React Router", "REST APIs", "Tailwind CSS", "Webpack", "Node.js"],
+  technologies: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "React Router", "REST APIs", "Tailwind CSS", "Webpack", "Storybook", "Node.js"],
   problem: "The commerce platform needed to evolve merchant and storefront experiences while keeping a large legacy React application reliable and making theme development faster and more flexible.",
   responsibilities: [
     "Owned the React-to-Next.js migration of marketing and landing pages, improving SEO and Core Web Vitals through SSR and a modern delivery path.",
+    "Built Sazito's UI kit: 59 RTL-first, accessible React/TypeScript components with 445 Storybook stories, shipped as ESM/CJS with separate CSS and used by the admin panel and every storefront theme.",
     "Restructured theme-generation and build workflows, reducing theme-builder build time from 15 minutes to 2.",
     "Implemented merchant controls for font and primary/accent colors, enabling store owners to personalize storefronts without code changes.",
     "Delivered customer reviews with photo and video attachments and moderation tools for store administrators.",
@@ -23,10 +24,12 @@ export const caseStudy = {
   challenges: [
     "Modernizing active React code without disrupting production storefronts and admin workflows.",
     "Reducing build time while preserving a flexible theme system for many merchant stores.",
+    "Making one component library look native in the admin panel, in storefront themes, and in each merchant's colors without forking component code.",
     "Designing SDK-backed themes that can operate independently from the platform's existing theme catalog."
   ],
   results: [
     "Cut theme-builder build time by 13 minutes, from 15 minutes to 2.",
+    "The admin panel and all 6,000+ storefronts now share one themeable component library, restyled through --sui-* CSS custom properties instead of per-theme code; the blog and marketing sites are adopting it next.",
     "Expanded merchant control over branding and delivered review moderation with media attachments.",
     "Improved the SEO and Core Web Vitals foundation for marketing pages through the Next.js migration.",
     "Advanced a collaborative SDK effort and delivered a working reference theme using the new integration."

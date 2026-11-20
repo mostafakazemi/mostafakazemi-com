@@ -92,11 +92,12 @@ export const projects = [
     ],
     highlights: [
       "Owned the React-to-Next.js migration of marketing and landing pages, strengthening SSR, SEO, and Core Web Vitals.",
+      "Built Sazito's UI kit: 59 themeable, RTL-first React components with 445 Storybook stories, used in the admin panel and every storefront theme, with the blog and marketing sites adopting it next.",
       "Implemented merchant controls for fonts and primary/accent colors, plus customer reviews with photo/video uploads and admin moderation.",
       "Migrated legacy Sass/node-sass styling to Tailwind CSS while keeping active React storefront and admin features working.",
       "Partnered on a Node.js SDK/API for independent merchant themes, optimized request and payload data, and built a sample Next.js theme using the SDK."
     ],
-    tags: ["React", "Next.js", "TypeScript", "Redux", "Tailwind CSS", "Node.js", "SDK"]
+    tags: ["React", "Next.js", "TypeScript", "UI Kit", "Storybook", "Tailwind CSS", "Node.js", "SDK"]
   },
   {
     title: "Chamedoon Travel Booking Platform",
@@ -117,7 +118,7 @@ export const projects = [
 export const experiences = [
   {
     title: "Senior Frontend Engineer", company: "Sazito", period: "Jun 2022 – Present", type: "Full-time since Jul 2026 · part-time before",
-    description: "Deliver React and Next.js features for a commerce platform serving 6,000+ stores and 5M+ users. Owned the marketing-page migration from React to Next.js, reduced theme-builder build time from 15 minutes to 2, and shipped merchant theme customization, customer reviews with media uploads, and a sample Next.js theme using a jointly developed Node.js SDK."
+    description: "Deliver React and Next.js features for a commerce platform serving 6,000+ stores and 5M+ users. Owned the marketing-page migration from React to Next.js, built the UI kit used by the admin panel and all storefronts, reduced theme-builder build time from 15 minutes to 2, and shipped merchant theme customization, customer reviews with media uploads, and a sample Next.js theme using a jointly developed Node.js SDK."
   },
   {
     title: "Frontend Engineer", company: "Jack Westin", period: "Jun 2022 – Jun 2026", type: "Remote · US-based team",
