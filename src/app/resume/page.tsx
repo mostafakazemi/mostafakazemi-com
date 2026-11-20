@@ -36,7 +36,7 @@ function Section({ title: sectionTitle, children }: Readonly<{ title: string; ch
 }
 
 export default function ResumePage() {
-  const experience = resume.variants.general.experience;
+  const experience = resume.experience;
   return (
     <main id="main" className="min-h-screen bg-neutral-50 text-neutral-950 dark:bg-neutral-950 dark:text-neutral-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }} />
@@ -71,7 +71,7 @@ export default function ResumePage() {
           </header>
 
           <Section title="Professional Summary">
-            <p className="text-[15px] leading-7 text-neutral-700 dark:text-neutral-300">{resume.variants.general.summary}</p>
+            <p className="text-[15px] leading-7 text-neutral-700 dark:text-neutral-300">{resume.summary}</p>
           </Section>
 
           <Section title="Experience">

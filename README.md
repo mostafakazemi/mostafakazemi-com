@@ -4,20 +4,21 @@ Personal portfolio website for Mostafa Kazemi, Senior Frontend Engineer.
 
 ## Tech Stack
 
-- Next.js 16
+- Next.js 16 (App Router, static export)
 - React 19
 - TypeScript
-- App Router
 - Tailwind CSS
+- Playwright (Chromium) for PDFs and screenshots
 - ESLint
 - pnpm
 
 ## Local Development
 
-Install dependencies:
+Install dependencies and the Chromium build used for PDFs and screenshots:
 
 ```bash
 pnpm install
+pnpm exec playwright install chromium
 ```
 
 Start the development server:
@@ -30,49 +31,54 @@ Open `http://localhost:3000`.
 
 ## Build
 
-Create a production build. This also regenerates the all-stack resume PDF, case-study registry, and general cover letter before the Next.js build runs:
+Create a production build. `prebuild` regenerates the case-study registry and `public/resume.pdf` first:
 
 ```bash
 pnpm build
 ```
 
-Generate the resume PDF only:
-
-```bash
-pnpm generate:resume
-```
+The site is a static export written to `out/`.
 
 ## Lint
-
-Run ESLint:
 
 ```bash
 pnpm lint
 ```
 
-## Deploy To Vercel
+## Deploy
 
-1. Push this repository to GitHub.
-2. Import the GitHub repository into Vercel.
-3. Use `pnpm build` as the build command.
-4. Deploy the project.
-
-The project is configured for static export, so the production output is written to `out/`.
-
-## Deploy To GitHub Pages
-
-1. Run `pnpm build`.
-2. Publish the generated `out/` directory with GitHub Pages.
-3. Use the included GitHub Actions workflow if you want automated deployment from GitHub.
-
-## Custom Domain
-
-After deployment, add `mostafakazemi.com` in:
-
-`Vercel Project Settings -> Domains`
-
-Then configure the DNS records exactly as Vercel instructs. DNS requirements can vary by registrar, so Vercel should be treated as the source of truth for the final records.
+Pushing to `main` runs `.github/workflows/deploy.yml`, which installs Chromium, lints, builds, and publishes `out/` to GitHub Pages. The custom domain `mostafakazemi.com` is configured in the repository's GitHub Pages settings.
 
 ## Content
 
-Portfolio content is centralized in `src/data/portfolio.ts`. Resume content is centralized in `src/data/resume.json` and powers `/resume` plus the combined React/Next.js and Vue/Nuxt.js resume at `public/resume.pdf`. The general cover letter source is `src/data/general-cover-letter.txt`; `pnpm build` generates its PDF under `resume/`, which is ignored by Git and excluded from the deployed site.
+| What | Source | Output |
+| --- | --- | --- |
+| Portfolio sections | `src/data/portfolio.ts` | Home page |
+| Case studies | `src/data/case-studies/*.ts` | `/case-studies/<slug>` |
+| Resume | `src/data/resume.json` | `/resume` page and `public/resume.pdf` |
+| Cover letter | `src/data/cover-letter.txt` | `private/` (ignored by Git, never deployed) |
+| Screenshots | `scripts/capture-screenshots.mjs` | `public/screenshots/*.webp` |
+
+## Documents
+
+The resume and cover letter share one letterhead and renderer (`scripts/lib/document.mjs`). Both are one-page US Letter PDFs with real, single-column text so applicant tracking systems can parse them. The generator warns if content overflows the page.
+
+```bash
+# Resume -> public/resume.pdf (also runs on every build)
+pnpm generate:resume
+
+# Generic cover letter -> private/mostafa-kazemi-cover-letter.pdf
+pnpm generate:cover-letter
+
+# Tailored cover letter -> private/cover-letters/mostafa-kazemi-cover-letter-acme.pdf
+pnpm generate:cover-letter --company "Acme" --role "Staff Frontend Engineer"
+```
+
+The cover letter text supports `{{role}}`, `{{atCompany}}` (" at Acme" or nothing), and `{{company}}` ("Acme" or "your team").
+
+## Screenshots
+
+```bash
+pnpm capture:screenshots              # all targets
+pnpm capture:screenshots store-offerie   # specific ids
+```

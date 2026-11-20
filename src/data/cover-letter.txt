@@ -1,0 +1,12 @@
+Dear Hiring Team,
+
+I'm applying for the {{role}} role{{atCompany}}. I've spent more than six years shipping production frontends in both React/Next.js and Vue/Nuxt, and my best work sits where product requirements meet code that has to keep working for years: commerce platforms, shared UI libraries, SSR sites, and browser extensions.
+
+At Sazito, a commerce platform serving 6,000+ stores and 5M+ users, I built the company's UI kit: 59 themeable, RTL-first React components that now power the admin panel and every storefront theme, with the blog and marketing sites adopting it next. I also moved our marketing pages from React to Next.js and cut the theme-builder build from 15 minutes to 2, which made theme iteration a quick feedback loop instead of a coffee break.
+
+For four years I also worked with Jack Westin's US-based team, fully remote and asynchronous. I owned the frontend of their MCAT Chrome extension, listed with 40,000+ users, isolating its interface from third-party pages with Shadow DOM, and led an incremental Nuxt 2 to Nuxt Bridge migration that kept the main site shipping throughout. That work shaped how I operate: small, reviewable pull requests, written context, tests and Storybook stories for shared components, and predictable releases.
+
+I'm based in Istanbul (UTC+3), with comfortable overlap with European hours and US East Coast mornings. I'd welcome a conversation about how I can help {{company}} build a frontend that stays fast and maintainable as it grows.
+
+Sincerely,
+Mostafa Kazemi
