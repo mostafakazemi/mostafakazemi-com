@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { CaseStudyHeader } from "@/components/case-studies/CaseStudyHeader";
 import { CaseStudySection } from "@/components/case-studies/CaseStudySection";
 import { TechnologyTags } from "@/components/case-studies/TechnologyTags";
+import { BrowserFrame, StoreStrip } from "@/components/Screenshots";
 import {
   caseStudies,
   getCaseStudyBySlug,
@@ -145,7 +146,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-950 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100">
       <Header />
-      <main>
+      <main id="main">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -155,10 +156,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
         <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
           <Link
-            href="/#case-studies"
+            href="/#projects"
             className="mb-7 inline-flex items-center gap-2 rounded-sm border border-neutral-300 bg-white px-3 py-2 text-xs font-semibold text-neutral-700 transition hover:border-sky-400 hover:text-sky-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:border-sky-400 dark:hover:text-sky-300"
           >
-            Back to Case Studies
+            Back to Selected Work
           </Link>
 
           <CaseStudyHeader caseStudy={caseStudy} />
@@ -168,6 +169,38 @@ export default async function CaseStudyPage({ params }: PageProps) {
               {caseStudy.summary}
             </p>
           </CaseStudySection>
+
+          {caseStudy.screenshots?.length ? (
+            <CaseStudySection title="Screenshots">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {caseStudy.screenshots.map((shot, index) => (
+                  <BrowserFrame
+                    key={shot.src}
+                    shot={shot}
+                    priority={index === 0}
+                    className={caseStudy.screenshots!.length === 1 ? "sm:col-span-2" : undefined}
+                    sizes="(min-width: 1024px) 480px, 100vw"
+                  />
+                ))}
+              </div>
+            </CaseStudySection>
+          ) : null}
+
+          {caseStudy.stores?.length ? (
+            <CaseStudySection title="Live stores">
+              <p className="mb-4 max-w-3xl text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">
+                A few of the merchant storefronts running on Sazito today.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {caseStudy.stores.slice(0, 2).map((store) => (
+                  <BrowserFrame key={store.host} shot={store.desktop} sizes="(min-width: 1024px) 480px, 100vw" />
+                ))}
+              </div>
+              <div className="mt-4 max-w-xl">
+                <StoreStrip stores={caseStudy.stores} />
+              </div>
+            </CaseStudySection>
+          ) : null}
 
           <CaseStudySection title="Problem">
             <p className="max-w-3xl text-[15px] leading-7 text-neutral-600 dark:text-neutral-300">

@@ -45,7 +45,7 @@ function Section({ title: sectionTitle, children }: Readonly<{ title: string; ch
 export default function ResumePage() {
   const experience = resume.variants.general.experience;
   return (
-    <main className="min-h-screen bg-neutral-50 text-neutral-950 dark:bg-neutral-950 dark:text-neutral-100">
+    <main id="main" className="min-h-screen bg-neutral-50 text-neutral-950 dark:bg-neutral-950 dark:text-neutral-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }} />
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <nav className="mb-8 flex flex-wrap items-center justify-between gap-3 text-sm">

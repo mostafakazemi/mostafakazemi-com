@@ -1,4 +1,5 @@
 import { contactLinks, siteConfig } from "@/data/portfolio";
+import { ArrowIcon } from "./ArrowIcon";
 
 export function Contact() {
   return (
@@ -28,20 +29,26 @@ export function Contact() {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                  className="inline-flex min-h-12 items-center justify-between rounded-sm border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:border-sky-300/70 hover:bg-sky-300/10"
+                  className="group inline-flex min-h-12 items-center justify-between rounded-sm border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition hover:border-sky-300/70 hover:bg-sky-300/10"
                 >
                   {link.label}
-                  <span aria-hidden="true">-&gt;</span>
+                  <ArrowIcon />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="mt-8 border-t border-white/15 pt-4 text-sm leading-6 text-neutral-300">
-            Direct email:{" "}
-            <a className="font-semibold text-sky-300 hover:text-sky-200" href={`mailto:${siteConfig.email}`}>
-              {siteConfig.email}
-            </a>
+          <div className="mt-8 flex flex-col gap-2 border-t border-white/15 pt-4 text-sm leading-6 text-neutral-300 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              Direct email:{" "}
+              <a className="font-semibold text-sky-300 hover:text-sky-200" href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email}
+              </a>
+            </p>
+            <p>
+              Based in {siteConfig.location} ({siteConfig.timezone}) · overlaps with European
+              hours and US East Coast mornings
+            </p>
           </div>
         </div>
       </div>

@@ -24,30 +24,25 @@ export function About() {
           index="01"
           label="About"
           title="Frontend work across products, platforms, and shared systems."
-          description="Six-plus years translating product requirements into maintainable interfaces, from commerce workflows and SSR websites to browser-integrated study tools."
+          description="Translating product requirements into maintainable interfaces, from commerce workflows and SSR websites to browser-integrated study tools."
         />
 
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)] lg:gap-16">
           <div className="space-y-5 text-pretty text-base leading-7 text-neutral-600 dark:text-neutral-300">
             <p>
-              I&apos;m Mostafa Kazemi, a Senior Frontend Engineer with more than
-              six years of experience building production applications across
-              React, Next.js, Vue, Nuxt.js, and TypeScript. At Jack Westin, I
-              owned a backward-compatible Nuxt Bridge migration, built Vue 3
-              components reused across products, delivered Nuxt 4 SSR marketing
-              pages, and led frontend delivery for a Chrome extension listed
-              with 40,000+ users.
+              I&apos;m a Senior Frontend Engineer who works comfortably in both
+              the React/Next.js and Vue/Nuxt.js ecosystems. Most of my work sits
+              where product requirements meet long-lived code: commerce
+              storefronts and admin tools, SSR marketing sites, shared component
+              libraries, and browser extensions that run inside other
+              people&apos;s pages.
             </p>
             <p>
-              In July 2026, I moved to full-time at Sazito after working
-              part-time there since June 2022 alongside my Jack Westin role,
-              which ended in June 2026. I deliver storefront and admin features
-              for a platform serving 6,000+ stores and 5M+ users, with 10
-              trillion Iranian rials in monthly transaction volume. Recent work
-              includes migrating marketing pages to Next.js and cutting the
-              theme-builder build from 15 minutes to 2, as well as merchant
-              theme controls, customer reviews, and an SDK-powered reference
-              theme.
+              I&apos;m currently at Sazito, building storefront, admin, and
+              theme tooling for a multi-tenant commerce platform. Before that I
+              spent four years with Jack Westin&apos;s US-based remote team,
+              where I owned their MCAT Chrome extension, a shared Vue 3 UI kit,
+              and an incremental Nuxt 2 to Nuxt Bridge migration.
             </p>
           </div>
 

@@ -10,6 +10,13 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <>
+    <a
+      href="#main"
+      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-sky-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-neutral-950"
+    >
+      Skip to content
+    </a>
     <header className="sticky top-0 z-50 border-b border-neutral-200/80 bg-neutral-50/85 backdrop-blur-xl dark:border-neutral-800/80 dark:bg-neutral-950/85">
       <nav
         className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
@@ -80,5 +87,6 @@ export function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }

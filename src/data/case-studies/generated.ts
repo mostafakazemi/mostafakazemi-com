@@ -6,4 +6,4 @@ import { caseStudy as chamedoonTravelPlatform } from "./chamedoon-travel-platfor
 import { caseStudy as jackwestinPlatform } from "./jackwestin-platform";
 import { caseStudy as sazitoPlatform } from "./sazito-platform";
 
-export const caseStudies = [aamcExtension, chamedoonTravelPlatform, jackwestinPlatform, sazitoPlatform] satisfies CaseStudy[];
+export const caseStudies: CaseStudy[] = [aamcExtension, chamedoonTravelPlatform, jackwestinPlatform, sazitoPlatform];

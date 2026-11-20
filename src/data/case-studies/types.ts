@@ -1,3 +1,5 @@
+import type { Screenshot, StoreShowcase } from "../screenshots";
+
 export interface CaseStudy {
   slug: string;
   title: string;
@@ -12,4 +14,6 @@ export interface CaseStudy {
   results: string[];
   learnings?: string[];
   featured?: boolean;
+  screenshots?: Screenshot[];
+  stores?: StoreShowcase[];
 }

@@ -1,3 +1,4 @@
+import { extensionScreenshots } from "../screenshots";
 import type { CaseStudy } from "./types";
 
 export const caseStudy = {
@@ -31,5 +32,6 @@ export const caseStudy = {
     "Authentication and subscription changes should invalidate related cached data in one predictable place.",
     "Component stories and realistic API mocks are especially useful for browser states that are hard to reproduce manually."
   ],
-  featured: true
+  featured: true,
+  screenshots: extensionScreenshots
 } satisfies CaseStudy;

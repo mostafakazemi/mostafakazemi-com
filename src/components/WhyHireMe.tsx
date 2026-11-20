@@ -2,19 +2,19 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 const reasons = [
   {
-    title: "Production Work in Both Stacks",
+    title: "Migrate without stopping the product",
     description:
-      "Six-plus years building production products across React/Next.js and Vue/Nuxt.js ecosystems."
+      "Framework and styling migrations done incrementally and backward-compatibly (Nuxt 2 to Nuxt Bridge, React to Next.js, Sass to Tailwind) so feature work keeps shipping."
   },
   {
-    title: "Concrete Product Features",
+    title: "Components that stay reusable",
     description:
-      "A 15-to-2-minute theme-builder build reduction, a 40,000+ user extension, shared UI systems, SSR migrations, and merchant-facing commerce features."
+      "Shared UI built with documented states, Storybook stories, API mocks, and tests, so other teams can adopt it without reading the source."
   },
   {
-    title: "Remote Team Experience",
+    title: "Async-friendly delivery",
     description:
-      "Four years of asynchronous collaboration with a US-based team, including product and code reviews, plus direct cross-functional delivery at Sazito."
+      "Reviewable pull requests, written context, and type checks, shaped by years of working across time zones with a US-based team."
   }
 ];
 

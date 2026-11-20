@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
+import { ArrowIcon } from "./ArrowIcon";
 
 const profileBlurDataUrl =
   "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBQCdASoYABgAPt1mq1EopSOiqAgBEBuJYgDGBYvWXtIKJrWUpvVjDsiuqyn94vYvE/XvAAD+79edCjgI0L4Cvh7AJQ5opeVj52eVjZrQS8j2MRcw1qf+lvUEDM9cupo5bBIVeIRDk61OGTDfo5uKstcuzX0ieMRVTx7b8YSx/ReQ2kZtsbm/PK1oZvngfbMl2E2PrvcfQI17yMZCPuKSiLYoAYaPLtJZJAAA";
@@ -51,10 +52,10 @@ export function Hero() {
               View Resume
             </a>
             <a
-              href="#case-studies"
-              className="inline-flex min-h-11 items-center gap-2 rounded-md px-3 py-2.5 text-sm font-semibold text-neutral-700 transition hover:text-sky-700 dark:text-neutral-300 dark:hover:text-sky-300"
+              href="#projects"
+              className="group inline-flex min-h-11 items-center gap-2 rounded-md px-3 py-2.5 text-sm font-semibold text-neutral-700 transition hover:text-sky-700 dark:text-neutral-300 dark:hover:text-sky-300"
             >
-              Explore case studies <span aria-hidden="true">-&gt;</span>
+              See selected work <ArrowIcon />
             </a>
           </div>
 

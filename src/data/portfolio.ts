@@ -1,9 +1,12 @@
+import { extensionScreenshots, sazitoHomeScreenshot, sazitoStores } from "./screenshots";
+
 export const siteConfig = {
   name: "Mostafa Kazemi",
   title: "Senior Frontend Engineer",
   domain: "https://mostafakazemi.com",
   location: "Istanbul, Turkey",
   availability: "Open to Remote Worldwide",
+  timezone: "UTC+3",
   email: "mostafa.kazeminejhad@gmail.com",
   links: {
     github: "https://github.com/mostafakazemi",
@@ -15,7 +18,7 @@ export const siteConfig = {
 export const navItems = [
   { label: "Home", href: "/#home" }, { label: "About", href: "/#about" },
   { label: "Skills", href: "/#skills" }, { label: "Projects", href: "/#projects" },
-  { label: "Case Studies", href: "/#case-studies" }, { label: "Experience", href: "/#experience" },
+  { label: "Experience", href: "/#experience" },
   { label: "Resume", href: "/resume" }, { label: "Contact", href: "/#contact" }
 ];
 
@@ -29,6 +32,8 @@ export const skillGroups = [
 export const projects = [
   {
     title: "The Jack Westin MCAT® Chrome Extension",
+    caseStudy: "aamc-extension",
+    image: extensionScreenshots[0],
     type: "Vue 3 / TypeScript / Chrome Extension",
     description: "Owned frontend delivery for a Vue 3 and TypeScript extension that places Jack Westin tutor solutions beside AAMC practice questions. The Chrome Web Store lists the product with 40,000+ users.",
     impact: "Designed extension UI boundaries with Shadow DOM and cross-context messaging, then shipped study, authentication, subscription, and resource workflows.",
@@ -47,6 +52,7 @@ export const projects = [
   },
   {
     title: "Jack Westin Web Applications",
+    caseStudy: "jackwestin-platform",
     type: "Vue / Nuxt.js / EdTech",
     description: "Shipped public-site and student-product features across Jack Westin's Nuxt applications while working asynchronously with a US-based remote team.",
     impact: "Examples include navigation and marketing pages, billing and payment UI, study-plan updates, subscription screens, and reusable component integration.",
@@ -75,17 +81,17 @@ export const projects = [
   },
   {
     title: "Sazito Commerce Platform",
+    caseStudy: "sazito-platform",
+    image: sazitoHomeScreenshot,
+    stores: sazitoStores,
     type: "React / Next.js / E-commerce",
-    description: "Full-time at Sazito since July 2026, after working part-time there since June 2022 alongside my Jack Westin role, which ended in June 2026. The commerce platform serves 6,000+ stores, 5M+ users, and records 10 trillion Iranian rials (IRR) in monthly transaction volume.",
+    description: "Storefront, admin, and theme tooling for a multi-tenant commerce platform serving 6,000+ stores and 5M+ users.",
     impact: "Moved marketing pages from React to Next.js and cut theme-builder build time from 15 minutes to 2, alongside merchant customization, reviews, and SDK-based theme work.",
     links: [
-      { label: "Main Website", href: "https://sazito.com/" },
-      { label: "Example Store", href: "https://davidjones.ir/" },
-      { label: "Example Store", href: "https://xiaomixiaomi.ir/" }
+      { label: "Main Website", href: "https://sazito.com/" }
     ],
     highlights: [
       "Owned the React-to-Next.js migration of marketing and landing pages, strengthening SSR, SEO, and Core Web Vitals.",
-      "Reduced theme-builder build time from 15 minutes to 2 through theme-generation and build-workflow changes.",
       "Implemented merchant controls for fonts and primary/accent colors, plus customer reviews with photo/video uploads and admin moderation.",
       "Migrated legacy Sass/node-sass styling to Tailwind CSS while keeping active React storefront and admin features working.",
       "Partnered on a Node.js SDK/API for independent merchant themes, optimized request and payload data, and built a sample Next.js theme using the SDK."
@@ -94,6 +100,7 @@ export const projects = [
   },
   {
     title: "Chamedoon Travel Booking Platform",
+    caseStudy: "chamedoon-travel-platform",
     type: "Vue / Nuxt.js / Travel Technology",
     description: "Served as the sole frontend developer for a flight-booking and hotel-reservation service operating during the COVID-era travel downturn; the product has since been retired.",
     impact: "Historical Lighthouse scores improved from 65 to 98 for Performance, 75 to 100 for Accessibility, 90 to 100 for Best Practices, and 78 to 96 for SEO.",
@@ -109,15 +116,15 @@ export const projects = [
 
 export const experiences = [
   {
-    title: "Senior Frontend Engineer", company: "Sazito", type: "Part-time to Jun 2026 · Full-time from Jul 2026",
-    description: "Deliver React and Next.js features for a commerce platform serving 6,000+ stores, 5M+ users, and 10 trillion Iranian rials (IRR) in monthly transaction volume. Owned the marketing-page migration from React to Next.js, reduced theme-builder build time from 15 minutes to 2, and shipped merchant theme customization, customer reviews with media uploads, and a sample Next.js theme using a jointly developed Node.js SDK."
+    title: "Senior Frontend Engineer", company: "Sazito", period: "Jun 2022 – Present", type: "Full-time since Jul 2026 · part-time before",
+    description: "Deliver React and Next.js features for a commerce platform serving 6,000+ stores and 5M+ users. Owned the marketing-page migration from React to Next.js, reduced theme-builder build time from 15 minutes to 2, and shipped merchant theme customization, customer reviews with media uploads, and a sample Next.js theme using a jointly developed Node.js SDK."
   },
   {
-    title: "Frontend Engineer", company: "Jack Westin", type: "Remote · Jun 2022 - Jun 2026",
+    title: "Frontend Engineer", company: "Jack Westin", period: "Jun 2022 – Jun 2026", type: "Remote · US-based team",
     description: "Owned frontend work for a Chrome extension listed with 40,000+ users, led a backward-compatible Nuxt 2 to Nuxt Bridge migration, built Vue 3 UI-kit components reused across products, and delivered SEO-focused Nuxt 4 pages. Added automated tests and reviewed code with a US-based remote team."
   },
   {
-    title: "Frontend Developer", company: "Chamedoon", type: "Apr 2020 - Jun 2022",
+    title: "Frontend Developer", company: "Chamedoon", period: "Apr 2020 – Jun 2022", type: "Sole frontend developer",
     description: "As the sole frontend developer for a flight-booking and hotel-reservation platform, built responsive Vue/Nuxt interfaces and REST API workflows. Improved historical Lighthouse scores to 98 Performance, 100 Accessibility, 100 Best Practices, and 96 SEO through work on Core Web Vitals and accessibility."
   }
 ];

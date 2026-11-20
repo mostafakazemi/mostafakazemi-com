@@ -43,7 +43,7 @@ const output = [
   'import type { CaseStudy } from "./types";',
   ...imports,
   "",
-  `export const caseStudies = [${identifiers.join(", ")}] satisfies CaseStudy[];`,
+  `export const caseStudies: CaseStudy[] = [${identifiers.join(", ")}];`,
   ""
 ].join("\n");
 

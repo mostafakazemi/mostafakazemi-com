@@ -1,3 +1,4 @@
+import { sazitoHomeScreenshot, sazitoStores } from "../screenshots";
 import type { CaseStudy } from "./types";
 
 export const caseStudy = {
@@ -6,7 +7,9 @@ export const caseStudy = {
   company: "Sazito",
   period: "Jun 2022 - Present",
   role: "Senior Frontend Engineer",
-  summary: "After working part-time at Sazito from June 2022, I transitioned to full-time in July 2026, following the end of my Jack Westin role in June. Frontend ownership spans React and Next.js commerce products, from replatforming marketing pages and modernizing build workflows to merchant customization and reviews. The platform serves 6,000+ stores and 5M+ users, with 10 trillion Iranian rials (IRR) in monthly transaction volume.",
+  summary: "Frontend ownership at Sazito (part-time from June 2022, full-time since July 2026) spans React and Next.js commerce products, from replatforming marketing pages and modernizing build workflows to merchant customization and reviews. The platform serves 6,000+ stores and 5M+ users.",
+  screenshots: [sazitoHomeScreenshot],
+  stores: sazitoStores,
   technologies: ["React", "Next.js", "TypeScript", "Redux", "Redux Saga", "React Router", "REST APIs", "Tailwind CSS", "Webpack", "Node.js"],
   problem: "The commerce platform needed to evolve merchant and storefront experiences while keeping a large legacy React application reliable and making theme development faster and more flexible.",
   responsibilities: [
